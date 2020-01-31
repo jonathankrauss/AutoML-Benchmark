@@ -228,7 +228,7 @@
     </tr>
     </tr>
     <tr>
-      <td class="tl">Darwin<a href="#fn:TestLoneRef" class="footnote">2</a></td> <!-- Systems -->
+      <td class="tl">Darwin<sup id="fnref:TestLoneRef"><a href="#fn:TestLoneRef" class="footnote">2</a></sup></td> <!-- Systems -->
       <td class="tc">&nbsp;</td> <!-- Data Integration -->
       <td class="tc">X</td> <!-- Data Preprocessing -->
       <td class="tc">X</td> <!-- Feature Engineering -->
@@ -252,7 +252,16 @@
   </tbody>
 </table></div>
 
-Referencing test[^TestRef]
+Referencing test<sup id="fnref:TestRef"><a href="#fn:TestRef" class="footnote">1</a></sup>
+
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:TestRef">
+      <p>Falkner S, Klein A, Hutter F (2018) BOHB: Robust and Efficient Hyperparameter Optimization at Scale. in Dy J, Krause A, (Eds.). Proceedings of the 35th International Conference on Machine Learning. PMLR. Stockholmsmässan, Stockholm Sweden, pp. 1437–1446.&nbsp;<a href="#fnref:TestRef" class="reversefootnote">↩</a></p>
+    </li>
+  </ol>
+</div>
 
 [^TestRef]: Falkner S, Klein A, Hutter F (2018) BOHB: Robust and Efficient Hyperparameter Optimization at Scale. in Dy J, Krause A, (Eds.). Proceedings of the 35th International Conference on Machine Learning. PMLR. Stockholmsmässan, Stockholm Sweden, pp. 1437–1446.
 
