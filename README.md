@@ -1,25 +1,46 @@
 <!-- **Probably** we will have an introductory text somewhere in the beginning. -->
 
 Auto-WEKA[^AutoWEKA]
+
 Hyperopt-sklearn[^Hyperoptsklearn]
+
 Auto-sklearn[^Autosklearn]
+
 Auto-PyTorch[^AutoPyTorch]
+
 TPOT[^TPOT]
+
 Feature Tools[^FeatureTools]
+
 tsfresh[^tsfresh]
+
 FeatureHub[^FeatureHub]
+
 ATM[^ATM]
+
 Auto_ml[^Auto_ml]
+
 H2O AutoML[^H2O]
+
 SAS[^SAS]
+
 MLBox[^MLBox]
+
 Google AutoML[^Google]
+
 Azure Machine Learning[^Azure]
+
 Amazon SageMaker[^Amazon]
+
 AutoKeras[^AutoKeras]
+
 TransmogrifAI[^TransmogrifAI]
+
 Darwin[^Darwin]
+
 MLJar[^MLJar]
+
+======
 
 [^AutoWEKA]: Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing. Cham, pp. 81–95.
 
