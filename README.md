@@ -1,8 +1,62 @@
 <!-- **Probably** we will have an introductory text somewhere in the beginning. -->
 
-<!-- 
-Referencing test[^TestLoneRef][^TestVeryLoneRef]
+Auto-WEKA[^AutoWEKA]
+Hyperopt-sklearn[^Hyperoptsklearn]
+Auto-sklearn[^Autosklearn]
+Auto-PyTorch[^AutoPyTorch]
+TPOT[^TPOT]
+Feature Tools[^FeatureTools]
+tsfresh[^tsfresh]
+FeatureHub[^FeatureHub]
+ATM[^ATM]
+Auto_ml[^Auto_ml]
+H2O AutoML[^H2O]
+SAS[^SAS]
+MLBox[^MLBox]
+Google AutoML[^Google]
+Azure Machine Learning[^Azure]
+Amazon SageMaker[^Amazon]
+AutoKeras[^AutoKeras]
+TransmogrifAI[^TransmogrifAI]
+Darwin[^Darwin]
+MLJar[^MLJar]
 
-[^TestLoneRef]: Falkner S, Klein A, Hutter F (2018) BOHB: Robust and Efficient Hyperparameter Optimization at Scale. in Dy J, Krause A, (Eds.). Proceedings of the 35th International Conference on Machine Learning. PMLR. Stockholmsmässan, Stockholm Sweden, pp. 1437–1446.
+[^AutoWEKA]: Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing. Cham, pp. 81–95.
 
-[^TestVeryLoneRef]: Falkner S, Klein A, Hutter F (2018) BOHB: Robust and Efficient Hyperparameter Optimization at Scale. in Dy J, Krause A, (Eds.). Proceedings of the 35th International Conference on Machine Learning. PMLR. Stockholmsmässan, Stockholm Sweden, pp. 1437–1446. -->
+[^Hyperoptsklearn]: Komer B, Bergstra J, Eliasmith C (2019) Hyperopt-Sklearn. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing. Cham, pp. 97–111.
+
+[^Autosklearn]: Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing. Cham, pp. 113–134.
+
+[^AutoPyTorch]: Hector Mendoza, Aaron Klein, Matthias Feurer, Jost Tobias Springenberg, Matthias Urban, Michael Burkart, Max Dippel, Marius Lindauer, Frank Hutter (2018) Towards Automatically-Tuned Deep Neural Networks: 7. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). AutoML: Methods, Sytems, Challenges. Springer, pp. 141–156.
+
+[^TPOT]: 
+
+[^FeatureTools]: 
+
+[^tsfresh]: 
+
+[^FeatureHub]: Smith MJ, Wedge R, Veeramachaneni K (2017) FeatureHub: Towards collaborative data science. 2017 IEEE International Conference on Data Science and Advanced Analytics (DSAA), pp. 590–600.
+
+[^ATM]: Swearingen T, Drevo W, Cyphers B, Cuesta-Infante A, Ross A, Veeramachaneni K (2017 - 2017) ATM: A distributed, collaborative, scalable system for automated machine learning. 2017 IEEE International Conference on Big Data (Big Data). IEEE, pp. 151–162.
+
+[^Auto_ml]: 
+
+[^H2O]: 
+
+[^SAS]: SAS Institute Inc. SAS Visual Data Mining and Machine Learning. https://www.sas.com/en_us/software/visual-data-mining-machine-learning.html (accessed on 26.01.2020).
+
+[^MLBox]: ARONIO DE ROMBLAY A. MLBox Documentation. https://mlbox.readthedocs.io/en/latest/index.html (accessed on 20.11.2019).
+
+[^Google]: 
+
+[^Azure]: Microsoft Azure. Azure Machine Learning documentation. https://docs.microsoft.com/en-us/azure/machine-learning/ (accessed on 20.11.2019).
+
+[^Amazon]: AWS. Amazon SageMaker - Developer Guide. https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-dg.pdf (accessed on 20.11.2019).
+
+[^AutoKeras]: Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing. Cham, pp. 113–134.
+
+[^TransmogrifAI]: Salesforce.com, Inc. AutoML library for building modular, reusable, strongly typed machine learning workflows on Spark from Salesforce Engineering. https://transmogrif.ai/ (accessed on 26.01.2020).
+
+[^Darwin]: 
+
+[^MLJar]: 
