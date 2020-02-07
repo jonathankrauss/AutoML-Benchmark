@@ -1,5 +1,3 @@
-<!-- **Probably** we will have an introductory text somewhere in the beginning. -->
-
 <!-- Auto-WEKA[^AutoWEKA]
 
 Hyperopt-sklearn[^Hyperoptsklearn]
