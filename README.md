@@ -1,4 +1,4 @@
-<!-- **Probably** we will have an introductory text somewhere in the beginning. -->
+![AutoMLPipeline](static/images/pipeline.png "AutoML pipeline in the context of production")
 
 <!-- Auto-WEKA[^AutoWEKA]
 
