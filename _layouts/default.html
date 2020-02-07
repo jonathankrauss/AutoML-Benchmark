@@ -4,50 +4,48 @@
 {% assign is_home = false %}
 {% endif %}
 <!DOCTYPE html>
-<html
-  lang="{{ page.lang | default: site.lang | default: "en" }}"
-  class="dark-gray">
-  <head>
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="dark-gray">
 
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% feed_meta %}
-    <link rel="stylesheet" href="{{ "/static/app.css" | relative_url }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}" />
-    {% seo %}
-  </head>
-  <body>
-    <main class="measure-wide center ph4 pt5">
-      {% if is_home %}
-      <h1 class="mt0 mb4">
+<head>
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% feed_meta %}
+  <link rel="stylesheet" href="{{ "/static/app.css" | relative_url }}">
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}" />
+  {% seo %}
+</head>
+
+<body>
+  <main class="measure-wide center ph4 pt5">
+    {% if is_home %}
+    <h1 class="mt0 mb4">
       {% else %}
       <h2 class="mt0 mb5">
-      {% endif %}
-        <a
-          href="{{ "/" | relative_url }}"
-          class="no-underline bg-{{ site.brand_color }}">
+        {% endif %}
+        <a href="{{ "/" | relative_url }}" class="no-underline bg-{{ site.brand_color }}">
           {{site.title}}
         </a>
-      {% if is_home %}
-      </h1>
-      {% else %}
-      </h2>
-      {% endif %}
-      <!-- {% if is_home %} -->
-        <section class="pv2">
-          {{ content }}
-        </section>
-      <!-- {% else %}
+        {% if is_home %}
+    </h1>
+    {% else %}
+    </h2>
+    {% endif %}
+    <!-- {% if is_home %} -->
+    <section class="pv2">
+      {{ content }}
+    </section>
+    <!-- {% else %}
         <section class="pv2">
           <h1 class="mt0 mb1">{{page.title}}</h1>
           {% if page.date %}
@@ -79,7 +77,7 @@
           {{ home[0].content | markdownify }}
         </section>
       {% endif %} -->
-      <!-- {% if site.posts.size > 0 %}
+    <!-- {% if site.posts.size > 0 %}
         <hr />
         <section class="pv2">
           <ul class="list pl0">
@@ -123,288 +121,397 @@
           </ul>
         </section>
       {% endif %} -->
-    </main>
-    <div class="ph4 pb6">
-      <div class="overflow-auto">
-        <table class="f6 w-100 mw8 center" cellspacing="0">
-          <thead>
-            <tr>
-              <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-              <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-              <th class="fw6 bt b--black tl bg-white tc" colspan="2">Data Preparation</th>
-              <th class="fw6 bt b--black tl bg-white tc" colspan="4">Modeling</th>
-              <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-            </tr>
-            <tr>
-              <th class="fw6 bb b--black tl bg-white tl">Systems</th>
-              <th class="fw6 bb b--black tl bg-white tc">Data Integration</th>
-              <th class="fw6 bb b--black tl bg-white tc">Data Preprocessing</th>
-              <th class="fw6 bb b--black tl bg-white tc">Feature Engineering</th>
-              <th class="fw6 bb b--black tl bg-white tc">Algorithm Selection</th>
-              <th class="fw6 bb b--black tl bg-white tc">HPO</th>
-              <th class="fw6 bb b--black tl bg-white tc">Training</th>
-              <th class="fw6 bb b--black tl bg-white tc">Diagnosis</th>
-              <th class="fw6 bb b--black tl bg-white tc">Deployment</th>
-            </tr>
-          </thead>
-          <tbody class="lh-copy">
-            <tr>
-              <td class="tl">Auto-WEKA<!--<sup id="fnref:TestRef"><a href="#fn:TestRef" class="footnote">1</a></sup>--></td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">X</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">Hyperopt-sklearn</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">Auto-sklearn</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">Auto-PyTorch</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">TPOT</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">Feature Tools</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-              <td class="tc">&nbsp;</td> <!-- HPO -->
-              <td class="tc">&nbsp;</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">tsfresh</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-              <td class="tc">&nbsp;</td> <!-- HPO -->
-              <td class="tc">&nbsp;</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">FeatureHub</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-              <td class="tc">&nbsp;</td> <!-- HPO -->
-              <td class="tc">&nbsp;</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">ATM</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">X</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">Auto_ml</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">H2O AutoML</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="tl">SAS</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">X</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">MLBox</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">Google AutoML</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">X</td> <!-- Diagnosis -->
-              <td class="tc">X</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">Azure Machine Learning</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">X</td> <!-- Diagnosis -->
-              <td class="tc">X</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">Amazon SageMaker</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">X</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">AutoKeras</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-              <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">TransmogrifAI</td> <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-              <td class="tc">&nbsp;</td> <!-- Deployment -->
-            </tr>
-            </tr>
-            <tr>
-              <td class="tl">Darwin<sup id="fnref:TestLoneRef"><a href="#fn:TestLoneRef" class="footnote">2</a></sup></td>
-              <!-- Systems -->
-              <td class="tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="tc">X</td> <!-- Data Preprocessing -->
-              <td class="tc">X</td> <!-- Feature Engineering -->
-              <td class="tc">X</td> <!-- Algorithm Selection -->
-              <td class="tc">X</td> <!-- HPO -->
-              <td class="tc">X</td> <!-- Training -->
-              <td class="tc">X</td> <!-- Diagnosis -->
-              <td class="tc">X</td> <!-- Deployment -->
-            </tr>
-            <tr>
-              <td class="bb b--black tl">MLJar</td>
-              <td class="bb b--black tc">&nbsp;</td> <!-- Data Integration -->
-              <td class="bb b--black tc">X</td> <!-- Data Preprocessing -->
-              <td class="bb b--black tc">&nbsp;</td> <!-- Feature Engineering -->
-              <td class="bb b--black tc">X</td> <!-- Algorithm Selection -->
-              <td class="bb b--black tc">X</td> <!-- HPO -->
-              <td class="bb b--black tc">X</td> <!-- Training -->
-              <td class="bb b--black tc">X</td> <!-- Diagnosis -->
-              <td class="bb b--black tc">X</td> <!-- Deployment -->
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  </main>
+  <div class="ph4">
+    <div class="overflow-auto">
+      <table class="f6 w-100 mw8 center" cellspacing="0">
+        <thead>
+          <tr>
+            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
+            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="2">Data Preparation</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="4">Modeling</th>
+            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
+          </tr>
+          <tr>
+            <th class="fw6 bb b--black tl bg-white tl">Systems</th>
+            <th class="fw6 bb b--black tl bg-white tc">Data Integration</th>
+            <th class="fw6 bb b--black tl bg-white tc">Data Preprocessing</th>
+            <th class="fw6 bb b--black tl bg-white tc">Feature Engineering</th>
+            <th class="fw6 bb b--black tl bg-white tc">Algorithm Selection</th>
+            <th class="fw6 bb b--black tl bg-white tc">HPO</th>
+            <th class="fw6 bb b--black tl bg-white tc">Training</th>
+            <th class="fw6 bb b--black tl bg-white tc">Diagnosis</th>
+            <th class="fw6 bb b--black tl bg-white tc">Deployment</th>
+          </tr>
+        </thead>
+        <tbody class="lh-copy">
+          <tr>
+            <td class="tl">Auto-WEKA<sup id="fnref:AutoWEKA"><a href="#fn:AutoWEKA" class="footnote">1</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">X</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
+                  class="footnote">2</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
+                  class="footnote">3</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">Auto-PyTorch<sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch"
+                  class="footnote">4</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">5</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">Feature Tools<sup id="fnref:FeatureTools"><a href="#fn:FeatureTools"
+                  class="footnote">6</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
+            <td class="tc">&nbsp;</td> <!-- HPO -->
+            <td class="tc">&nbsp;</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">tsfresh<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">7</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
+            <td class="tc">&nbsp;</td> <!-- HPO -->
+            <td class="tc">&nbsp;</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">FeatureHub<sup id="fnref:FeatureHub"><a href="#fn:FeatureHub" class="footnote">8</a></sup>
+            </td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
+            <td class="tc">&nbsp;</td> <!-- HPO -->
+            <td class="tc">&nbsp;</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">ATM<sup id="fnref:ATM"><a href="#fn:ATM" class="footnote">9</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">X</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">Auto_ml<sup id="fnref:Auto_ml"><a href="#fn:Auto_ml" class="footnote">10</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">11</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="tl">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">12</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">X</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">13</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">14</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">X</td> <!-- Diagnosis -->
+            <td class="tc">X</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">15</a></sup>
+            </td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">X</td> <!-- Diagnosis -->
+            <td class="tc">X</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">Amazon SageMaker<sup id="fnref:Amazon"><a href="#fn:Amazon" class="footnote">16</a></sup>
+            </td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">X</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">17</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
+            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI"
+                  class="footnote">18</a></sup></td> <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
+            <td class="tc">&nbsp;</td> <!-- Deployment -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl">Darwin<sup id="fnref:Darwin"><a href="#fn:Darwin" class="footnote">19</a></sup></td>
+            <!-- Systems -->
+            <td class="tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="tc">X</td> <!-- Data Preprocessing -->
+            <td class="tc">X</td> <!-- Feature Engineering -->
+            <td class="tc">X</td> <!-- Algorithm Selection -->
+            <td class="tc">X</td> <!-- HPO -->
+            <td class="tc">X</td> <!-- Training -->
+            <td class="tc">X</td> <!-- Diagnosis -->
+            <td class="tc">X</td> <!-- Deployment -->
+          </tr>
+          <tr>
+            <td class="bb b--black tl">MLJar<sup id="fnref:MLJar"><a href="#fn:MLJar" class="footnote">20</a></sup></td>
+            <td class="bb b--black tc">&nbsp;</td> <!-- Data Integration -->
+            <td class="bb b--black tc">X</td> <!-- Data Preprocessing -->
+            <td class="bb b--black tc">&nbsp;</td> <!-- Feature Engineering -->
+            <td class="bb b--black tc">X</td> <!-- Algorithm Selection -->
+            <td class="bb b--black tc">X</td> <!-- HPO -->
+            <td class="bb b--black tc">X</td> <!-- Training -->
+            <td class="bb b--black tc">X</td> <!-- Diagnosis -->
+            <td class="bb b--black tc">X</td> <!-- Deployment -->
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <!-- <div class="center ph4 pt5 footnotes">
-      <ol>
-        <li id="fn:TestRef">
-          <p>Falkner S, Klein A, Hutter F (2018) BOHB: Robust and Efficient Hyperparameter Optimization at Scale. in Dy J,
-            Krause A, (Eds.). Proceedings of the 35th International Conference on Machine Learning. PMLR. Stockholmsmässan,
-            Stockholm Sweden, pp. 1437–1446.&nbsp;<a href="#fnref:TestRef" class="reversefootnote">↩</a></p>
-        </li>
-      </ol>
-    </div> -->
-    <script>
-      var moreLink = document.querySelector('.js-more')
-      if (moreLink) {
-        document.querySelector('.js-more').addEventListener('click', function (e) {
-          e.preventDefault()
-          e.target.classList.add('dn')
-          e.target.classList.remove('dib')
-          document.querySelectorAll('.js-hidden').forEach(function (elt) {
-            elt.classList.remove('dn')
-          })
+  </div>
+  <div class="center ph4 pt6 footnotes">
+    <ol>
+      <li id="fn:AutoWEKA">
+        <p>Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and
+          Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine
+          Learning. Springer International Publishing. Cham, pp. 81–95.&nbsp;<a href="#fnref:AutoWEKA"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Hyperoptsklearn">
+        <p>Komer B, Bergstra J, Eliasmith C (2019) Hyperopt-Sklearn. in Hutter F, Kotthoff L, Vanschoren J, (Eds.).
+          Automated Machine Learning. Springer International Publishing. Cham, pp. 97–111.&nbsp;<a
+            href="#fnref:Hyperoptsklearn" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Autosklearn">
+        <p>Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and
+          Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
+          Springer International Publishing. Cham, pp. 113–134.&nbsp;<a href="#fnref:Autosklearn"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:AutoPyTorch">
+        <p>Hector Mendoza, Aaron Klein, Matthias Feurer, Jost Tobias Springenberg, Matthias Urban, Michael Burkart, Max
+          Dippel, Marius Lindauer, Frank Hutter (2018) Towards Automatically-Tuned Deep Neural Networks: 7. in Hutter F,
+          Kotthoff L, Vanschoren J, (Eds.). AutoML: Methods, Sytems, Challenges. Springer, pp. 141–156.&nbsp;<a
+            href="#fnref:AutoPyTorch" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:TPOT">
+        <p>Olson RS, Moore JH (2019) TPOT: A Tree-Based Pipeline Optimization Tool for Automating Machine Learning. in
+          Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing.
+          Cham, pp. 151–160.&nbsp;<a href="#fnref:TPOT" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:FeatureTools">
+        <p>Feature Labs. Featuretools 0.12.0 documentation. https://docs.featuretools.com/en/stable/index.html (accessed
+          on 20.11.2019).&nbsp;<a href="#fnref:FeatureTools" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:tsfresh">
+        <p>Christ M, Braun N, Neuffer J. tsfresh — tsfresh 0.12.0 documentation.
+          https://tsfresh.readthedocs.io/en/latest/index.html (accessed on 06.02.2020).&nbsp;<a href="#fnref:tsfresh"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:FeatureHub">
+        <p>Smith MJ, Wedge R, Veeramachaneni K (2017) FeatureHub: Towards collaborative data science. 2017 IEEE
+          International Conference on Data Science and Advanced Analytics (DSAA), pp. 590–600.&nbsp;<a
+            href="#fnref:FeatureHub" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:ATM">
+        <p>Swearingen T, Drevo W, Cyphers B, Cuesta-Infante A, Ross A, Veeramachaneni K (2017 - 2017) ATM: A
+          distributed, collaborative, scalable system for automated machine learning. 2017 IEEE International Conference
+          on Big Data (Big Data). IEEE, pp. 151–162.&nbsp;<a href="#fnref:ATM" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Auto_ml">
+        <p>Parry P. auto_ml 0.1.0 documentation. https://auto-ml.readthedocs.io/en/latest/index.html (accessed on
+          20.11.2019).&nbsp;<a href="#fnref:Auto_ml" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:H2O">
+        <p>H2O.ai. AutoML: Automatic Machine Learning — H2O 3.26.0.10 documentation.
+          http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html (accessed on 20.11.2019).&nbsp;<a href="#fnref:H2O"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:SAS">
+        <p>SAS Institute Inc. SAS Visual Data Mining and Machine Learning.
+          https://www.sas.com/en_us/software/visual-data-mining-machine-learning.html (accessed on 26.01.2020).&nbsp;<a
+            href="#fnref:SAS" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:MLBox">
+        <p>ARONIO DE ROMBLAY A. MLBox Documentation. https://mlbox.readthedocs.io/en/latest/index.html (accessed on
+          20.11.2019).&nbsp;<a href="#fnref:MLBox" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Google">
+        <p>Google Cloud. Best practices for creating training data | AutoML Tables Documentation | Google Cloud.
+          https://cloud.google.com/automl-tables/docs/data-best-practices#tables-does (accessed on 20.11.2019).&nbsp;<a
+            href="#fnref:Google" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Azure">
+        <p>Microsoft Azure. Azure Machine Learning documentation.
+          https://docs.microsoft.com/en-us/azure/machine-learning/ (accessed on 20.11.2019).&nbsp;<a href="#fnref:Azure"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Amazon">
+        <p>AWS. Amazon SageMaker - Developer Guide. https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-dg.pdf
+          (accessed on 20.11.2019).&nbsp;<a href="#fnref:Amazon" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:AutoKeras">
+        <p>Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and
+          Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
+          Springer International Publishing. Cham, pp. 113–134.&nbsp;<a href="#fnref:AutoKeras"
+            class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:TransmogrifAI">
+        <p>Salesforce.com, Inc. AutoML library for building modular, reusable, strongly typed machine learning workflows
+          on Spark from Salesforce Engineering. https://transmogrif.ai/ (accessed on 26.01.2020).&nbsp;<a
+            href="#fnref:TransmogrifAI" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:Darwin">
+        <p>SparkCognition (2019) From Data to Application: DARWINS UNIQUE APPROACH TO AUTOML.&nbsp;<a
+            href="#fnref:Darwin" class="reversefootnote">↩</a></p>
+      </li>
+      <li id="fn:MLJar">
+        <p>MLJAR. mljar-docs. https://docs.mljar.com/ (accessed on 06.02.2020).&nbsp;<a href="#fnref:MLJar"
+            class="reversefootnote">↩</a></p>
+      </li>
+    </ol>
+  </div>
+  <script>
+    var moreLink = document.querySelector('.js-more')
+    if (moreLink) {
+      document.querySelector('.js-more').addEventListener('click', function (e) {
+        e.preventDefault()
+        e.target.classList.add('dn')
+        e.target.classList.remove('dib')
+        document.querySelectorAll('.js-hidden').forEach(function (elt) {
+          elt.classList.remove('dn')
         })
-      }
-    </script>
-    <script>window.twttr = (function(d, s, id) {
+      })
+    }
+  </script>
+  <script>window.twttr = (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
+        t = window.twttr || {};
       if (d.getElementById(id)) return t;
       js = d.createElement(s);
       js.id = id;
@@ -412,11 +519,12 @@
       fjs.parentNode.insertBefore(js, fjs);
 
       t._e = [];
-      t.ready = function(f) {
+      t.ready = function (f) {
         t._e.push(f);
       };
 
       return t;
     }(document, "script", "twitter-wjs"));</script>
-  </body>
+</body>
+
 </html>
