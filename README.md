@@ -68,7 +68,7 @@ MLJar[^MLJar]
 
 [^MLBox]: ARONIO DE ROMBLAY A. MLBox Documentation. https://mlbox.readthedocs.io/en/latest/index.html (accessed on 20.11.2019).
 
-[^Google]: Google Cloud. Best practices for creating training data  |  AutoML Tables Documentation  |  Google Cloud. https://cloud.google.com/automl-tables/docs/data-best-practices#tables-does (accessed on 20.11.2019).
+[^Google]: Google Cloud. Best practices for creating training data  \|  AutoML Tables Documentation  \|  Google Cloud. https://cloud.google.com/automl-tables/docs/data-best-practices#tables-does (accessed on 20.11.2019).
 
 [^Azure]: Microsoft Azure. Azure Machine Learning documentation. https://docs.microsoft.com/en-us/azure/machine-learning/ (accessed on 20.11.2019).
 
