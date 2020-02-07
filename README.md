@@ -1,6 +1,6 @@
-**Probably** we will have an introductory text somewhere in the beginning.
+<!-- **Probably** we will have an introductory text somewhere in the beginning. -->
 
-Auto-WEKA[^AutoWEKA]
+<!-- Auto-WEKA[^AutoWEKA]
 
 Hyperopt-sklearn[^Hyperoptsklearn]
 
@@ -80,4 +80,4 @@ MLJar[^MLJar]
 
 [^Darwin]: SparkCognition (2019) From Data to Application: DARWINS UNIQUE APPROACH TO AUTOML.
 
-[^MLJar]: MLJAR. mljar-docs. https://docs.mljar.com/ (accessed on 06.02.2020).
+[^MLJar]: MLJAR. mljar-docs. https://docs.mljar.com/ (accessed on 06.02.2020). -->
