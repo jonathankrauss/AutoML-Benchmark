@@ -10,12 +10,15 @@
   
   <!--This is where we define the functions to load the tables -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!--
   <script>
   $(function(){
   $("#table_1").load("include/table_1.html");
     });
-   <!--This is where we are done loading the tables -->
+   This is where we are done loading the tables
   </script>
+  -->
   
   {% if jekyll.environment == 'production' and site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -140,7 +143,6 @@
 
     
    <!--This is where Table 1 should be-->
-  <div id="table_1"></div>  
    <div> <script>$("#table_1").load("include/table_1.html");
     </div>
      
