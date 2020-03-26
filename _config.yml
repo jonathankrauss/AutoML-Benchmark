@@ -10,7 +10,7 @@ url: "https://hannomaximilian.github.io/AutoML-Benchmark/"
 
 # If you're deployging to a subdirectory (https://foo.com/bar/)
 # Then write "/bar/". Otherwise, remove this line.
-baseurl: "/AutoML-Benchmark/"
+#baseurl: "/AutoML-Benchmark/"
 
 # Twitter IDs
 twitter:
