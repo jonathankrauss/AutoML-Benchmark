@@ -7,23 +7,26 @@
       <table class="f6 w-100 mw8 center" cellspacing="0">
         <thead>
           <tr>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-            <th class="fw6 bt b--black tl bg-white tc" colspan="2">Data Preparation</th>
-            <th class="fw6 bt b--black tl bg-white tc" colspan="4">Modeling</th>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
+            <th rowspan=4 class="fw6 bt b--black tl bg-white">&nbsp;</th>
+            <th colspan = 9 class="fw6 bt b--black tl bg-green">Performance;</th>
+          </tr>
+          
+          <tr>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="8">Evaluation</th>
+            <th class="fw6 bt b--black tl bg-white tc" rowspan = 3>Finding the best model (min)</th>
           </tr>
           <tr>
-            <th class="fw6 bb b--black tl bg-white tl">Systems</th>
-            <th class="fw6 bb b--black tl bg-white tc">Data Integration</th>
-            <th class="fw6 bb b--black tl bg-white tc">Data Preprocessing</th>
-            <th class="fw6 bb b--black tl bg-white tc">Feature Engineering</th>
-            <th class="fw6 bb b--black tl bg-white tc">Algorithm Selection</th>
-            <th class="fw6 bb b--black tl bg-white tc">HPO</th>
-            <th class="fw6 bb b--black tl bg-white tc">Training</th>
-            <th class="fw6 bb b--black tl bg-white tc">Diagnosis</th>
-            <th class="fw6 bb b--black tl bg-white tc">Deployment</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="6">Classification</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="2">Regression</th>
           </tr>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">Accuracy [%]</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">Logarithm Loss[-1 - 1]</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">F1 Score[0-1]</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">ROC</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">AUC[0-1]</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">Confusion Matrix</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">RMSE[0-inf]</th>
+            <th class="fw6 bt b--black tl bg-white tc" colspan="1">MAE[0-inf]</th>
         </thead>
         <tbody class="lh-copy">
 
@@ -38,6 +41,8 @@
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">&nbsp;</td> <!-- Diagnosis -->
             <td class="tc bb br">&nbsp;</td> <!-- Deployment -->
+            <td class="tc bb br">&nbsp;</td> <!-- Deployment -->
+
           </tr>
           <tr>
             <td class="tl">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
