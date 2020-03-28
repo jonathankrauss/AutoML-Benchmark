@@ -195,6 +195,10 @@ canvas {
     display: none
 }
 
+.ipt-light-green {
+    background-color: rgb(197 ,246, 235)
+}
+        
 .ipt-green {
     background-color: rgb(23 ,156, 125)
 }
