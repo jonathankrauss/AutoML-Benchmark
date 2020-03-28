@@ -24,6 +24,13 @@
   </script>
   <!--This is where we are done loading the tables -->
   
+  <script>
+  $(function(){
+  $("#table_3").load("include/table_3.html");
+    });
+  </script>
+  <!--This is where we are done loading the tables -->
+  
   {% if jekyll.environment == 'production' and site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -82,8 +89,8 @@ Projects that rely on the application of ML are usually referred to as ML projec
     <!-- <p class = "ph2"> This is the text </p> -->
   </section>
   
-    <!--Table 1-->
-    <div id="table_1"></div>
+  <!--Table 1-->
+  <div id="table_1"></div>
 
   <!-- Here starts Chapter 4 -->
   <section class= "ph4">
@@ -91,14 +98,17 @@ Projects that rely on the application of ML are usually referred to as ML projec
     <!-- <p class = "ph2"> This is the text </p> -->
   </section>  
   
-    <!--Table 2-->
-    <div id="table_2"></div>
+  <!--Table 2-->
+  <div id="table_2"></div>
   
   <!-- Here starts Chapter 5 -->
   <section class= "ph4">
     <h2> 5: Modeling and Deployment</h2>
     <!-- <p class = "ph2"> This is the text </p> -->
   </section>  
+  
+    <!--Table 3-->
+  <div id="table_3"></div>
   
   <!-- Here starts Chapter 6 -->
   <section class= "ph4">
