@@ -8,14 +8,14 @@
         <thead>
           <tr>
             <th rowspan=4 class="fw6 bt double-bottom b--black tl thick-br bl bg-white ph2" width="12%" ><h4>System</h4></th>
-            <th colspan = 11 class="fw6 bt br b--black tc ipt-green">Performance</th>
+            <th colspan = 11 class="fw6 bt thick-br b--black tc ipt-green">Performance</th>
           </tr>
           
           <tr>
             <th class="fw6 bt b--black tc bb br bg-grey-400" colspan="8">Evaluation</th>
             <th class="fw6 bt b--black tc double-bottom br bg-grey-400" rowspan = 3>Finding the best model (min)</th>
             <th class="fw6 bt b--black tc double-bottom br bg-grey-400" rowspan = 3>Train/test <wbr>dataset</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-400" rowspan = 3>How to avoid overfitting?</th>
+            <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-400" rowspan = 3>How to avoid overfitting?</th>
 
           </tr>
           <tr>
@@ -46,7 +46,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">47 (100 trials)</td> <!-- Finding best model -->
             <td class="tc bb br">Train and test splitted manually <wbr>(CNC dataset folder)</td> <!-- Train/test dataset -->
-            <td class="tc bb br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
 
 
           </tr>
@@ -63,7 +63,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">120</td> <!-- Finding best model -->
             <td class="tc bb br">Included all the data and performed scikit learn train_test_split function</td> <!-- Train/test dataset -->
-            <td class="tc bb br">It uses resamble strategy (basically train and test split)</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">It uses resamble strategy (basically train and test split)</td> <!-- Avoiding overfitting -->
 
           </tr>
          
@@ -80,7 +80,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">68,93</td> <!-- Finding best model -->
             <td class="tc bb br">It uses resamble strategy (basically train and test split)</td> <!-- Train/test dataset -->
-            <td class="tc bb br">This pipeline optimization procedure uses internal k-fold cross-validaton to avoid overfitting on the provided data</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">This pipeline optimization procedure uses internal k-fold cross-validaton to avoid overfitting on the provided data</td> <!-- Avoiding overfitting -->
           </tr>
           <tr>
             
@@ -97,7 +97,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">53,1</td> <!-- Finding best model -->
             <td class="tc bb br"> Included all data and made train_test_explit from sklearn</td> <!-- Train/test dataset -->
-            <td class="tc bb br">K-fold cross-validation is used to validate a model internally</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">K-fold cross-validation is used to validate a model internally</td> <!-- Avoiding overfitting -->
           </tr>
           <tr>
             <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
@@ -111,7 +111,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">-</td> <!-- Finding best model -->
             <td class="tc bb br">Include all data. The system splits it into train(60%), validation(30%), test(10%)</td> <!-- Train/test dataset -->
-            <td class="tc bb br">It offers k-fold cross validation through the Autotuning capability</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">It offers k-fold cross validation through the Autotuning capability</td> <!-- Avoiding overfitting -->
           </tr>
           </tr>
           <tr>
@@ -128,7 +128,7 @@
             <td class="tc bb br">40 iterations</td> <!-- Finding best model -->
             <td class="tc bb br">Included all the data already preprocessed (2 files, one for train(70%) and 1 for test(30%)) 
              and target name. A dataset is considered testset if it does not contain the target value.</td> <!-- Train/test dataset -->
-            <td class="tc bb br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
           </tr>
           </tr>
           <tr>
@@ -145,7 +145,7 @@
             <td class="tc bb br">60</td> <!-- Finding best model -->
             <td class="tc bb br"> Included all data. The system split it into train(80%), validation(10%) and test(10%). 
               The evaluation uses the test dataset</td> <!-- Train/test dataset -->
-            <td class="tc bb br">It only says that the dataset will be split into training, validation and testing sets. 
+            <td class="tc bb thick-br">It only says that the dataset will be split into training, validation and testing sets. 
               By default, AutoML Tables uses 80% of your data for training, 10% for validation, and 10% for testing, 
               but you can manually edit those values if necessary.</td> <!-- Avoiding overfitting -->
           </tr>
@@ -163,7 +163,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">50 min</td> <!-- Finding best model -->
             <td class="tc bb br">Included all the data (Raw data) and performed train test split (70% for training).</td> <!-- Train/test dataset -->
-            <td class="tc bb br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
           </tr>
           </tr>
           
@@ -181,7 +181,7 @@
             <td class="tc bb br">-</td> <!-- MAE -->
             <td class="tc bb br">60,7</td> <!-- Finding best model -->
             <td class="tc bb br">Train and test splitted manually (CNC dataset folder)</td> <!-- Train/test dataset -->
-            <td class="tc bb br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
           </tr>
           </tr>
           
