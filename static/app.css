@@ -41,7 +41,7 @@ pre {
 }
 
 a {
-    color: blue
+    color: #357edd;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
