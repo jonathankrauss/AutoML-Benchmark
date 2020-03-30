@@ -23,12 +23,18 @@
     });
   </script>
   
+    <script>
+  $(function(){
+  $("#integration_table").load("include/integration_table.html");
+    });
+  </script>
+  
+  
   <script>
   $(function(){
   $("#preparation_table").load("include/preparation_table.html");
     });
   </script>
-  <!--This is where we are done loading the tables -->
   
   <script>
   $(function(){
@@ -124,6 +130,7 @@ Projects that rely on the application of ML are usually referred to as ML projec
     <!-- <p class = "ph2"> This is the text </p> -->
     <div class="ph1">
       <h3>5.1 Data Integration</h3>
+      <div id="integration_table"></div>
     </div>
     <div class="ph1">
       <h3>5.2 Data Preparation</h3>
