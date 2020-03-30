@@ -13,6 +13,12 @@
   
   <script>
   $(function(){
+  $("#characteristics_table").load("include/characteristics_table.html");
+    });
+  </script>
+  
+  <script>
+  $(function(){
   $("#performance_table").load("include/performance_table.html");
     });
   </script>
@@ -93,10 +99,13 @@ Projects that rely on the application of ML are usually referred to as ML projec
   </section>
   
   <!-- Here starts Chapter 3 -->
-  <section class= "ph4">
+  <div class= "ph4">
     <h2> 3: Characteristics of AutoML systems </h2>
     <!-- <p class = "ph2"> This is the text </p> -->
-  </section>
+    <div class="ph1">
+      <div id="characteristics_table"></div>
+    </div>
+  </div>
   
   
   <!-- Here starts Chapter 4 -->
