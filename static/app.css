@@ -196,6 +196,15 @@ canvas {
     display: none
 }
 
+.pastel {
+    background-color: rgb(255 ,235, 204)
+}
+
+.light-pastel {
+    background-color: rgb(255 ,245, 230)
+}
+
+
 .ipt-light-green {
     background-color: rgb(197 ,246, 235)
 }
