@@ -223,12 +223,14 @@ canvas {
 
 .double-bottom {
     border-bottom-style: double;
-    border-bottom-width: 4px
+    border-bottom-width: 4px;
+    border-color:  rgb(255 ,163, 102)
 }
 
 .thick-br {
     border-right-style: solid;
-    border-right-width: 2px
+    border-right-width: 2px;
+    border-color:  rgb(23 ,156, 125)
 }
 
 .border-box, a, article, body, code, dd, div, dl, dt, fieldset, footer, form, h1, h2, h3, h4, h5, h6, header, html, input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], legend, li, main, ol, p, pre, section, table, td, textarea, th, tr, ul {
