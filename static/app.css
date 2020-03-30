@@ -204,6 +204,14 @@ canvas {
     background-color: rgb(23 ,156, 125)
 }
 
+.ipt-light-orange {
+    background-color: rgb(255 ,204 , 153)
+}
+        
+.ipt-orange {
+    background-color: rgb(255 ,163, 102)
+}
+
 .double-bottom {
     border-bottom-style: double;
     border-bottom-width: 4px
