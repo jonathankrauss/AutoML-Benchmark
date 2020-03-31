@@ -13,9 +13,9 @@
             <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-400" rowspan = 3>Deployment</th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200" rowspan="2">Algorithms Included</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-200" rowspan="2">ML Algorithms Included</th>
             <th class="fw6 bt b--black tc bb br bg-grey-200" colspan="3">Algorithm Selection</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200" rowspan="2">Hyperparameter Selection [Yes/No]</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-200" rowspan="2">Hyperparameter Selection included</th>
             <th class="fw6 bt b--black tc double-bottom br bg-grey-200" rowspan="2">Training</th>
             <th class="fw6 bt b--black tc bb br bg-grey-200" colspan="2">Model Diagnosis</th>
           </tr>
@@ -31,12 +31,11 @@
           <tr>
             <td class="tl bb thick-br bl ph2">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
                   class="footnote">1</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">Decision Tree, Gaussian Processes, Annealing, 
-              TPE, Light GBM, Random Search</td> <!-- Algorithms included -->
+            <td class="tc bb br">Decision Tree</td> <!-- ML Algorithms included -->
             <td class="tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="tc bb br">Model</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
@@ -47,12 +46,12 @@
           <tr>
             <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
                   class="footnote">2</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">AdaBoost, Decision Tree, Gaussian Processes, Gradient Boosting, K-NN, 
-            Random Forest, SVM, Bernoulli NB</td> <!-- Algorithms included -->
+            <td class="tc bb br">AdaBoost, Decision Tree, Gradient Boosting, K-NN, 
+            Random Forest, SVM</td> <!-- ML Algorithms included -->
             <td class="tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="tc bb br">Model</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
@@ -63,13 +62,12 @@
           <tr>
             <td class="tl bb thick-br bl ph2">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></td>
             <!-- Systems -->
-            <td class="tc bb br">AdaBoost, Decision Tree, Gaussian Processs, Gradient Boosting, K-NN, 
-              Logistic Regression, Passive Agressive, Random Forest, SGD, SVM, Feature Agglomeration,
-            Fast ICA, RBF Sampler, ...</td> <!-- Algorithms included -->
+            <td class="tc bb br">AdaBoost, Decision Tree, K-NN, 
+              Logistic Regression, Random Forest, SVM, XGBoost</td> <!-- Algorithms included -->
             <td class="tc bb br">-</td> <!-- Evaluation approach -->
             <td class="tc bb br">Population</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
@@ -80,11 +78,11 @@
           <tr>
             <td class="tl bb thick-br bl ph2">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></td>
             <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">Neural Network, Gradient Boosting, Random Forest, XGBoost</td> <!-- Algorithms included -->
             <td class="tc bb br">-</td> <!-- Evaluation approach -->
             <td class="tc bb br">Random Search</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
@@ -92,11 +90,11 @@
           </tr>
           <tr>
             <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">Neural Network, Gradient Boosting, Regression, Random Forest, SVM</td> <!-- Algorithms included -->
             <td class="tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="tc bb br">Model</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">X</td> <!-- Charts -->
@@ -106,11 +104,11 @@
           <tr>
             <td class="tl bb thick-br bl ph2">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></td>
             <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">Random Forest, XGBoost</td> <!-- Algorithms included -->
             <td class="tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="tc bb br">Model</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
@@ -120,25 +118,25 @@
           <tr>
             <td class="tl bb thick-br bl ph2">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></td>
             <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">AdaBoost, Gradient Boosting, </td> <!-- Algorithms included -->
             <td class="tc bb br">-</td> <!-- Evaluation approach -->
             <td class="tc bb br">-</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
-            <td class="tc bb br">-</td> <!-- Charts -->
-            <td class="tc bb thick-br">Not included</td> <!-- Deployment -->
+            <td class="tc bb br">X</td> <!-- Charts -->
+            <td class="tc bb thick-br">Web service</td> <!-- Deployment -->
           </tr>
           </tr>
           <tr>
             <td class="tl bb thick-br bl ph2">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></sup>
             </td> <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">Not yet analyzed</td> <!-- Algorithms included -->
             <td class="tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="tc bb br">Model</td> <!-- Search -->
             <td class="tc bb br">X</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">X</td> <!-- Charts -->
@@ -150,11 +148,11 @@
           <tr>
             <td class="tl bb thick-br bl ph2">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">9</a></sup></td>
             <!-- Systems -->
-            <td class="tc bb br">XXX</td> <!-- Algorithms included -->
+            <td class="tc bb br">Not yet analyzed</td> <!-- Algorithms included -->
             <td class="tc bb br">-</td> <!-- Evaluation approach -->
             <td class="tc bb br">-</td> <!-- Search -->
             <td class="tc bb br">-</td> <!-- GUI -->
-            <td class="tc bb br">X</td> <!-- Hyperparameter Selection [Yes/No] -->
+            <td class="tc bb br">X</td> <!-- Hyperparameter Selection included -->
             <td class="tc bb br">X</td> <!-- Training -->
             <td class="tc bb br">X</td> <!-- Metrics -->
             <td class="tc bb br">-</td> <!-- Charts -->
