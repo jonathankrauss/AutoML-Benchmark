@@ -1,0 +1,174 @@
+<html>
+
+
+<body>
+
+  <!-- colours = light-pastel, pastel, ipt-orange, ipt-light-orange, bg-orange-200, bg-orange-100, ipt-light-orange, bg-amber-200 -->
+  
+  <div class="overflow-auto ph5 pv4">
+      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+        <thead>
+          <tr>
+            <th width="160" rowspan=3 class="fw6 bt double-bottom b--black tl thick-br bl bg-white ph2"><h4>System</h4></th>
+            <th class="fw6 bt b--black tc br bg-grey-400" colspan = 7>Data preparation</th>
+            <th class="fw6 bt b--black tc thick-br bg-grey-400" colspan = 3>Feature Engineering</th>
+          </tr>
+
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Included</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Handling missing values</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Outliers detection and deletion</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data standardization</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data reduction</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data balancing</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">PCA</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Included</th>
+            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Integrated with modeling</th>
+            <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-50" rowspan="2" colspan="1">Automatic</th>
+
+        </thead>
+        <tbody class="lh-copy">
+
+          <tr>
+            <td class="tl bb thick-br bl ph2">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
+                  class="footnote">1</a></sup></td> <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">X</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">-</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp</td> <!-- PCA -->
+            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
+                  class="footnote">2</a></sup></td> <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">X</td> <!-- Data standardization -->
+            <td class="tc bb br">&nbsp</td> <!-- Data reduction -->
+            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
+            <td class="tc bb br">X</td> <!-- PCA -->
+            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+
+          </tr>
+         
+          <tr>
+            <td class="tl bb thick-br bl ph2">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></td>
+            <!-- Systems -->
+            <td class="tc bb br">&nbsp;</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">-</td> <!-- Data balancing -->
+            <td class="tc bb br">X</td> <!-- PCA -->
+            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+          </tr>
+          <tr>
+            
+          <tr>
+            <td class="tl bb thick-br bl ph2">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></td>
+            <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">X</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp;</td> <!-- PCA -->
+            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">X</td> <!-- Data reduction -->
+            <td class="tc bb br">-</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp</td> <!-- PCA -->
+            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></td>
+            <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp</td> <!-- PCA -->
+            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></td>
+            <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp</td> <!-- PCA -->
+            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">X</td> <!-- Automatic -->
+          </tr>
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></sup>
+            </td> <!-- Systems -->
+            <td class="tc bb br">X</td> <!-- Included -->
+            <td class="tc bb br">X</td> <!-- >Handling missing values -->
+            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">&nbsp</td> <!-- Data standardization -->
+            <td class="tc bb br">&nbsp</td> <!-- Data reduction -->
+            <td class="tc bb br">X</td> <!-- Data balancing -->
+            <td class="tc bb br">X</td> <!-- PCA -->
+            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">&nbsp</td> <!-- Automatic -->
+          </tr>
+          </tr>
+          
+          </tr>
+          <tr>
+            <td class="tl bb thick-br bl ph2">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">9</a></sup></td>
+            <!-- Systems -->
+            <td class="tc bb br">-</td> <!-- Included -->
+            <td class="tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="tc bb br">-</td> <!-- Data standardization -->
+            <td class="tc bb br">-</td> <!-- Data reduction -->
+            <td class="tc bb br">-</td> <!-- Data balancing -->
+            <td class="tc bb br">&nbsp</td> <!-- PCA -->
+            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
+            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
+            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+          </tr>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+</body>
+</html>

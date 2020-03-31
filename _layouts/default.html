@@ -4,9 +4,45 @@
 {% assign is_home = false %}
 {% endif %}
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <html lang="{{ page.lang | default: site.lang | default: "en" }}" class="dark-gray">
- 
 <head>
+  
+  <!--This is where we define the functions to load the tables -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script>
+  $(function(){
+  $("#characteristics_table").load("include/characteristics_table.html");
+    });
+  </script>
+  
+  <script>
+  $(function(){
+  $("#performance_table").load("include/performance_table.html");
+    });
+  </script>
+  
+    <script>
+  $(function(){
+  $("#integration_table").load("include/integration_table.html");
+    });
+  </script>
+  
+  
+  <script>
+  $(function(){
+  $("#preparation_table").load("include/preparation_table.html");
+    });
+  </script>
+  
+  <script>
+  $(function(){
+  $("#modeling_and_deployment").load("include/modeling_and_deployment.html");
+    });
+  </script>
+  <!--This is where we are done loading the tables -->
+  
   {% if jekyll.environment == 'production' and site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -26,384 +62,130 @@
   {% seo %}
 </head>
 
+ <!-- Here i put up the title of the page (not the heading) -->
 <body>
-  <main class="measure-wide center ph4 pt5">
-    {% if is_home %}
-    <h1 class="mt0 mb4">
-      {% else %}
-      <h2 class="mt0 mb5">
-        {% endif %}
-        <a href="{{ "/" | relative_url }}" class="no-underline bg-{{ site.brand_color }}">
-          {{site.title}}
-        </a>
-        {% if is_home %}
-    </h1>
-    {% else %}
-    </h2>
-    {% endif %}
-    <!-- {% if is_home %} -->
-    <section class="pv2">
-      {{ content }}
+  <section class="jumbotron bg-light text-center">
+  <div class="container">
+      <h1>AutoML Comparison</h1>
+      <p class="lead text-muted">Comparison and Analysis of different AutoML frameworks.</p>
+  </div>
     </section>
-    <!-- {% else %}
-        <section class="pv2">
-          <h1 class="mt0 mb1">{{page.title}}</h1>
-          {% if page.date %}
-            <p class="silver mt0">
-              <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{page.date | date: site.date_format }}
-              </time>
-            </p>
-          {% endif %}
-          <p class="twitter-share-button-wrapper">
-            <a class="twitter-share-button"
-            href="https://twitter.com/intent/tweet"
-            data-size="large"
-            data-via="{{ site.twitter.username }}">
-            Tweet</a>
-          </p>
-          {{content}}
-          {% if page.date %}
-            <p class="silver">
-              <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{page.date | date: site.date_format }}
-              </time>
-            </p>
-          {% endif %}
-        </section>
-        <hr />
-        <section class="pv2">
-          {% assign home = site.pages | where:"url","/" %}
-          {{ home[0].content | markdownify }}
-        </section>
-      {% endif %} -->
-    <!-- {% if site.posts.size > 0 %}
-        <hr />
-        <section class="pv2">
-          <ul class="list pl0">
-          {% if is_home %}
-            {% for post in site.posts %}
-              {% if forloop.index0 == site.num_posts_visible_initially %}
-              <li class="mt0 mb4">
-                <h4 class="ma0">
-                  <a class="bg-{{ site.brand_color }} pv2 ph3 dib ba b--black br3 no-underline js-more" href="#">
-                    View All
-                  </a>
-                </h4>
-              </li>
-              {% endif %}
-              <li class="mt0 mb4 {% if forloop.index0 >= site.num_posts_visible_initially %}dn js-hidden{% endif %}">
-                <span class="silver db mb1">{{ post.date | date: site.date_format }}</span>
-                <h3 class="ma0">
-                  <a class=" no-underline" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h3>
-              </li>
-            {% endfor %}
-          {% else %}
-            {% for post in site.posts limit:site.num_posts_visible_initially %}
-              <li class="mt0 mb4">
-                <span class="silver db mb1">{{ post.date | date: site.date_format }}</span>
-                <h3 class="ma0">
-                  <a class=" no-underline" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h3>
-              </li>
-            {% endfor %}
-            <li class="pt4 mt0 mb4">
-              <h2 class="ma0">
-                <a
-                href="{{ "/" | relative_url }}"
-                class="no-underline bg-{{ site.brand_color }}">
-                  {{site.title}}
-                </a>
-              </h2>
-            </li>
-          {% endif %}
-          </ul>
-        </section>
-      {% endif %} -->
-  </main>
+  
+   <!-- Here starts Chapter 1 -->
+  <div class= "center ph4">
+    <h2> 1: Introduction to AutoML in Production </h2>
+    <p class = "ph2">In the pursuit of leveraging the potential of data, companies usually rely on ML technologies. Applications of ML range from detecting anomalies in the operation and non-specialized machines designed to learn by themselves, to optimization of routing through demand forecasting. Its most common use cases are for knowledge extraction operations and as the core technology underlying the control of processes and products.
+Projects that rely on the application of ML are usually referred to as ML projects. Although this naming is useful to get a straightforward view of the main idea, it conceals several tasks such as data preparation and implementation of the results.
+</p>
+  </div>
   <div class="ph4">
-    <section class="pb3 ph5">
+    <section class="ph5 pv4">
       <p><img src="static/images/pipeline.png" alt="AutoMLPipeline" title="AutoML pipeline in the context of production"></p>
     </section>
-    <div class="overflow-auto">
-      <table class="f6 w-100 mw8 center" cellspacing="0">
-        <thead>
-          <tr>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-            <th class="fw6 bt b--black tl bg-white tc" colspan="2">Data Preparation</th>
-            <th class="fw6 bt b--black tl bg-white tc" colspan="4">Modeling</th>
-            <th class="fw6 bt b--black tl bg-white">&nbsp;</th>
-          </tr>
-          <tr>
-            <th class="fw6 bb b--black tl bg-white tl">Systems</th>
-            <th class="fw6 bb b--black tl bg-white tc">Data Integration</th>
-            <th class="fw6 bb b--black tl bg-white tc">Data Preprocessing</th>
-            <th class="fw6 bb b--black tl bg-white tc">Feature Engineering</th>
-            <th class="fw6 bb b--black tl bg-white tc">Algorithm Selection</th>
-            <th class="fw6 bb b--black tl bg-white tc">HPO</th>
-            <th class="fw6 bb b--black tl bg-white tc">Training</th>
-            <th class="fw6 bb b--black tl bg-white tc">Diagnosis</th>
-            <th class="fw6 bb b--black tl bg-white tc">Deployment</th>
-          </tr>
-        </thead>
-        <tbody class="lh-copy">
-          <tr>
-            <td class="tl">Auto-WEKA<sup id="fnref:AutoWEKA"><a href="#fn:AutoWEKA" class="footnote">1</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">X</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
-                  class="footnote">2</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
-                  class="footnote">3</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">Auto-PyTorch<sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch"
-                  class="footnote">4</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">5</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">Feature Tools<sup id="fnref:FeatureTools"><a href="#fn:FeatureTools"
-                  class="footnote">6</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-            <td class="tc">&nbsp;</td> <!-- HPO -->
-            <td class="tc">&nbsp;</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">tsfresh<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">7</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-            <td class="tc">&nbsp;</td> <!-- HPO -->
-            <td class="tc">&nbsp;</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">FeatureHub<sup id="fnref:FeatureHub"><a href="#fn:FeatureHub" class="footnote">8</a></sup>
-            </td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-            <td class="tc">&nbsp;</td> <!-- HPO -->
-            <td class="tc">&nbsp;</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">ATM<sup id="fnref:ATM"><a href="#fn:ATM" class="footnote">9</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">X</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">Auto_ml<sup id="fnref:Auto_ml"><a href="#fn:Auto_ml" class="footnote">10</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">11</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="tl">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">12</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">X</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">13</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">14</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">X</td> <!-- Diagnosis -->
-            <td class="tc">X</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">15</a></sup>
-            </td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">X</td> <!-- Diagnosis -->
-            <td class="tc">X</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">Amazon SageMaker<sup id="fnref:Amazon"><a href="#fn:Amazon" class="footnote">16</a></sup>
-            </td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">X</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">17</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">&nbsp;</td> <!-- Data Preprocessing -->
-            <td class="tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="tc">&nbsp;</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI"
-                  class="footnote">18</a></sup></td> <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">&nbsp;</td> <!-- Diagnosis -->
-            <td class="tc">&nbsp;</td> <!-- Deployment -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl">Darwin<sup id="fnref:Darwin"><a href="#fn:Darwin" class="footnote">19</a></sup></td>
-            <!-- Systems -->
-            <td class="tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="tc">X</td> <!-- Data Preprocessing -->
-            <td class="tc">X</td> <!-- Feature Engineering -->
-            <td class="tc">X</td> <!-- Algorithm Selection -->
-            <td class="tc">X</td> <!-- HPO -->
-            <td class="tc">X</td> <!-- Training -->
-            <td class="tc">X</td> <!-- Diagnosis -->
-            <td class="tc">X</td> <!-- Deployment -->
-          </tr>
-          <tr>
-            <td class="bb b--black tl">MLJar<sup id="fnref:MLJar"><a href="#fn:MLJar" class="footnote">20</a></sup></td>
-            <td class="bb b--black tc">&nbsp;</td> <!-- Data Integration -->
-            <td class="bb b--black tc">X</td> <!-- Data Preprocessing -->
-            <td class="bb b--black tc">&nbsp;</td> <!-- Feature Engineering -->
-            <td class="bb b--black tc">X</td> <!-- Algorithm Selection -->
-            <td class="bb b--black tc">X</td> <!-- HPO -->
-            <td class="bb b--black tc">X</td> <!-- Training -->
-            <td class="bb b--black tc">X</td> <!-- Diagnosis -->
-            <td class="bb b--black tc">X</td> <!-- Deployment -->
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
-  <div class="center ph4 pt6 footnotes">
+  
+  <!-- Here starts Chapter 2 -->
+  <section class= "ph4">
+    <h2> 2: Methodology of the AutoML Benchmark </h2>
+    <p class = "ph2"> We evaluated AutoML systems with respect to what they propose to achieve, 
+      but also evaluated the largest share of them with test data from the production domain. The AutoML 
+      Systems that are included in our Analysis are: Auto-WEKA, Hyperopt-sklearn, Auto-sklearn, Auto-PyTorch, 
+      TPOT, The Automatic Statistician, Feature Tools, Categorical-encoding, tsfresh, FeatureHub, ATM, Auto_ml, H2O AutoML, Devol, 
+      SAS, MLBox, Google AutoML, Azure Machine Learning, Amazon SageMaker, Uber Ludwig, AutoKeras, ExploreKit, TransmogrifAI, Darwin, 
+      MLJar, DataRobot. Not all of the AutoML systems included in the Analysis have been benchmarked. 
+      The main criteria for selecting the most suitable system for a use case from production were: 
+      the ease-of-use, both in terms of user experience and knowledge requirements; the coverage of the 
+      required tools, e.g., if a tool provides the algorithms that are necessary for a given project; 
+      and the inclusion of domain knowledge.
+ </p>
+  </section>
+  
+  <!-- Here starts Chapter 3 -->
+  <div class= "ph4">
+    <h2> 3: Characteristics of AutoML systems </h2>
+    <!-- <p class = "ph2"> This is the text </p> -->
+    <div class="ph1">
+      <div id="characteristics_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+
+    </div>
+    
+  </div>
+  
+  
+  <!-- Here starts Chapter 4 -->
+  <div class= "ph4">
+    <h2> 4: Performance of the AutoML systems, applied on a ML use case from production</h2>
+    <p class="ph2"> The currently 
+      demonstrated results have been generated on the 
+      <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill">CNC Mill Tool Wear data set</a>.
+      A future version of this benchmark will futher include the results generated on the 
+      <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM"> SECOM data set </a>.
+    <p/>
+    <!--Performance Table -->
+    <div class="ph1">
+      <div id="performance_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+     <div/>
+  </div>  
+  
+  
+
+  
+  <!-- Here starts Chapter 5 -->
+  <div class= "ph4">
+    <h2> 5: Functionalities of the AutoML systems</h2>
+    <!-- <p class = "ph2"> This is the text </p> -->
+    <div class="ph1">
+      <h3>5.1 Data Integration</h3>
+      <div id="integration_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+    <div class="ph1">
+      <h3>5.2 Data Preparation</h3>
+      <div id="preparation_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+    <div class="ph1">
+      <h3>5.3 Modeling and Deployment</h3>
+      <div id="modeling_and_deployment"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+  </div>  
+  
+    
+  <!-- Here starts Chapter 6 -->
+  <section class= "ph4">
+    <h2> 6: Wrap Up </h2>
+    <p class = "ph2">The past developments in the area of AutoML indicate that progress towards improved automation of specific steps within the ML pipeline can be expected. Overall a full automation of the whole ML pipeline from Data Integration to Deployment is a concept that requires more research. In the near future, it can be expected that tasks such as Modeling will be automated enough so that ML models will be created with little to no ML knowledge. Semi-AutoML systems that support data scientists in other activities can be expected in the future as well.</p>
+  </section> 
+  
+  <!-- Here starts Chapter 7 -->
+  <section class= "ph4">
+    <h2> 7: Bibliography </h2>
+    <p class = "ph2"> In order of appearance in Benchmark Table</p>
+  </section> 
+  
+  <div class="center ph4 pt2 footnotes">
     <ol>
+      <!--
       <li id="fn:AutoWEKA">
         <p>Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and
           Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine
           Learning. Springer International Publishing. Cham, pp. 81–95.&nbsp;<a href="#fnref:AutoWEKA"
             class="reversefootnote">↩</a></p>
+      -->
       </li>
       <li id="fn:Hyperoptsklearn">
         <p>Komer B, Bergstra J, Eliasmith C (2019) Hyperopt-Sklearn. in Hutter F, Kotthoff L, Vanschoren J, (Eds.).
@@ -415,21 +197,30 @@
           Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
           Springer International Publishing. Cham, pp. 113–134.&nbsp;<a href="#fnref:Autosklearn"
             class="reversefootnote">↩</a></p>
+      <!--
       </li>
       <li id="fn:AutoPyTorch">
         <p>Hector Mendoza, Aaron Klein, Matthias Feurer, Jost Tobias Springenberg, Matthias Urban, Michael Burkart, Max
           Dippel, Marius Lindauer, Frank Hutter (2018) Towards Automatically-Tuned Deep Neural Networks: 7. in Hutter F,
           Kotthoff L, Vanschoren J, (Eds.). AutoML: Methods, Sytems, Challenges. Springer, pp. 141–156.&nbsp;<a
             href="#fnref:AutoPyTorch" class="reversefootnote">↩</a></p>
+      -->
       </li>
       <li id="fn:TPOT">
         <p>Olson RS, Moore JH (2019) TPOT: A Tree-Based Pipeline Optimization Tool for Automating Machine Learning. in
           Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing.
           Cham, pp. 151–160.&nbsp;<a href="#fnref:TPOT" class="reversefootnote">↩</a></p>
       </li>
+      <!--
+      <li id="fn:TheAutomatedStatician">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:TheAutomatedStatician" class="reversefootnote">↩</a></p>
+      </li>
       <li id="fn:FeatureTools">
         <p>Feature Labs. Featuretools 0.12.0 documentation. https://docs.featuretools.com/en/stable/index.html (accessed
           on 20.11.2019).&nbsp;<a href="#fnref:FeatureTools" class="reversefootnote">↩</a></p>
+      </li>
+        <li id="fn:CategoricalEncoding">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:CategoricalEncoding" class="reversefootnote">↩</a></p>
       </li>
       <li id="fn:tsfresh">
         <p>Christ M, Braun N, Neuffer J. tsfresh — tsfresh 0.12.0 documentation.
@@ -450,11 +241,17 @@
         <p>Parry P. auto_ml 0.1.0 documentation. https://auto-ml.readthedocs.io/en/latest/index.html (accessed on
           20.11.2019).&nbsp;<a href="#fnref:Auto_ml" class="reversefootnote">↩</a></p>
       </li>
+      -->
       <li id="fn:H2O">
         <p>H2O.ai. AutoML: Automatic Machine Learning — H2O 3.26.0.10 documentation.
           http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html (accessed on 20.11.2019).&nbsp;<a href="#fnref:H2O"
             class="reversefootnote">↩</a></p>
+      <!--
       </li>
+      <li id="fn:Devol">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+      </li>
+      -->
       <li id="fn:SAS">
         <p>SAS Institute Inc. SAS Visual Data Mining and Machine Learning.
           https://www.sas.com/en_us/software/visual-data-mining-machine-learning.html (accessed on 26.01.2020).&nbsp;<a
@@ -473,16 +270,25 @@
         <p>Microsoft Azure. Azure Machine Learning documentation.
           https://docs.microsoft.com/en-us/azure/machine-learning/ (accessed on 20.11.2019).&nbsp;<a href="#fnref:Azure"
             class="reversefootnote">↩</a></p>
+      <!--
       </li>
       <li id="fn:Amazon">
         <p>AWS. Amazon SageMaker - Developer Guide. https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-dg.pdf
           (accessed on 20.11.2019).&nbsp;<a href="#fnref:Amazon" class="reversefootnote">↩</a></p>
       </li>
+      <li id="fn:UberLudwig">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+      </li>
+      -->
       <li id="fn:AutoKeras">
         <p>Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and
           Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
           Springer International Publishing. Cham, pp. 113–134.&nbsp;<a href="#fnref:AutoKeras"
             class="reversefootnote">↩</a></p>
+      <!--
+      </li>
+      <li id="fn:ExploreKit">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
       </li>
       <li id="fn:TransmogrifAI">
         <p>Salesforce.com, Inc. AutoML library for building modular, reusable, strongly typed machine learning workflows
@@ -497,6 +303,10 @@
         <p>MLJAR. mljar-docs. https://docs.mljar.com/ (accessed on 06.02.2020).&nbsp;<a href="#fnref:MLJar"
             class="reversefootnote">↩</a></p>
       </li>
+      <li id="fn:DataRobot">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+      </li>
+    -->
     </ol>
   </div>
   <script>
