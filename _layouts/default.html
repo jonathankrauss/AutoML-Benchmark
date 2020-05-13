@@ -22,10 +22,16 @@
   $("#performance_table").load("include/performance_table.html");
     });
   </script>
+
+<script>
+  $(function(){
+  $("#integration_table").load("include/integration_table.html");
+    });
+  </script>
   
     <script>
   $(function(){
-  $("#integration_table").load("include/integration_table.html");
+  $("#requirements_and_boudaries_table").load("include/requirements_and_boudaries_table.html");
     });
   </script>
   
@@ -38,9 +44,22 @@
   
   <script>
   $(function(){
-  $("#modeling_and_deployment").load("include/modeling_and_deployment.html");
+  $("#modeling_table").load("include/modeling_table.html");
     });
   </script>
+
+  <script>
+  $(function(){
+  $("#deployment_table").load("include/deployment_table.html");
+    });
+  </script>
+
+  <script>
+  $(function(){
+  $("#results_table").load("include/results_table.html");
+    });
+  </script>
+
   <!--This is where we are done loading the tables -->
   
   {% if jekyll.environment == 'production' and site.google_analytics %}
@@ -134,7 +153,12 @@ Projects that rely on the application of ML are usually referred to as ML projec
      <div/>
   </div>  
   
-  
+  <div class="ph1">
+    <div id="requirements_and_boudaries_table"></div>
+    <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+      An empty field means that the information is missing in the current version of our Analysis 
+    </p>
+   <div/>
 
   
   <!-- Here starts Chapter 5 -->
@@ -156,13 +180,29 @@ Projects that rely on the application of ML are usually referred to as ML projec
       </p>
     </div>
     <div class="ph1">
-      <h3>5.3 Modeling and Deployment</h3>
-      <div id="modeling_and_deployment"></div>
+      <h3>5.3 Modeling</h3>
+      <div id="modeling_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+
+    <div class="ph1">
+      <h3>5.4 Deployment</h3>
+      <div id="deployment_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
   </div>  
+
+  <div class="ph1">
+    <h3>5.4 Results</h3>
+    <div id="results_table"></div>
+    <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+      An empty field means that the information is missing in the current version of our Analysis 
+    </p>
+  </div>
   
     
   <!-- Here starts Chapter 6 -->
