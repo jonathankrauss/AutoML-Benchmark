@@ -13,51 +13,40 @@
   
   <script>
   $(function(){
-  $("#characteristics_table").load("include/characteristics_table.html");
-    });
-  </script>
+    $("#characteristics_table").load("include/characteristics_table.html");
+  });
   
-  <script>
   $(function(){
-  $("#performance_table").load("include/performance_table.html");
-    });
-  </script>
+    $("#performance_table").load("include/performance_table.html");
+  });
 
-<script>
   $(function(){
-  $("#integration_table").load("include/integration_table.html");
-    });
-  </script>
+    $("#integration_table").load("include/integration_table.html");
+  });
   
-    <script>
   $(function(){
-  $("#requirements_and_boudaries_table").load("include/requirements_and_boudaries_table.html");
-    });
-  </script>
+    $("#requirements_and_boudaries_table").load("include/requirements_and_boudaries_table.html");
+  });
   
-  
-  <script>
   $(function(){
-  $("#preparation_table").load("include/preparation_table.html");
-    });
-  </script>
+    $("#preparation_table").load("include/preparation_table.html");
+  });
   
-  <script>
   $(function(){
-  $("#modeling_table").load("include/modeling_table.html");
-    });
-  </script>
+    $("#modeling_table").load("include/modeling_table.html");
+  });
 
-  <script>
   $(function(){
-  $("#deployment_table").load("include/deployment_table.html");
-    });
-  </script>
+    $("#deployment_table").load("include/deployment_table.html");
+  });
 
-  <script>
   $(function(){
-  $("#results_table").load("include/results_table.html");
-    });
+    $("#results_table").load("include/results_table.html");
+  });
+
+  $(function(){
+    $("#personas_table").load("include/personas_table.html");
+  });
   </script>
 
   <!--This is where we are done loading the tables -->
@@ -84,18 +73,18 @@
  <!-- Here i put up the title of the page (not the heading) -->
 <body>
   <section class="jumbotron bg-light text-center">
-  <div class="container">
-      <h1>AutoML Comparison</h1>
-      <p class="lead text-muted">Comparison and Analysis of different AutoML frameworks.</p>
-  </div>
-    </section>
+    <div class="container">
+        <h1>AutoML Comparison</h1>
+        <p class="lead text-muted">Comparison and Analysis of different AutoML frameworks.</p>
+    </div>
+  </section>
   
    <!-- Here starts Chapter 1 -->
   <div class= "center ph4">
     <h2> 1: Introduction to AutoML in Production </h2>
     <p class = "ph2">In the pursuit of leveraging the potential of data, companies usually rely on ML technologies. Applications of ML range from detecting anomalies in the operation and non-specialized machines designed to learn by themselves, to optimization of routing through demand forecasting. Its most common use cases are for knowledge extraction operations and as the core technology underlying the control of processes and products.
-Projects that rely on the application of ML are usually referred to as ML projects. Although this naming is useful to get a straightforward view of the main idea, it conceals several tasks such as data preparation and implementation of the results.
-</p>
+    Projects that rely on the application of ML are usually referred to as ML projects. Although this naming is useful to get a straightforward view of the main idea, it conceals several tasks such as data preparation and implementation of the results.
+    </p>
   </div>
   <div class="ph4">
     <section class="ph5 pv4">
@@ -116,7 +105,7 @@ Projects that rely on the application of ML are usually referred to as ML projec
       the ease-of-use, both in terms of user experience and knowledge requirements; the coverage of the 
       required tools, e.g., if a tool provides the algorithms that are necessary for a given project; 
       and the inclusion of domain knowledge.
- </p>
+    </p>
   </section>
   
   <!-- Here starts Chapter 3 -->
@@ -129,17 +118,14 @@ Projects that rely on the application of ML are usually referred to as ML projec
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
-
     </div>
-    
   </div>
   
   
   <!-- Here starts Chapter 4 -->
   <div class= "ph4">
     <h2> 4: Performance of the AutoML systems, applied on a ML use case from production</h2>
-    <p class="ph2"> The currently 
-      demonstrated results have been generated on the 
+    <p class="ph2"> The currently demonstrated results have been generated on the 
       <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill">CNC Mill Tool Wear data set</a>.
       A future version of this benchmark will futher include the results generated on the 
       <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM"> SECOM data set </a>.
@@ -150,7 +136,7 @@ Projects that rely on the application of ML are usually referred to as ML projec
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
-     <div/>
+    </div>
   </div>  
   
   <div class="ph1">
@@ -158,9 +144,8 @@ Projects that rely on the application of ML are usually referred to as ML projec
     <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
       An empty field means that the information is missing in the current version of our Analysis 
     </p>
-   <div/>
+  </div>
 
-  
   <!-- Here starts Chapter 5 -->
   <div class= "ph4">
     <h2> 5: Functionalities of the AutoML systems</h2>
@@ -194,29 +179,44 @@ Projects that rely on the application of ML are usually referred to as ML projec
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
-  </div>  
-
-  <div class="ph1">
-    <h3>5.4 Results</h3>
-    <div id="results_table"></div>
-    <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-      An empty field means that the information is missing in the current version of our Analysis 
-    </p>
   </div>
-  
-    
+
+  <div class= "ph4">
+    <h2> 6: Results</h2>
+    <div class="ph1">
+      <h3>6.1 Results</h3>
+      <div id="results_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
+    </div>
+  </div>
+
+  <section class= "ph4">
+    <h2> 7: Practical examples</h2>
+      <p class="ph2">
+        In order to simulate how the process of finding systems 
+        that fullfill a person's restrictions and requirements occurs,
+        the table below was created. <br>
+
+        Each row represents a "persona" - an exemplified user. The last two columns contain the results based on this research. 
+      </p>
+      <div id="personas_table"></div>
+    </div>
+  </section> 
+
   <!-- Here starts Chapter 6 -->
   <section class= "ph4">
-    <h2> 6: Wrap Up </h2>
+    <h2> 8: Wrap Up </h2>
     <p class = "ph2">The past developments in the area of AutoML indicate that progress towards improved automation of specific steps within the ML pipeline can be expected. Overall a full automation of the whole ML pipeline from Data Integration to Deployment is a concept that requires more research. In the near future, it can be expected that tasks such as Modeling will be automated enough so that ML models will be created with little to no ML knowledge. Semi-AutoML systems that support data scientists in other activities can be expected in the future as well.</p>
   </section> 
-  
+
   <!-- Here starts Chapter 7 -->
   <section class= "ph4">
-    <h2> 7: Bibliography </h2>
+    <h2> 9: Bibliography </h2>
     <p class = "ph2"> In order of appearance in Benchmark Table</p>
   </section> 
-  
+    
   <div class="center ph4 pt2 footnotes">
     <ol>
       <!--
@@ -323,7 +323,7 @@ Projects that rely on the application of ML are usually referred to as ML projec
       <!-- <li id="fn:UberLudwig">
         <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
       </li> -->
-     
+    
       <li id="fn:AutoKeras">
         <p>Feurer M, Klein A, Eggensperger K, Springenberg JT, Blum M, Hutter F (2019) Auto-sklearn: Efficient and
           Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
@@ -346,7 +346,6 @@ Projects that rely on the application of ML are usually referred to as ML projec
       <!-- <li id="fn:DataRobot">
         <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
       </li> -->
-   
     </ol>
   </div>
   <script>
@@ -375,9 +374,7 @@ Projects that rely on the application of ML are usually referred to as ML projec
       t.ready = function (f) {
         t._e.push(f);
       };
-
       return t;
     }(document, "script", "twitter-wjs"));</script>
 </body>
-
 </html>
