@@ -40,13 +40,8 @@ pre {
     font-size: 1em
 }
 
-a:link {
+a {
     color: blue;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:visited {
-    color: rgb(139, 139, 139);
     background-color: transparent;
     text-decoration: none;
 }
