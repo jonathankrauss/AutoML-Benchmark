@@ -40,10 +40,15 @@ pre {
     font-size: 1em
 }
 
-a {
-    color: #357edd;
+a:link {
+    color: blue;
     background-color: transparent;
-    -webkit-text-decoration-skip: objects
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(139, 139, 139);
+    background-color: transparent;
+    text-decoration: none;
 }
 
 abbr[title] {
@@ -13402,14 +13407,6 @@ h4, h5, h6 {
 
 table {
     margin: 1em 0
-}
-
-a {
-    color: inherit
-}
-
-a:focus, a:hover {
-    background-color: #f4f4f4
 }
 
 blockquote {
