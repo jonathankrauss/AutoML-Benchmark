@@ -13434,7 +13434,9 @@ figcaption {
 }
 
 caption {
-    text-align:top;
+    caption-side:top;
+    text-align:center;
+    font-size: x-large;
 }
 
 .twitter-tweet {
