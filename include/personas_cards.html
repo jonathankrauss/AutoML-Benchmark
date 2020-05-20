@@ -1,36 +1,13 @@
 <html>
   <style>
-    /* .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 960px;
-      margin: auto;
-      text-align: center;
-      font-family: arial;
-      border: 3px solid black;
-      width:480px;
-    }
-    .title {
-      color: grey;
-      font-size: 18px;
-    }
-    .content {
-      max-width: 960px;
-      margin: auto;
-      background: white;
-    }
-    div.description {
-      position: relative;
-      bottom: 100px;
-    } */
     img {
       position: relative;
       width: 200;
       height: 200;
-      margin: left;
     }
     .column {
       float: left;
-      width: 20%;
+      width: 22%;
       padding: 0 10px;
     }
 
@@ -60,106 +37,107 @@
         margin-bottom: 20px;
       }
     }
+
   </style>
   <body>
     <div class="row">
       <div class="column">
         <div class="card">
           <img src="static/images/Lisa.jpg" alt="Photo of Lisa">
+          <h2>Lisa</h2>
+          <p>Programming experience: Medium</p>
+          <p>Data Science experience: Medium </p>
+          <p>Programming languages: R</p>
+          <p>OS: Windows</p>
+          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
+          <p>Available time: 2 days</p>
+          <p>Cost budget: 0</p>
+          
+          <h3><b>Use Case</b></h3>
+          <p>Validate results of classification problem.</p>
+          
+          <h2><b>Recommendations</b></h2>
           <p>
-            Lisa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
+            Systems: H2O.</p>
+            Reason: With no cost budget, 
+            a person with some experience in programming and data science 
+            could use this system, since it is the only one that supports 
+            the R language and can be run in a simple PC.
           </p>
         </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Johannes.jpg" alt="Photo of Johannes">
+          <h2>Johannes</h2>
+          <p>Programming experience: None</p>
+          <p>Data Science experience: None </p>
+          <p>Programming languages: None</p>
+          <p>OS: Windows</p>
+          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
+          <p>Available time: 3h</p>
+          <p>Cost budget: 1000€</p>
+          
+          <h3><b>Use Case</b></h3>
+          <p>Predict stock market behaviour and use model as a webservice</p>
+          
+          <h2><b>Recommendations</b></h2>
           <p>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
+            Systems: Google, SAS, MLJar.</p>
+            Reason: Having a short time available, and budget, 
+            a person with no experience in the area can use these systems, 
+            to get a quick and cloud based solution.
           </p>
         </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Klaus.jpg" alt="Photo of Klaus">
+          <h2>Klaus</h2>
+          <p>Programming experience: Full</p>
+          <p>Data Science experience: Full </p>
+          <p>Programming languages: Python, R</p>
+          <p>OS: Windows</p>
+          <p>Hardware: Dedicated PC (Fast CPU, 32GB or RAM and GPU) </p>
+          <p>Available time: 2 days</p>
+          <p>Cost budget: 0</p>
+
+          <h3><b>Use Case</b></h3>
+          <p>Detect screchets on surfaces with image recognition.</p>
+          
+          <h2><b>Recommendations</b></h2>
           <p>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
+            Systems: H2O, MLJar, ATM, Autokeras.</p>
+            Reason: With no cost budget, an experienced programmer and 
+            data scientist could use these systems for image recognition 
+            in the time available.
           </p>
         </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Hans.jpg" alt="Photo of Hans">
+          <h2>Hans</h2>
+          <p>Programming experience: Full</p>
+          <p>Data Science experience: Full </p>
+          <p>Programming languages: Python, R</p>
+          <p>OS: Windows</p>
+          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
+          <p>Available time: 1 days</p>
+          <p>Cost budget: 0</p>
+
+          <h3><b>Use Case</b></h3>
+          <p>Improve features.</p>
+
+          <h2><b>Recommendations</b></h2>
+          <p>Systems: Feature tools, tsfresh</p>
           <p>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaa<br>
+            Reason: Aiming at getting features for the given dataset, 
+            systems that automate only this part of the pipeline are 
+            recommended.
           </p>
         </div>
       </div>
     </div>
-
-    <!-- <div class="content">
-      <table>
-        <tr>
-          <td>
-            <div class="card">
-              <img src="static/images/Lisa.jpg" alt="Photo of Lisa">
-              <div class="description">
-                a
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <img src="static/images/Johannes.jpg" alt="Photo of Johannes">
-              <div class="description">
-
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="card">
-              <img src="static/images/Klaus.jpg" alt="Photo of Klaus">
-              <div class="description">
-
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <img src="static/images/Hans.jpg" alt="Photo of Hans">
-              <div class="description">
-
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div> -->
   </body>
 </html>
