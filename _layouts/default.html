@@ -132,7 +132,8 @@
       </UL>
 
       Each of the benchmarked systems was analysed in 7 different criterias:
-      Performance, Requirements and Boundaries, Data Integration, Data Preparation, Modeling, Deployment and Results.
+      <b>Performance</b>, <b>Requirements and Boundaries</b>, <b>Data Integration</b>, 
+      <b>Data Preparation</b>, <b>Modeling</b>, <b>Deployment</b> and <b>Results</b>.
 
       This criterias are spread out from chapters <a href="#chapter3">3</a> to <a href="#chapter6">6</a>.
       
@@ -156,7 +157,7 @@
       <p class = "ph2"> 
         As seen above, not all of the systems tested are considered AutoML. 
         Feature tools and tsfresh, for example, automate only the Data Preparation step of the AutoML pipeline,
-        but were kept in the analysis.
+        but were kept in the analysis, since they propose to automate the most time-consuming step of the pipeline.
       </p>
 
       <p class = "ph2"> 
@@ -187,12 +188,25 @@
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
-  </div>  
+    <p class="ph2">
+      All the AutoML systems performed well predicting the dataset target, 
+      therefore it can be hard to distinguish which one is the best in this criteria.<br>
+
+      Performance also depends on the Runtime, since running a system for for time usually outputs better results.
+      Note that Runtime can sometimes be set by the user, or depend on the number of algorithms the user chooses to use. 
+    </p>
+  </div>
 
   <!-- Here starts Chapter 5 -->
   <div class= "ph4">
     <h2> 5: Functionalities of the AutoML systems</h2>
-    <!-- <p class = "ph2"> This is the text </p> -->
+    <p class = "ph2"> This chapter follows the machine learning pipeline. </p>
+
+    <p class = "ph2">
+      Data Integration aims to integrate data residing in different sources. 
+      In the table x, data types accepted by each system are displayed, as well as if they automate the data integration process.
+    </p>
+
     <div class="ph1">
       <h3>5.1 Data Integration</h3>
       <div id="integration_table"></div>
@@ -200,6 +214,18 @@
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
+
+    <p class = "ph2">
+      None of the systems fully automate this step, so manual work is always needed 
+      In regards to the data type, some systems are more limited criteria and other are more inclusive, for example
+      Auto_ml and Google AutoML respectively.
+
+      Therefore, for image classification problems for example, some systems can already be filtered out here. 
+    </p>
+
+    <p class = "ph2">
+      In the Data Preparation step, the dataset in assembled and then transformed by Data Preprocessing and Feature Engineering.
+    </p>
     <div class="ph1">
       <h3>5.2 Data Preparation</h3>
       <div id="preparation_table"></div>
@@ -207,6 +233,10 @@
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
+
+    <p class = "ph2">
+      Some of the algorithms used for each system, as well as how they are selected, are shown in the table x, referent to Modeling.
+    </p>
     <div class="ph1">
       <h3>5.3 Modeling</h3>
       <div id="modeling_table"></div>
@@ -215,6 +245,24 @@
       </p>
     </div>
 
+    <p class = "ph2">
+      There may be more algorithms used by these systems, but they are not explicitly given by them.<br>
+      If you want to test a specific algorithm, some system allow you to do so, others just output the best model and it's results. 
+      See table [Results] for more information.<br>
+
+      If a more visual result of the model is required, the <b>Charts</b> column can be consulted. It does not mean the model is interpretable.
+    </p>
+
+    <p class = "ph2">
+      Ending the pipeline, <b>Deployment</b> aims to release the results to users.<br>
+      
+      For that, the table[Deployment] answers the following questions:
+      <OL>
+        <LI>How can it be deployed?</LI>
+        <LI>How the model will be accessed?</LI>
+        <LI>Can it be trained during production?</LI>
+      </OL>
+    </p>
     <div class="ph1">
       <h3>5.4 Deployment</h3>
       <div id="deployment_table"></div>
@@ -222,6 +270,10 @@
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
     </div>
+
+    <p class = "ph2">
+      
+    </p>
   </div>
 
   <div class= "ph4">

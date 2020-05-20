@@ -13433,6 +13433,10 @@ figcaption {
     color: #999
 }
 
+caption {
+    text-align:top;
+}
+
 .twitter-tweet {
     margin: 1em auto!important
 }
