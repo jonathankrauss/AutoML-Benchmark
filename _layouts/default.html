@@ -95,40 +95,40 @@
   <section class= "ph4">
     <h2> 2: Methodology of the AutoML Benchmark </h2>
     <p class = "ph2"> AutoML systems were evaluated with respect to what they propose to achieve, 
-      based on test data from the production domain. The Systems that are included in our benchmark are:
+      based on test data from the production domain. The systems that are included in this benchmark are:
 
       <UL>
-        <LI>Hyperopt-sklearn</LI>
-        <LI>Auto-sklearn</LI>
-        <LI>TPOT</LI>
-        <LI>H2O AutoML</LI>
-        <LI>SAS</LI>
-        <LI>MLBox</LI>
-        <LI>Google AutoML</LI>
-        <LI>Azure Machine Learning</LI>
-        <LI>MLJar</LI>
-        <LI>ATM</LI>
-        <LI>Auto_ml</LI>
-        <LI>Amazon SageMaker</LI>
-        <LI>AutoKeras</LI>
-        <LI>Feature Tools</LI>
-        <LI>tsfresh</LI>
+        <LI>Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn" class="footnote">1</a></sup></LI>
+        <LI>Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn" class="footnote">2</a></sup></LI>
+        <LI>TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></LI>
+        <LI>H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></LI>
+        <LI>SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></LI>
+        <LI>MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></LI>
+        <LI>Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></LI>
+        <LI>Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></LI>
+        <LI>MLJar<sup id="fnref:MLJar"><a href="#fn:MLJar" class="footnote">9</a></sup></LI>
+        <LI>ATM<sup id="fnref:ATM"><a href="#fn:ATM" class="footnote">10</a></sup></LI>
+        <LI>Auto_ml<sup id="fnref:Auto_ml"><a href="#fn:Auto_ml" class="footnote">11</a></LI>
+        <LI>Amazon SageMaker<sup id="fnref:Amazon"><a href="#fn:Amazon" class="footnote">12</a></LI>
+        <LI>AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">13</a></sup></LI>
+        <LI>Feature Tools<sup id="fnref:FTools"><a href="#fn:FTools" class="footnote">14</a></sup></LI>
+        <LI>tsfresh<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">15</a></sup></LI>
       </UL>
 
-      The ones that exist, but were not included, are:
+      The following ones were not included in the analysis <b>[Missing references]</b>:
 
       <UL>
-        <LI>Auto-WEKA</LI>
-        <LI>Auto-PyTorch</LI>
+        <LI>Auto-WEKA<sup id="fnref:AutoWEKA"><a href="#fn:AutoWEKA" class="footnote">16</a></sup></LI>
+        <LI>Auto-PyTorch<sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch" class="footnote">17</a></sup></LI>
         <LI>The Automatic Statistician</LI>
         <LI>Uber Ludwig</LI>
         <LI>ExploreKit</LI>
-        <LI>TransmogrifAI</LI>
-        <LI>Darwin</LI>
+        <LI>TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI" class="footnote">21</a></sup></LI>
+        <LI>Darwin<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">22</a></sup></LI>
         <LI>DataRobot</LI>
+        <LI>Devol</LI>
         <LI>AutoML Zero</LI>
         <LI>AxCell</LI>
-        <LI>Devol</LI>
       </UL>
 
       Each of the benchmarked systems was analysed in 7 different criterias:
@@ -136,6 +136,9 @@
       <b>Data Preparation</b>, <b>Modeling</b>, <b>Deployment</b> and <b>Results</b>.
 
       This criterias are spread out from chapters <a href="#chapter3">3</a> to <a href="#chapter6">6</a>.
+
+      After that, in chapter <a href="#chapter7">7</a>, 
+      four exemplified users are presented, and AutoML systems are recommended for each of them.
       
       <!-- The main criteria for selecting the most suitable system for a use case from production were: 
       the ease-of-use, both in terms of user experience and knowledge requirements; the coverage of the 
@@ -161,7 +164,7 @@
       </p>
 
       <p class = "ph2"> 
-        The table <a href="#requirements_and_boudaries_table">Requirements and Boudaries Table</a> exhibit what aspects can limit the access to these systems, 
+        The <a href="#requirements_and_boudaries_table">Requirements and Boudaries Table</a> exhibit what aspects can limit the access to these systems, 
         for example required knowledge, available tools and budget.
       </p>
 
@@ -206,7 +209,7 @@
       <h3>5.1 Data Integration</h3>
       <p class = "ph2">
         Data Integration aims to integrate data residing in different sources. 
-        In the table <a href="#integration_table">Data Integration Table</a>, data types accepted by each system are displayed, as well as if they automate the data integration process.
+        In the <a href="#integration_table">Data Integration Table</a>, data types accepted by each system are displayed, as well as if they automate the data integration process.
       </p>
       <div id="integration_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
@@ -236,7 +239,7 @@
       <h3>5.3 Modeling</h3>
       <p class = "ph2">
         Some of the algorithms used for each system, as well as how they are selected, 
-        are shown in the table <a href="#modeling_table">Modeling Table</a>, referent to Modeling.
+        are shown in the <a href="#modeling_table">Modeling Table</a>, referent to Modeling.
       </p>
       <div id="modeling_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
@@ -245,7 +248,7 @@
       <p class = "ph2">
         There may be more algorithms used by these systems, but they are not explicitly given by them.<br>
         If you want to test a specific algorithm, some system allow you to do so, others just output the best model and it's results. 
-        See table <a href="#results_table">Results Table</a> for more information.<br>
+        See <a href="#results_table">Results Table</a> for more information.<br>
   
         If a more visual result of the model is required, the <b>Charts</b> column can be consulted. It does not mean the model is interpretable.
       </p>
@@ -256,10 +259,10 @@
       <p class = "ph2">
         Ending the pipeline, <b>Deployment</b> aims to release the results to users.<br>
         
-        For that, the table <a href="#deployment_table">Deployment Table</a> answers the following questions:
+        For that, the <a href="#deployment_table">Deployment Table</a> tries to answers the following questions:
         <OL>
           <LI>How can it be deployed?</LI>
-          <LI>How the model will be accessed?</LI>
+          <LI>How can the model be accessed by the user?</LI>
           <LI>Can it be trained during production?</LI>
         </OL>
       </p>
@@ -276,7 +279,7 @@
   <div class= "ph4">
     <h2><a id="chapter6">6: Results</a></h2>
     <p class = "ph2">
-      The last table, <a href="#results_table">Results Table</a>, 
+      The <a href="#results_table">Results Table</a>
       aims to show how the final results of each system are presented to the user.
     </p>
     <div class="ph1">
@@ -286,15 +289,16 @@
       </p>
     </div>
     <p class = "ph2">
-      AutoML vary giving sometimes a list of models and their characteristics, 
-      and sometimes just the best model and evaluation.<br>
+      As can be seen in the table, the results vary, outputing sometimes a list of models and their characteristics, 
+      and sometimes just the best model and evaluations. 
+      This means that not always the user is allowed which model can be exported, and therefore run in production.<br>
   
       Feature Tools and tsfresh output a new dataset, containing new features and transformed old ones.
     </p>
   </div>
 
   <section class= "ph4">
-    <h2> 7: Practical Examples</h2>
+    <h2><a id="chapter7">7: Practical Examples</a></h2>
       <p class="ph2">
         In order to simulate how the process of finding systems 
         that fullfill a person's restrictions and requirements occurs,
@@ -321,14 +325,7 @@
     
   <div class="center ph4 pt2 footnotes">
     <ol>
-      <!--
-      <li id="fn:AutoWEKA">
-        <p>Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and
-          Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine
-          Learning. Springer International Publishing. Cham, pp. 81–95.&nbsp;<a href="#fnref:AutoWEKA"
-            class="reversefootnote">↩</a></p>
-      -->
-      </li>
+      
       <li id="fn:Hyperoptsklearn">
         <p>Komer B, Bergstra J, Eliasmith C (2019) Hyperopt-Sklearn. in Hutter F, Kotthoff L, Vanschoren J, (Eds.).
           Automated Machine Learning. Springer International Publishing. Cham, pp. 97–111.&nbsp;<a
@@ -339,15 +336,9 @@
           Robust Automated Machine Learning. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning.
           Springer International Publishing. Cham, pp. 113–134.&nbsp;<a href="#fnref:Autosklearn"
             class="reversefootnote">↩</a></p>
-      <!--
+      
       </li>
-      <li id="fn:AutoPyTorch">
-        <p>Hector Mendoza, Aaron Klein, Matthias Feurer, Jost Tobias Springenberg, Matthias Urban, Michael Burkart, Max
-          Dippel, Marius Lindauer, Frank Hutter (2018) Towards Automatically-Tuned Deep Neural Networks: 7. in Hutter F,
-          Kotthoff L, Vanschoren J, (Eds.). AutoML: Methods, Sytems, Challenges. Springer, pp. 141–156.&nbsp;<a
-            href="#fnref:AutoPyTorch" class="reversefootnote">↩</a></p>
-      -->
-      </li>
+     
       <li id="fn:TPOT">
         <p>Olson RS, Moore JH (2019) TPOT: A Tree-Based Pipeline Optimization Tool for Automating Machine Learning. in
           Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine Learning. Springer International Publishing.
@@ -434,10 +425,26 @@
           https://tsfresh.readthedocs.io/en/latest/index.html (accessed on 06.02.2020).&nbsp;<a href="#fnref:tsfresh"
             class="reversefootnote">↩</a></p>
       </li>
-      <!-- 
-      <li id="fn:ExploreKit">
-        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+
+      <li id="fn:AutoWEKA">
+        <p>Kotthoff L, Thornton C, Hoos HH, Hutter F, Leyton-Brown K (2019) Auto-WEKA: Automatic Model Selection and
+          Hyperparameter Optimization in WEKA. in Hutter F, Kotthoff L, Vanschoren J, (Eds.). Automated Machine
+          Learning. Springer International Publishing. Cham, pp. 81–95.&nbsp;
+          <a href="#fnref:AutoWEKA" class="reversefootnote">↩</a>
+        </p>
       </li>
+
+      <li id="fn:AutoPyTorch">
+        <p>Hector Mendoza, Aaron Klein, Matthias Feurer, Jost Tobias Springenberg, Matthias Urban, Michael Burkart, Max
+          Dippel, Marius Lindauer, Frank Hutter (2018) Towards Automatically-Tuned Deep Neural Networks: 7. in Hutter F,
+          Kotthoff L, Vanschoren J, (Eds.). AutoML: Methods, Sytems, Challenges. Springer, pp. 141–156.&nbsp;
+          <a href="#fnref:AutoPyTorch" class="reversefootnote">↩</a>
+        </p>
+      </li>
+      
+      <!-- <li id="fn:ExploreKit">
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXX Text Missing XXXXXXXXXXXXXXXXXXXXXXXXXX.&nbsp;<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+      </li> -->
       <li id="fn:TransmogrifAI">
         <p>Salesforce.com, Inc. AutoML library for building modular, reusable, strongly typed machine learning workflows
           on Spark from Salesforce Engineering. https://transmogrif.ai/ (accessed on 26.01.2020).&nbsp;<a
