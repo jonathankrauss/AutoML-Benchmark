@@ -147,7 +147,7 @@
   <!-- Here starts Chapter 3 -->
   <div class= "ph4">
     <h2><a id="chapter3"> 3: Characteristics and Requirements</a></h2>
-    <p class = "ph2"> Generic information about the benchmarked systems can be seen in the table x. </p>
+    <p class = "ph2"> Generic information about the benchmarked systems can be seen in the table <a href="#characteristics_table">Characteristics</a>. </p>
     <div class="ph1">
       <div id="characteristics_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
@@ -161,7 +161,7 @@
       </p>
 
       <p class = "ph2"> 
-        The table x exhibit what aspects can limit the access to these systems, 
+        The table <a href="#requirements_and_boudaries_table">Requirements and Boudaries</a> exhibit what aspects can limit the access to these systems, 
         for example required knowledge, available tools and budget.
       </p>
 
@@ -204,7 +204,7 @@
 
     <p class = "ph2">
       Data Integration aims to integrate data residing in different sources. 
-      In the table x, data types accepted by each system are displayed, as well as if they automate the data integration process.
+      In the table <a href="#integration_table">Data Integration</a>, data types accepted by each system are displayed, as well as if they automate the data integration process.
     </p>
 
     <div class="ph1">
@@ -235,7 +235,8 @@
     </div>
 
     <p class = "ph2">
-      Some of the algorithms used for each system, as well as how they are selected, are shown in the table x, referent to Modeling.
+      Some of the algorithms used for each system, as well as how they are selected, 
+      are shown in the table <a href="#modeling_table">Modeling</a>, referent to Modeling.
     </p>
     <div class="ph1">
       <h3>5.3 Modeling</h3>
@@ -248,7 +249,7 @@
     <p class = "ph2">
       There may be more algorithms used by these systems, but they are not explicitly given by them.<br>
       If you want to test a specific algorithm, some system allow you to do so, others just output the best model and it's results. 
-      See table [Results] for more information.<br>
+      See table <a href="#results_table">Results</a> for more information.<br>
 
       If a more visual result of the model is required, the <b>Charts</b> column can be consulted. It does not mean the model is interpretable.
     </p>
@@ -256,7 +257,7 @@
     <p class = "ph2">
       Ending the pipeline, <b>Deployment</b> aims to release the results to users.<br>
       
-      For that, the table[Deployment] answers the following questions:
+      For that, the table <a href="#deployment_table">Deployment</a> answers the following questions:
       <OL>
         <LI>How can it be deployed?</LI>
         <LI>How the model will be accessed?</LI>
@@ -276,6 +277,11 @@
     </p>
   </div>
 
+  <p class = "ph2">
+      The last table, <a href="#results_table">Results</a>, 
+      aims to show how the final results of each system are presented to the user.
+  </p>
+
   <div class= "ph4">
     <h2><a id="chapter6">6: Results</a></h2>
     <div class="ph1">
@@ -285,6 +291,13 @@
       </p>
     </div>
   </div>
+
+  <p class = "ph2">
+    AutoML vary giving sometimes a list of models and their characteristics, 
+    and sometimes just the best model and evaluation.<br>
+
+    Feature Tools and tsfresh output a new dataset, containing new features and transformed old ones.
+  </p>
 
   <section class= "ph4">
     <h2> 7: Practical Examples</h2>
