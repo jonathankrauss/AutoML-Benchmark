@@ -24,7 +24,7 @@
   });
   
   $(function(){
-    $("#requirements_and_boudaries_table").load("include/requirements_and_boudaries_table.html");
+    $("#requirements_and_boundaries_table").load("include/requirements_and_boundaries_table.html");
   });
   
   $(function(){
@@ -81,7 +81,12 @@
    <!-- Here starts Chapter 1 -->
   <div class= "center ph4">
     <h2> 1: Introduction to AutoML in Production </h2>
-    <p class = "ph2">In the pursuit of leveraging the potential of data, companies usually rely on ML technologies. Applications of ML range from detecting anomalies in the operation and non-specialized machines designed to learn by themselves, to optimization of routing through demand forecasting. Its most common use cases are for knowledge extraction operations and as the core technology underlying the control of processes and products.
+    <p class = "ph2">In the pursuit of leveraging the potential of data, 
+      companies usually rely on ML technologies. 
+      Applications of ML range from detecting anomalies in the operation and non-specialized machines 
+      designed to learn by themselves, to the optimization of routing through demand forecasting. 
+      Its most common use cases are for knowledge extraction operations and as the core technology underlying 
+      the control of processes and products.
     Projects that rely on the application of ML are usually referred to as ML projects. Although this naming is useful to get a straightforward view of the main idea, it conceals several tasks such as data preparation and implementation of the results.
     </p>
   </div>
@@ -115,27 +120,28 @@
         <LI>tsfresh<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">15</a></sup></LI>
       </UL>
 
-      The following ones were not included in the analysis <b>[Missing references]</b>:
+      The following ones were not included in the analysis <b>[Missing references, missing reasons]</b>:
 
       <UL>
         <LI>Auto-WEKA<sup id="fnref:AutoWEKA"><a href="#fn:AutoWEKA" class="footnote">16</a></sup></LI>
         <LI>Auto-PyTorch<sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch" class="footnote">17</a></sup></LI>
-        <LI>The Automatic Statistician</LI>
+        <LI>The Automatic Statistician, no open-source version.</LI>
         <LI>Uber Ludwig</LI>
-        <LI>ExploreKit</LI>
-        <LI>TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI" class="footnote">21</a></sup></LI>
-        <LI>Darwin<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">22</a></sup></LI>
-        <LI>DataRobot</LI>
+        <LI>ExploreKit, No guide in how to use the system.</LI>
+        <LI>TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI" class="footnote">21</a></sup>, uncommon language.</LI>
+        <LI>Darwin<sup id="fnref:tsfresh"><a href="#fn:tsfresh" class="footnote">22</a></sup>, free trial just allows you to use dataset provided by the system.</LI>
+        <LI>DataRobot, a demo must be requested for use, which might take some time to use.</LI>
         <LI>Devol</LI>
         <LI>AutoML Zero</LI>
         <LI>AxCell</LI>
       </UL>
 
-      Each of the benchmarked systems was analysed in 7 different criterias:
-      <b>Performance</b>, <b>Requirements and Boundaries</b>, <b>Data Integration</b>, 
-      <b>Data Preparation</b>, <b>Modeling</b>, <b>Deployment</b> and <b>Results</b>.
+      Each of the benchmarked systems was analysed in 7 different criteria:
+      <a href="#chapter32">Requirements and Boundaries</a>, <a href="#chapter4">Performance</a>, 
+      <a href="#chapter51">Data Integration</a>, <a href="#chapter52">Data Preparation</a>, 
+      <a href="#chapter53">Modeling</a>, <a href="#chapter54">Deployment</a> and <a href="#chapter6">Results</a>.
 
-      This criterias are spread out from chapters <a href="#chapter3">3</a> to <a href="#chapter6">6</a>.
+      These criteria are spread out from chapters <a href="#chapter3">3</a> to <a href="#chapter6">6</a>.
 
       After that, in chapter <a href="#chapter7">7</a>, 
       four exemplified users are presented, and AutoML systems are recommended for each of them.
@@ -152,6 +158,7 @@
     <h2><a id="chapter3"> 3: Characteristics and Requirements</a></h2>
     <p class = "ph2"> Generic information about the benchmarked systems can be seen in the table <a href="#characteristics_table">Characteristics Table</a>. </p>
     <div class="ph1">
+      <h3 id="chapter31">3.1 Characteristics</h3>
       <div id="characteristics_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
@@ -159,16 +166,17 @@
 
       <p class = "ph2"> 
         As seen above, not all of the systems tested are considered AutoML. 
-        Feature tools and tsfresh, for example, automate only the Data Preparation step of the AutoML pipeline,
-        but were kept in the analysis, since they propose to automate the most time-consuming step of the pipeline.
+        Feature Tools and tsfresh, for example, automate only the Data Preparation step of the AutoML pipeline. 
+        Nevertheless they were kept in the analysis, since they propose to automate the most time-consuming step of the pipeline.
       </p>
 
+      <h3 id="chapter32">3.2 Requirements and Boundaries</h3>
       <p class = "ph2"> 
-        The <a href="#requirements_and_boudaries_table">Requirements and Boudaries Table</a> exhibit what aspects can limit the access to these systems, 
+        The <a href="#requirements_and_boundaries_table">Requirements and Boundaries Table</a> exhibits what aspects can limit the access to these systems, 
         for example required knowledge, available tools and budget.
       </p>
 
-      <div id="requirements_and_boudaries_table"></div>
+      <div id="requirements_and_boundaries_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
@@ -178,11 +186,11 @@
   
   <!-- Here starts Chapter 4 -->
   <div class= "ph4">
-    <h2> 4: Performance of the AutoML Systems</h2>
+    <h2 id="chapter4"> 4: Performance of the AutoML Systems</h2>
     <p class="ph2"> The currently demonstrated results have been applied on a ML use case from production, on the 
       <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">CNC Mill Tool Wear data set</a>.
-      A future version of this benchmark will futher include the results generated on the 
-      <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM" target="_blank"> SECOM data set </a>.
+      A future version of this benchmark will further include the results generated on the 
+      <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM" target="_blank"> SECOM data set</a>.
     <p/>
     <!--Performance Table -->
     <div class="ph1">
@@ -206,26 +214,27 @@
     <p class = "ph2"> This chapter follows the machine learning pipeline. </p>
 
     <div class="ph1">
-      <h3>5.1 Data Integration</h3>
+      <h3 id="chapter51">5.1 Data Integration</h3>
       <p class = "ph2">
         Data Integration aims to integrate data residing in different sources. 
-        In the <a href="#integration_table">Data Integration Table</a>, data types accepted by each system are displayed, as well as if they automate the data integration process.
+        In the <a href="#integration_table">Data Integration Table</a>, 
+        data types accepted by each system are displayed, as well as if they automate the data integration process.
       </p>
       <div id="integration_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
       <p class = "ph2">
-        None of the systems fully automate this step, so manual work is always needed 
-        In regards to the data type, some systems are more limited criteria and other are more inclusive, for example
-        Auto_ml and Google AutoML respectively.
+        None of the systems fully automate this step, so manual work is always needed. 
+        In regards to the data type, some systems are more limited criteria and others are more inclusive, 
+        for example Auto_ml and Google AutoML respectively.
   
         Therefore, for image classification problems for example, some systems can already be filtered out here. 
       </p>
     </div>
 
     <div class="ph1">
-      <h3>5.2 Data Preparation</h3>
+      <h3 id="chapter52">5.2 Data Preparation</h3>
       <p class = "ph2">
         In the Data Preparation step, the dataset in assembled and then transformed by Data Preprocessing and Feature Engineering.
       </p>
@@ -236,7 +245,7 @@
     </div>
 
     <div class="ph1">
-      <h3>5.3 Modeling</h3>
+      <h3 id="chapter53">5.3 Modeling</h3>
       <p class = "ph2">
         Some of the algorithms used for each system, as well as how they are selected, 
         are shown in the <a href="#modeling_table">Modeling Table</a>, referent to Modeling.
@@ -247,7 +256,7 @@
       </p>
       <p class = "ph2">
         There may be more algorithms used by these systems, but they are not explicitly given by them.<br>
-        If you want to test a specific algorithm, some system allow you to do so, others just output the best model and it's results. 
+        If you want to test a specific algorithm, some systems allow you to do so, others just output the best model and it's results. 
         See <a href="#results_table">Results Table</a> for more information.<br>
   
         If a more visual result of the model is required, the <b>Charts</b> column can be consulted. It does not mean the model is interpretable.
@@ -255,9 +264,9 @@
     </div>
     
     <div class="ph1">
-      <h3>5.4 Deployment</h3>
+      <h3 id="chapter54">5.4 Deployment</h3>
       <p class = "ph2">
-        Ending the pipeline, <b>Deployment</b> aims to release the results to users.<br>
+        Ending the pipeline, deployment aims to release the results to users.<br>
         
         For that, the <a href="#deployment_table">Deployment Table</a> tries to answers the following questions:
         <OL>
@@ -289,7 +298,7 @@
       </p>
     </div>
     <p class = "ph2">
-      As can be seen in the table, the results vary, outputing sometimes a list of models and their characteristics, 
+      As can be seen in the table, the results vary, outputting sometimes a list of models and their characteristics, 
       and sometimes just the best model and evaluations. 
       This means that not always the user is allowed which model can be exported, and therefore run in production.<br>
   
@@ -301,13 +310,25 @@
     <h2><a id="chapter7">7: Practical Examples</a></h2>
       <p class="ph2">
         In order to simulate how the process of finding systems 
-        that fullfill a person's restrictions and requirements occurs,
+        that fulfill a person's restrictions and requirements occurs,
         the cards below were created. <br>
 
         Each card represents a "persona" - an exemplified user. 
-        In the end of each card, the chosen systems are displayed, followed by the reason why they were chosen.
+        At the end of each card, the chosen systems are displayed, followed by the reason why they were chosen.
       </p>
       <div id="personas_cards"></div>
+      <hr>
+      Notes:
+      <UL>
+        <LI>
+          Paid systems, such as Google AutoML and Azure, 
+          can be used by the personas with no budget since these systems provide free trials, 
+          but it would not be a long term solution.
+        </LI>
+        <LI>
+          Recommended systems are not ordered from most recommended to less recommended.
+        </LI>
+      </UL>
     </div>
   </section> 
 
@@ -320,7 +341,6 @@
   <!-- Here starts Chapter 7 -->
   <section class= "ph4">
     <h2> 9: Bibliography </h2>
-    <p class = "ph2"> In order of appearance in Benchmark Table</p>
   </section> 
     
   <div class="center ph4 pt2 footnotes">
