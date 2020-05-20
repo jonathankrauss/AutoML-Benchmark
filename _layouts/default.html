@@ -94,37 +94,88 @@
   <!-- Here starts Chapter 2 -->
   <section class= "ph4">
     <h2> 2: Methodology of the AutoML Benchmark </h2>
-    <p class = "ph2"> We evaluated AutoML systems with respect to what they propose to achieve, 
-      but also evaluated the largest share of them with test data from the production domain. The AutoML 
-      Systems that are included in our Analysis are: Auto-WEKA, Hyperopt-sklearn, Auto-sklearn, Auto-PyTorch, 
-      TPOT, The Automatic Statistician, Feature Tools, Categorical-encoding, tsfresh, FeatureHub, ATM, Auto_ml, H2O AutoML, Devol, 
-      SAS, MLBox, Google AutoML, Azure Machine Learning, Amazon SageMaker, Uber Ludwig, AutoKeras, ExploreKit, TransmogrifAI, Darwin, 
-      MLJar, DataRobot. Not all of the AutoML systems included in the Analysis have been benchmarked. 
-      The main criteria for selecting the most suitable system for a use case from production were: 
+    <p class = "ph2"> AutoML systems were evaluated with respect to what they propose to achieve, 
+      based on test data from the production domain. The Systems that are included in our benchmark are:
+
+      <UL>
+        <LI>Hyperopt-sklearn</LI>
+        <LI>Auto-sklearn</LI>
+        <LI>TPOT</LI>
+        <LI>H2O AutoML</LI>
+        <LI>SAS</LI>
+        <LI>MLBox</LI>
+        <LI>Google AutoML</LI>
+        <LI>Azure Machine Learning</LI>
+        <LI>MLJar</LI>
+        <LI>ATM</LI>
+        <LI>Auto_ml</LI>
+        <LI>Amazon SageMaker</LI>
+        <LI>AutoKeras</LI>
+        <LI>Feature Tools</LI>
+        <LI>tsfresh</LI>
+      </UL>
+
+      The ones that exist, but were not included, are:
+
+      <UL>
+        <LI>Auto-WEKA</LI>
+        <LI>Auto-PyTorch</LI>
+        <LI>The Automatic Statistician</LI>
+        <LI>Uber Ludwig</LI>
+        <LI>ExploreKit</LI>
+        <LI>TransmogrifAI</LI>
+        <LI>Darwin</LI>
+        <LI>DataRobot</LI>
+        <LI>AutoML Zero</LI>
+        <LI>AxCell</LI>
+        <LI>Devol</LI>
+      </UL>
+
+      Each of the benchmarked systems was analysed in 7 different criterias:
+      Performance, Requirements and Boundaries, Data Integration, Data Preparation, Modeling, Deployment and Results.
+
+      This criterias are spread out from chapters <a href="#chapter3">3</a> to <a href="#chapter6">6</a>.
+      
+      <!-- The main criteria for selecting the most suitable system for a use case from production were: 
       the ease-of-use, both in terms of user experience and knowledge requirements; the coverage of the 
       required tools, e.g., if a tool provides the algorithms that are necessary for a given project; 
-      and the inclusion of domain knowledge.
+      and the inclusion of domain knowledge. -->
     </p>
   </section>
   
   <!-- Here starts Chapter 3 -->
   <div class= "ph4">
-    <h2> 3: Characteristics of AutoML Systems </h2>
-    <!-- <p class = "ph2"> This is the text </p> -->
+    <h2><a id="chapter3"> 3: Characteristics and Requirements</a></h2>
+    <p class = "ph2"> Generic information about the benchmarked systems can be seen in the table x. </p>
     <div class="ph1">
       <div id="characteristics_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
         An empty field means that the information is missing in the current version of our Analysis 
       </p>
-    </div>
+
+      <p class = "ph2"> 
+        As seen above, not all of the systems tested are considered AutoML. 
+        Feature tools and tsfresh, for example, automate only the Data Preparation step of the AutoML pipeline,
+        but were kept in the analysis.
+      </p>
+
+      <p class = "ph2"> 
+        The table x exhibit what aspects can limit the access to these systems, 
+        for example required knowledge, available tools and budget.
+      </p>
+
+      <div id="requirements_and_boudaries_table"></div>
+      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+        An empty field means that the information is missing in the current version of our Analysis 
+      </p>
     </div>
   </div>
   
   
   <!-- Here starts Chapter 4 -->
   <div class= "ph4">
-    <h2> 4: Performance of the AutoML systems, applied on a ML use case from production</h2>
-    <p class="ph2"> The currently demonstrated results have been generated on the 
+    <h2> 4: Performance of the AutoML Systems</h2>
+    <p class="ph2"> The currently demonstrated results have been applied on a ML use case from production, on the 
       <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">CNC Mill Tool Wear data set</a>.
       A future version of this benchmark will futher include the results generated on the 
       <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM" target="_blank"> SECOM data set </a>.
@@ -137,13 +188,6 @@
       </p>
     </div>
   </div>  
-  
-  <div class="ph1">
-    <div id="requirements_and_boudaries_table"></div>
-    <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-      An empty field means that the information is missing in the current version of our Analysis 
-    </p>
-  </div>
 
   <!-- Here starts Chapter 5 -->
   <div class= "ph4">
@@ -181,7 +225,7 @@
   </div>
 
   <div class= "ph4">
-    <h2> 6: Results</h2>
+    <h2><a id="chapter6">6: Results</a></h2>
     <div class="ph1">
       <div id="results_table"></div>
       <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
