@@ -5,7 +5,7 @@
     img {
       position: relative;
       width: 200;
-      height: 200;
+      overflow: hidden;
     }
     .column {
       float: left;
@@ -25,6 +25,7 @@
 
     /* Style the counter cards */
     .card {
+      position: relative;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
       padding: 16px;
       text-align: center;
@@ -32,7 +33,7 @@
     }
 
     /* Responsive columns - one column layout (vertical) on small screens */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1400px) {
       .column {
         width: 100%;
         display: block;
@@ -46,99 +47,123 @@
       <div class="column">
         <div class="card">
           <img src="static/images/Lisa.jpg" alt="Photo of Lisa">
-          <h2>Lisa</h2>
-          <p>Programming experience: Medium</p>
-          <p>Data Science experience: Medium </p>
-          <p>Programming languages: R</p>
-          <p>OS: Windows</p>
-          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
-          <p>Available time: 2 days</p>
-          <p>Cost budget: 0</p>
+          <nobr>
+            <h2>Lisa</h2>
+            <p>Programming experience:<br>Medium</p>
+            <p>Programming languages:<br>R</p>
+            <p>Data Science experience:<br>Medium</p>
+            <p>OS:<br>Windows</p>
+            <p>Hardware:<br>Basic PC<br>(8GB of RAM and no GPU)</p>
+            <p>Available time:<br>2 days</p>
+            <p>Cost budget:<br>0</p>
+            
+            <div class="use_case">
+              <h2><b>Use Case</b></h2>
+              <p>Compare a model manually built <br>with one automatically built.</p>
+            </div>
+          </nobr>
           
-          <h3><b>Use Case</b></h3>
-          <p>Validate results of classification problem.</p>
-          
-          <h2><b>Recommendations</b></h2>
-          <p>
-            Systems: H2O.</p>
-            Reason: With no cost budget, 
-            a person with some experience in programming and data science 
-            could use this system, since it is the only one that supports 
-            the R language and can be run in a simple PC.
-          </p>
+          <div class="recommendation">
+            <h2><b>Recommendations</b></h2>
+            <p>
+              Systems: H2O.</p>
+              Reason: With no cost budget, 
+              a person with some experience in programming and data science 
+              could use this system, since it is the only one that supports 
+              the R language and can be run in a simple PC.
+            </p>
+          </div>
         </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Johannes.jpg" alt="Photo of Johannes">
-          <h2>Johannes</h2>
-          <p>Programming experience: None</p>
-          <p>Data Science experience: None </p>
-          <p>Programming languages: None</p>
-          <p>OS: Windows</p>
-          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
-          <p>Available time: 3h</p>
-          <p>Cost budget: 1000€</p>
+          <nobr>
+            <h2>Johannes</h2>
+            <p>Programming experience:<br>None</p>
+            <p>Programming languages:<br>None</p>
+            <p>Data Science experience:<br>None</p>
+            <p>OS:<br>Windows</p>
+            <p>Hardware:<br>Basic PC<br>(8GB of RAM and no GPU)</p>
+            <p>Available time:<br>3h</p>
+            <p>Cost budget:<br>1000€</p>
+            
+            <div class="use_case">
+              <h2><b>Use Case</b></h2>
+              <p>Predict rejection of the <br>factory's end product.</p>
+            </div>
+          </nobr>
           
-          <h3><b>Use Case</b></h3>
-          <p>Predict stock market behaviour and use model as a webservice</p>
-          
-          <h2><b>Recommendations</b></h2>
-          <p>
-            Systems: SAS, Google, Azure, MLJar.</p>
-            Reason: Having a short time available, and budget, 
-            a person with no experience in the area can use these systems, 
-            to get a quick and cloud based solution.
-          </p>
+          <div class="recommendation">
+            <h2><b>Recommendations</b></h2>
+            <p>
+              Systems: SAS, Google, Azure, MLJar.</p>
+              Reason: Having a short time available, and budget, 
+              a person with no experience in the area can use these systems, 
+              to get a quick and cloud based solution.
+            </p>
+          </div>
         </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Klaus.jpg" alt="Photo of Klaus">
-          <h2>Klaus</h2>
-          <p>Programming experience: Full</p>
-          <p>Data Science experience: Full </p>
-          <p>Programming languages: Python, R</p>
-          <p>OS: Linux</p>
-          <p>Hardware: Dedicated PC (Fast CPU, 32GB or RAM and GPU) </p>
-          <p>Available time: 2 days</p>
-          <p>Cost budget: 0</p>
+          <nobr>
+            <h2>Klaus</h2>
+            <p>Programming experience:<br>Full</p>
+            <p>Programming languages:<br>Python, R</p>
+            <p>Data Science experience:<br>Full</p>
+            <p>OS:<br>Linux</p>
+            <p>Hardware:<br>Dedicated PC<br>(32GB of RAM and GPU)</p>
+            <p>Available time:<br>2 days</p>
+            <p>Cost budget:<br>0</p>
 
-          <h3><b>Use Case</b></h3>
-          <p>Detect scratches on surfaces with image recognition.</p>
-          
-          <h2><b>Recommendations</b></h2>
-          <p>
-            Systems: H2O, ATM, Autokeras.</p>
-            Reason: With no cost budget, an experienced programmer and 
-            data scientist could use these systems for image recognition 
-            in the time available.
-          </p>
-        </div>
+            <div class="use_case">
+              <h2><b>Use Case</b></h2>
+              <p>Detect scratches on surfaces <br>with image recognition.</p>
+            </div>
+          </nobr>
+
+          <div class="recommendation">
+            <h2><b>Recommendations</b></h2>
+            <p>
+              Systems: H2O, ATM, Autokeras.</p>
+              Reason: With no cost budget, an experienced programmer and 
+              data scientist could use these systems for image recognition 
+              in the time available.
+            </p>
+          </div>
+      </div>
       </div>
       <div class="column">
         <div class="card">
           <img src="static/images/Hans.jpg" alt="Photo of Hans">
-          <h2>Hans</h2>
-          <p>Programming experience: Full</p>
-          <p>Data Science experience: Full </p>
-          <p>Programming languages: Python, R</p>
-          <p>OS: Windows</p>
-          <p>Hardware: Basic PC (Simple CPU, 8GB or RAM and no GPU) </p>
-          <p>Available time: 1 days</p>
-          <p>Cost budget: 0</p>
+          <nobr>
+            <h2>Hans</h2>
+            <p>Programming experience:<br>Full</p>
+            <p>Programming languages:<br>Python, R</p>
+            <p>Data Science experience:<br>Full</p>
+            <p>OS:<br>Windows</p>
+            <p>Hardware:<br>Basic PC<br>(8GB of RAM and no GPU)</p>
+            <p>Available time:<br>1 days</p>
+            <p>Cost budget:<br>0</p>
 
-          <h3><b>Use Case</b></h3>
-          <p>Improve features.</p>
+            <div class="use_case">
+              <h2><b>Use Case</b></h2>
+              <p>Clean and improve data collected <br>from a welding machine.</p>
+            </div>
+        </nobr>
 
-          <h2><b>Recommendations</b></h2>
-          <p>Systems: Feature tools, tsfresh</p>
-          <p>
-            Reason: Aiming at getting features for the given dataset, 
-            systems that automate only this part of the pipeline are 
-            recommended.
-          </p>
-        </div>
+          <div class="recommendation">
+            <h2><b>Recommendations</b></h2>
+            <p>Systems: Feature tools, tsfresh</p>
+            <p>
+              Reason: Aiming at getting features for the given dataset, 
+              systems that automate only this part of the pipeline are 
+              recommended.
+            </p>
+          </div>
+      </div>
       </div>
     </div>
   </body>
