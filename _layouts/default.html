@@ -82,7 +82,7 @@
   <div class= "center ph4">
     <h2> 1: Introduction to AutoML in Production </h2>
     <p class = "ph2">In the pursuit of leveraging the potential of data, 
-      companies usually rely on ML technologies. 
+      companies usually rely on Machine Learning, i.e. ML, technologies. 
       Applications of ML range from detecting anomalies in the operation and non-specialized machines 
       designed to learn by themselves, to the optimization of routing through demand forecasting. 
       Its most common use cases are for knowledge extraction operations and as the core technology underlying 
@@ -90,7 +90,7 @@
     Projects that rely on the application of ML are usually referred to as ML projects. Although this naming is useful to get a straightforward view of the main idea, it conceals several tasks such as data preparation and implementation of the results.
     </p>
   </div>
-  <div class="ph4">
+  <div id="ml_pipeline" class="ph4">
     <section class="ph5 pv4">
       <p><img src="static/images/pipeline.png" alt="AutoMLPipeline" title="AutoML pipeline in the context of production"></p>
     </section>
@@ -258,15 +258,13 @@
         There may be more algorithms used by these systems, but they are not explicitly given by them.<br>
         If you want to test a specific algorithm, some systems allow you to do so, others just output the best model and it's results. 
         See <a href="#results_table">Results Table</a> for more information.<br>
-  
-        If a more visual result of the model is required, the <b>Charts</b> column can be consulted. It does not mean the model is interpretable.
       </p>
     </div>
     
     <div class="ph1">
       <h3 id="chapter54">5.4 Deployment</h3>
       <p class = "ph2">
-        Ending the pipeline, deployment aims to release the results to users.<br>
+        Ending the <a href="#ml_pipeline">pipeline</a>, deployment aims to release the results to users.<br>
         
         For that, the <a href="#deployment_table">Deployment Table</a> tries to answers the following questions:
         <OL>
@@ -509,3 +507,11 @@
     }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
+
+<!-- 
+  1.
+    Shouldn't the title of the image be "ML Pipeline in Production"?
+
+
+
+-->
