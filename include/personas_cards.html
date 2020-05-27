@@ -4,7 +4,7 @@
   <style>
     img {
       position: relative;
-      width: 200;
+      height: 200;
     }
 
     .column {
@@ -30,13 +30,20 @@
       padding: 16px;
       text-align: center;
       background-color: #f1f1f1;
+      height: 1550px;
     }
 
     /* Responsive columns - one column layout (vertical) on small screens */
     @media screen and (max-width: 1400px) {
       .column {
+        width: 45%;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
         width: 100%;
-        display: block;
         margin-bottom: 20px;
       }
     }
@@ -59,7 +66,7 @@
             
             <div class="use_case">
               <h2><b>Use Case</b></h2>
-              <p>Compare a model manually<br>built with one automatically built.</p>
+              <p>Compare a model manually<br>built with one automatically <br>built.</p>
             </div>
           </nobr>
           
@@ -90,7 +97,7 @@
             
             <div class="use_case">
               <h2><b>Use Case</b></h2>
-              <p>Predict rejection of the <br>factory's end product.</p>
+              <p>Predict rejection <br>rate of the factory's <br>end product.</p>
             </div>
           </nobr>
           
@@ -120,7 +127,7 @@
 
             <div class="use_case">
               <h2><b>Use Case</b></h2>
-              <p>Detect scratches on surfaces <br>with image recognition.</p>
+              <p>Detect scratches<br> on a surfaces with <br>image recognition.</p>
             </div>
           </nobr>
 
@@ -150,7 +157,7 @@
 
             <div class="use_case">
               <h2><b>Use Case</b></h2>
-              <p>Clean and improve data<br>collected from a welding machine.</p>
+              <p>Clean and improve data<br>collected from a welding <br>machine.</p>
             </div>
         </nobr>
 

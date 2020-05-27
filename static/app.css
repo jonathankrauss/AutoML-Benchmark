@@ -209,10 +209,6 @@ canvas {
 .ipt-light-green {
     background-color: rgb(197 ,246, 235)
 }
-        
-.ipt-green {
-    background-color: rgb(23 ,156, 125)
-}
 
 .ipt-light-orange {
     background-color: rgb(255 ,204 , 153)
@@ -3577,7 +3573,6 @@ canvas {
 }
 
 .nested-img img {
-    width: 100%;
     max-width: 100%;
     display: block
 }
@@ -13376,6 +13371,28 @@ h3 {
 
 .twitter-share-button-wrapper+h1, .twitter-share-button-wrapper+h2, .twitter-share-button-wrapper+h3, .twitter-share-button-wrapper+h4, .twitter-share-button-wrapper+h5, .twitter-share-button-wrapper+h6, h1, h1+h2, h1+h3, h1+h4, h1+h5, h1+h6, h2+h3, h2+h4, h2+h5, h2+h6, h3+h4, h3+h5, h3+h6, h4+h5, h4+h6, h5+h6 {
     margin-top: 1em
+}
+
+.system-header {
+    margin: 0;
+    position: relative;
+    top: 30%;
+}
+
+.ipt-green1 {
+    background-color: rgb(23, 156, 125);
+}
+
+.ipt-green2 {
+    background-color: rgb(111, 194, 159);
+}
+
+.ipt-green3 {
+    background-color: rgb(149, 216, 189);
+}
+
+.ipt-green4 {
+    background-color: rgb(216, 252, 237);
 }
 
 h1 {

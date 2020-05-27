@@ -1,23 +1,24 @@
 <html>
+  <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
   <div class="overflow-auto ph5 pv4">
       <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
         <caption>Performance Table</caption>
         <thead>       
           <tr>
-            <th rowspan=3 class="fw6 bt b--black tc double-bottom bb thick-br bg-grey-400" width=160 ><h4>System</h4></th>
+            <th rowspan=3 class="fw6 bt b--black tc double-bottom bb thick-br ipt-green1" width=160><h4 class="system-header">System</h4></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc bb br bg-grey-300" colspan=6>Classification</th>
+            <th class="fw6 bt b--black tc bb br ipt-green2" colspan=6>Classification</th>
           </tr>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">Accuracy [%]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">Logarithm Loss [-1 - 1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">F1 Score [0-1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">AUC [0-1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">Confusion Matrix</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-200">Runtime</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Accuracy [%]</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Logarithm Loss [-1 - 1]</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">F1 Score [0-1]</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">AUC [0-1]</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Confusion Matrix</th>
+            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Runtime</th>
         </thead>
-        <tbody class="lh-copy">
+        <tbody class="lh-copy ipt-green4">
 
           <tr>
             <td class="tl bb thick-br bl ph2">Hyperopt-sklearn</td> <!-- Systems -->
@@ -27,8 +28,6 @@
             <td class="tc bb br">-</td> <!-- AUC -->
             <td class="tc bb br">No</td> <!-- Confusion Matrix -->
             <td class="tc bb br">47 min</td> <!-- Finding best model -->
-
-
           </tr>
           <tr>
             <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
