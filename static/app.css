@@ -13444,7 +13444,9 @@ figure img, p img {
 figcaption {
     text-align: center;
     padding-top: .25em;
-    color: #999
+    color: #999;
+    font-size: x-large;
+    margin-top: 10px;
 }
 
 caption {
