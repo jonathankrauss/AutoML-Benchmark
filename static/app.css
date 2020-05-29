@@ -3250,7 +3250,8 @@ canvas {
 }
 
 .tc {
-    text-align: center
+    text-align: center;
+    font-size: 12px;
 }
 
 .tj {
@@ -13310,20 +13311,14 @@ canvas {
     stroke: #000
 }
 
-html {
-    font-size: 16px;
+html * {
+    /* font-size: 17px; */
     line-height: 1.6;
-    font-family: Times New Roman, serif;
+    font-family: Frutiger-LT-Com-45-Light;
 }
 
 html[lang=ja] {
     line-height: 1.9
-}
-
-@media screen and (min-width:48em) {
-    html {
-        font-size: 20px
-    }
 }
 
 code, kbd, pre, samp {
@@ -13362,7 +13357,7 @@ button, h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
-    margin-bottom: .5em
+    margin-bottom: .5em;
 }
 
 h3 {
@@ -13445,14 +13440,15 @@ figcaption {
     text-align: center;
     padding-top: .25em;
     color: #999;
-    font-size: x-large;
+    font-size: 17px;
     margin-top: 10px;
 }
 
 caption {
+    margin-bottom: 10px;
     caption-side: top;
     text-align: center;
-    font-size: x-large;
+    font-size: 17px;
 }
 
 .twitter-tweet {
@@ -13465,4 +13461,8 @@ caption {
 
 table, td, th {
     border: 0px
+}
+
+p {
+    font-size: 17px;
 }

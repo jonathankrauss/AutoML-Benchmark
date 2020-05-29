@@ -64,6 +64,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% feed_meta %}
+  <!-- <link rel="stylesheet" href="../static/app.css"> -->
   <link rel="stylesheet" href="{{ "/static/app.css" | relative_url }}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}" />
   {% seo %}
@@ -93,13 +94,13 @@
       Projects that rely on the application of ML are usually referred to as ML projects.
 
       Although this naming is useful to get a straightforward view of the main idea, 
-      it conceals several tasks, as depicted in the figure <a href="#ml_pipeline">AutoML Pipeline in Production</a>.
+      it conceals several tasks, as depicted in the <a href="#ml_pipeline">Fig. 1</a>.
     </p>
   </div>
   <figure id="ml_pipeline" class="ph4">
     <section class="ph5 pv4">
       <img src="static/images/pipeline.png" alt="AutoMLPipeline" title="AutoML pipeline in the context of production">
-      <figcaption>Steps which a production ML project goes through.</figcaption>
+      <figcaption>Fig. 1. AutoML pipeline in the context of production</figcaption>
     </section>
   </figure>
   
@@ -206,20 +207,24 @@
 
         <p>
           Each <a href="#benchmarked_systems">benchmarked systems</a> was tested in a specific version, 
-          as can be seen in the "Tested at" column of the <a href="#characteristics_table">Characteristics Table</a>.
+          as can be seen in the "Tested at" column of the <a href="#characteristics_table">Table 1</a>.
         </p>
         <p>
           Even though this research is focused on AutoML systems, not every evaluated 
           system covers the whole <a href="#ml_pipeline">AutoML Pipeline</a>.
   
-          This distinction is presented in the "AutoML" column of the <a href="#characteristics_table">Characteristics Table</a>,
-          where systems marked with a "Yes" cover the whole Pipeline, and the ones marked with a "No" do not.
+          This distinction is presented in the "AutoML" column of the <a href="#characteristics_table">Table 1</a>,
+          where systems marked with a "Yes" cover a large portion of the Pipeline.
         </p>
 
-      <div id="characteristics_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="characteristics_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>
+            A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
 
       <p class = "ph2"> 
         Feature Tools and tsfresh automate only the Data Preparation step of the <a href="#ml_pipeline">AutoML Pipeline</a>. 
@@ -233,14 +238,17 @@
           which may imply limitations for different users and use cases.
         </p>
         <p>
-          The <a href="#requirements_and_boundaries_table">Requirements and Boundaries Table</a> exhibits these limitations for each system.
+          The <a href="#requirements_and_boundaries_table">Table 2</a> exhibits these limitations for each system.
         </p>
       </p>
 
-      <div id="requirements_and_boundaries_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="requirements_and_boundaries_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
 
       <p>
         Most of the systems are free to use through a Python based API and require little knowledge in the programming language. 
@@ -259,7 +267,7 @@
         <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">CNC Mill Tool Wear data set</a>.
         This is a classification problem, 
         where the objective here is to predict the success of an experiment where a CNC machine was used.
-        The dataset was processed before being tested by each system, having in the end 7586 instances and 50 dimensions.
+        The dataset was pre-processed before being tested by each system, having in the end 7586 instances and 50 dimensions.
       </p>
 
       <p>
@@ -269,10 +277,13 @@
     <p/>
     <!--Performance Table -->
     <div class="ph1">
-      <div id="performance_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="performance_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
     </div>
     <p class="ph2">
       All the AutoML systems performed well predicting the dataset target, 
@@ -289,19 +300,22 @@
     <p class = "ph2">
       The systems presented here propose to automate the <a href="#ml_pipeline">AutoML Pipeline</a>, 
       or parts of it. Having that in mind, 
-      this chapter of the benchmark will evaluate how each systems covers each part of the Pipeline.
+      this chapter of the benchmark will evaluate to which degree every step of the Pipeline is covered by each system.
 
     <div class="ph1">
       <h3 id="chapter61">6.1 Data Integration</h3>
       <p class = "ph2">
         Data Integration aims to integrate data residing in different sources. 
-        In the <a href="#integration_table">Data Integration Table</a>, 
+        In the <a href="#integration_table">Table 3</a>, 
         data types accepted by each system are displayed, as well as if these automate the data integration process.
       </p>
-      <div id="integration_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="integration_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
       <p class = "ph2">
         Regarding the data type, some systems are more limited and others are more inclusive, 
         for example Auto_ml and Google AutoML respectively.
@@ -313,29 +327,34 @@
     <div class="ph1">
       <h3 id="chapter62">6.2 Data Preparation</h3>
       <p class = "ph2">
-        In the Data Preparation step, the dataset in assembled and then transformed in Data Preprocessing and Feature Engineering.
+        In the Data Preparation step, the dataset is prepared in Data Preprocessing and Feature Engineering.
       </p>
-      <div id="preparation_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="preparation_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+          An empty field means that the information is missing in the current version of our analysis 
+        </p>
+      </div>
     </div>
 
     <div class="ph1">
       <h3 id="chapter63">6.3 Modeling</h3>
       <p class = "ph2">
         Some of the algorithms used for each system, as well as how they are selected, 
-        are shown in the <a href="#modeling_table">Modeling Table</a>.
+        are shown in the <a href="#modeling_table">Table 4</a>.
       </p>
-      <div id="modeling_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="modeling_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%; caption-side: bottom'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
       <p class = "ph2">
         There may be more algorithms used by these systems that are not explicitly stated.<br>
         The testing of specific algorithms is allowed in some systems, 
         others just output the best model and the results. 
-        See <a href="#results_table">Results Table</a> for more information.<br>
+        See <a href="#results_table">Table 7</a> for more information.<br>
       </p>
     </div>
     
@@ -344,17 +363,20 @@
       <p class = "ph2">
         Ending the <a href="#ml_pipeline">AutoML Pipeline</a>, deployment aims to release the results to users.<br>
         
-        For that, the <a href="#deployment_table">Deployment Table</a> tries to answers the following questions:
+        For that, the <a href="#deployment_table">Table 6</a> tries to answers the following questions:
         <OL>
           <LI>How can the model be deployed?</LI>
           <LI>How can the model be accessed by the user?</LI>
           <LI>Is training during production possible?</LI>
         </OL>
       </p>
-      <div id="deployment_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="deployment_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
     </div>
   </section>
 
@@ -362,14 +384,17 @@
   <section class= "ph4">
     <h2><a id="chapter7">7: Results</a></h2>
     <p class = "ph2">
-      The <a href="#results_table">Results Table</a>
+      The <a href="#results_table">Table 7</a>
       aims to show how the final results of each system are presented to the user.
     </p>
     <div class="ph1">
-      <div id="results_table"></div>
-      <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-        An empty field means that the information is missing in the current version of our analysis 
-      </p>
+      <div id="results_table">
+        <caption>
+          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
+            An empty field means that the information is missing in the current version of our analysis 
+          </p>
+        </caption>
+      </div>
     </div>
     <p class = "ph2">
       As can be seen in the table, the results vary, outputting sometimes a list of models and their characteristics, 
@@ -414,7 +439,7 @@
       The past developments in the area of AutoML indicate that progress towards improved automation 
       of specific steps within the <a href="#ml_pipeline">AutoML Pipeline</a> can be expected. 
 
-      Overall a full automation of the whole <a href="#ml_pipeline">AutoML Pipeline</a> from Data Integration to 
+      Overall, a full automation of the whole <a href="#ml_pipeline">AutoML Pipeline</a> from Data Integration to 
       Deployment is a concept that requires more research. 
 
       In the near future, it can be expected that tasks such as Modeling will be automated enough so that ML models will be created 
