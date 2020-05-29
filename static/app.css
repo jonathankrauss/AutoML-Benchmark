@@ -3251,6 +3251,9 @@ canvas {
 
 .tc {
     text-align: center;
+}
+
+.ts {
     font-size: 12px;
 }
 
