@@ -75,7 +75,7 @@
   <section class="jumbotron bg-light text-center">
     <div class="container">
         <h1>AutoML Benchmark</h1>
-        <p class="lead text-muted">Comparison and Analysis of Different AutoML Systems in the Production Domain.</p>
+        <p class="text-muted">Comparison and Analysis of Different AutoML Systems in the Production Domain.</p>
     </div>
   </section>
   
@@ -99,7 +99,7 @@
   </div>
   <figure id="ml_pipeline" class="ph4">
     <section class="ph5 pv4">
-      <img src="static/images/pipeline.png" alt="AutoMLPipeline" title="AutoML pipeline in the context of production">
+      <img src="static/images/pipeline.png" style="width: 70%;" alt="AutoMLPipeline" title="AutoML pipeline in the context of production">
       <figcaption>Fig. 1. AutoML pipeline in the context of production</figcaption>
     </section>
   </figure>
@@ -248,10 +248,12 @@
     <h2 id="performance"> 5: Performance of the AutoML Systems</h2>
     <p class="ph2">
       <p>
-        The currently demonstrated results have been applied on a ML use case from production: the 
-        <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">CNC Mill Tool Wear data set</a>.
-        This is a classification problem, 
-        where the objective here is to predict the success of an experiment where a CNC machine was used.
+        In order to compare performances between the AutoML systems, 
+        they were tested on a ML use case from production, where the following data from a CNC mill was used: the 
+        <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">
+          CNC Mill Tool Wear data set
+        </a>. 
+        This is a classification problem, where the objective here is to predict the success of a test.
         The dataset was pre-processed before being tested by each system, having in the end 7586 instances and 50 dimensions.
       </p>
 
@@ -266,10 +268,11 @@
     </div>
     <p class="ph2">
       All the AutoML systems performed well predicting the dataset target, 
-      therefore it can be hard to distinguish which one is the best in this criteria.<br>
+      therefore it is hard to distinguish which one is the best in this criteria.<br>
 
-      Performance also depends on the runtime, since running a system for for time usually outputs better results.
-      Note that runtime can sometimes be set by the user, or depend on the number of algorithms the user chooses to use. 
+      Performance also depends on the runtime, since running a system for more time usually outputs better results.
+      Note that runtime can sometimes be set by the user, and sometimes cannot. 
+      It is also affected by the number of algorithms used and hardware available.
     </p>
   </section>
 
@@ -291,19 +294,27 @@
       <div id="integration_table">
       </div>
       <p class = "ph2">
+        No systems proposes to automate the Data Integration step, 
+        since adapting to the vast quantity of different kinds of data sources is not trivial.
         Regarding the data type, some systems are more limited and others are more inclusive, 
         for example Auto_ml and Google AutoML respectively.
   
-        When facing an image classification problem, for example, some systems can already be filtered out here. 
+        As an example, a user facing an image classification problem 
+        can filter out some systems based only on <a href="#integration_table">Table 4</a>. 
       </p>
     </div>
 
     <div class="ph1">
       <h3 id="data_preparation">6.2 Data Preparation</h3>
       <p class = "ph2">
-        In the Data Preparation step, the dataset is prepared in Data Preprocessing and Feature Engineering.
+        After assembling the dataset in a way it can be accessed by the AutoML System, 
+        it has to be prepared for the <a href="#modeling">Modeling</a> phase.
+        That means increasing the quality of the data (Data Preprocessing) and 
+        restructuring it in order to facilitate the extraction of knowledge by an ML algorithm (Feature Engineering).
       </p>
       <div id="preparation_table"></div>
+
+      
     </div>
 
     <div class="ph1">
