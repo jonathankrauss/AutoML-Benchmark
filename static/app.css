@@ -13448,8 +13448,6 @@ figcaption {
 }
 
 caption {
-    margin-bottom: 10px;
-    caption-side: top;
     text-align: center;
     font-size: 17px;
 }

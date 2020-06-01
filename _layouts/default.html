@@ -212,17 +212,10 @@
           system covers the whole <a href="#ml_pipeline">AutoML Pipeline</a>.
   
           This distinction is presented in the "AutoML" column of the <a href="#characteristics_table">Table 1</a>,
-          where systems marked with a "Yes" cover a large portion of the Pipeline.
+          where systems marked with a "Yes" cover a large portion of the Pipeline and the ones which do not, are defined in plain text.
         </p>
 
-      <div id="characteristics_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>
-            A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="characteristics_table"></div>
 
       <p class = "ph2"> 
         Feature Tools and tsfresh automate only the Data Preparation step of the <a href="#ml_pipeline">AutoML Pipeline</a>. 
@@ -240,13 +233,7 @@
         </p>
       </p>
 
-      <div id="requirements_and_boundaries_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="requirements_and_boundaries_table"></div>
 
       <p>
         Most of the systems are free to use through a Python based API and require little knowledge in the programming language. 
@@ -275,13 +262,7 @@
     <p/>
     <!--Performance Table -->
     <div class="ph1">
-      <div id="performance_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="performance_table"></div>
     </div>
     <p class="ph2">
       All the AutoML systems performed well predicting the dataset target, 
@@ -304,21 +285,16 @@
       <h3 id="data_integration">6.1 Data Integration</h3>
       <p class = "ph2">
         Data Integration aims to integrate data residing in different sources. 
-        In the <a href="#integration_table">Table 3</a>, 
+        In the <a href="#integration_table">Table 4</a>, 
         data types accepted by each system are displayed, as well as if these automate the data integration process.
       </p>
       <div id="integration_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
       </div>
       <p class = "ph2">
         Regarding the data type, some systems are more limited and others are more inclusive, 
         for example Auto_ml and Google AutoML respectively.
   
-        Therefore, for image classification problems for example, some systems can already be filtered out here. 
+        When facing an image classification problem, for example, some systems can already be filtered out here. 
       </p>
     </div>
 
@@ -327,32 +303,21 @@
       <p class = "ph2">
         In the Data Preparation step, the dataset is prepared in Data Preprocessing and Feature Engineering.
       </p>
-      <div id="preparation_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-          An empty field means that the information is missing in the current version of our analysis 
-        </p>
-      </div>
+      <div id="preparation_table"></div>
     </div>
 
     <div class="ph1">
       <h3 id="modeling">6.3 Modeling</h3>
       <p class = "ph2">
         Some of the algorithms used for each system, as well as how they are selected, 
-        are shown in the <a href="#modeling_table">Table 4</a>.
+        are shown in the <a href="#modeling_table">Table 6</a>.
       </p>
-      <div id="modeling_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%; caption-side: bottom'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="modeling_table"></div>
       <p class = "ph2">
         There may be more algorithms used by these systems that are not explicitly stated.<br>
         The testing of specific algorithms is allowed in some systems, 
         others just output the best model and the results. 
-        See <a href="#results_table">Table 7</a> for more information.<br>
+        See <a href="#results_table">Table 8</a> for more information.<br>
       </p>
     </div>
     
@@ -361,20 +326,14 @@
       <p class = "ph2">
         Ending the <a href="#ml_pipeline">AutoML Pipeline</a>, deployment aims to release the results to users.<br>
         
-        For that, the <a href="#deployment_table">Table 6</a> tries to answers the following questions:
+        For that, the <a href="#deployment_table">Table 7</a> tries to answers the following questions:
         <OL>
           <LI>How can the model be deployed?</LI>
           <LI>How can the model be accessed by the user?</LI>
           <LI>Is training during production possible?</LI>
         </OL>
       </p>
-      <div id="deployment_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="deployment_table"></div>
     </div>
   </section>
 
@@ -382,17 +341,11 @@
   <section class= "ph4">
     <h2><a id="results">7: Results</a></h2>
     <p class = "ph2">
-      The <a href="#results_table">Table 7</a>
+      The <a href="#results_table">Table 8</a>
       aims to show how the final results of each system are presented to the user.
     </p>
     <div class="ph1">
-      <div id="results_table">
-        <caption>
-          <p class="color-grey-700 mv2" style='font-size:50%'>A "-" means that the information is not explicitly given by the system.<br>
-            An empty field means that the information is missing in the current version of our analysis 
-          </p>
-        </caption>
-      </div>
+      <div id="results_table"></div>
     </div>
     <p class = "ph2">
       As can be seen in the table, the results vary, outputting sometimes a list of models and their characteristics, 
