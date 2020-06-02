@@ -79,8 +79,19 @@
     <a href="#methodology">2. Methodology</a>
     <a href="#automl_systems">3. AutoML Systems</a>
     <a href="#characteristics_requirements_and_boundaries">4. Characteristics Requirements and Boundaries</a>
+    <div class="ml10">
+      <a href="#characteristics">4.1. Characteristics</a>
+      <a href="#requirements_and_boundaries">4.2. Requirements and Boundaries</a>
+    </div>
     <a href="#performance">5. Performance</a>
     <a href="#functionalities">6. Functionalities</a>
+    <div class="ml10">
+      <a href="#data_integration">6.1. Data Integration</a>
+      <a href="#data_preparation">6.2. Data Preparation</a>
+      <a href="#dodeling">6.3. Modeling</a>
+      <a href="#deployment">6.4. Deployment</a>
+    </div>
+    
     <a href="#results">7. Results</a>
     <a href="#personas">8. Practical Examples</a>
     <a href="#wrap_up">9. Wrap Up</a>
@@ -91,7 +102,16 @@
     <section class="jumbotron bg-light text-center">
       <div class="container">
           <h1>AutoML Benchmark</h1>
-          <p class="text-muted ph2">Comparison and Analysis of Different AutoML Systems in the Production Domain.</p>
+          <p class="text-muted ph2">
+            Comparison and Analysis of Different AutoML Systems in the Production Domain.<br>
+            25 systems were identified and most of them were evaluated.
+            For a more objective evaluation approach, 
+            this research includes evaluations concerning different criteria of each system: 
+            <a href="#requirements_and_boundaries">Requirements and Boundaries</a>, <a href="#performance">Performance</a>, 
+            <a href="#data_integration">Data Integration</a>, <a href="#data_preparation">Data Preparation</a>, 
+            <a href="#modeling">Modeling</a>, <a href="#deployment">Deployment</a> and <a href="#results">Results</a>.<br>
+            In the end, in chapter <a href="#modeling">Practical Examples</a>, the systems are recommended to four exemplified users.
+          </p>
       </div>
     </section>
     
@@ -485,31 +505,31 @@
         
         <li id="fn:H2O">
           <p>H2O.ai. AutoML: Automatic Machine Learning — H2O 3.26.0.10 documentation.
-            http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html (accessed on 20.11.2019).&nbsp;<a href="#fnref:H2O"
+            http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html. Accessed on 20.11.2019.&nbsp;<a href="#fnref:H2O"
               class="reversefootnote">↩</a></p>
 
         <li id="fn:SAS">
           <p>SAS Institute Inc. SAS Visual Data Mining and Machine Learning.
-            https://www.sas.com/en_us/software/visual-data-mining-machine-learning.html (accessed on 26.01.2020).&nbsp;<a
+            https://www.sas.com/en_us/software/visual-data-mining-machine-learning.html. Accessed on 26.01.2020.&nbsp;<a
               href="#fnref:SAS" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:MLBox">
-          <p>ARONIO DE ROMBLAY A. MLBox Documentation. https://mlbox.readthedocs.io/en/latest/index.html (accessed on
-            20.11.2019).&nbsp;<a href="#fnref:MLBox" class="reversefootnote">↩</a></p>
+          <p>ARONIO DE ROMBLAY A. MLBox Documentation. https://mlbox.readthedocs.io/en/latest/index.html. Accessed on
+            20.11.2019.&nbsp;<a href="#fnref:MLBox" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:Google">
           <p>Google Cloud. Best practices for creating training data | AutoML Tables Documentation | Google Cloud.
-            https://cloud.google.com/automl-tables/docs/data-best-practices#tables-does (accessed on 20.11.2019).&nbsp;<a
+            https://cloud.google.com/automl-tables/docs/data-best-practices#tables-does. Accessed on 20.11.2019.&nbsp;<a
               href="#fnref:Google" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:Azure">
           <p>Microsoft Azure. Azure Machine Learning documentation.
-            https://docs.microsoft.com/en-us/azure/machine-learning/ (accessed on 20.11.2019).&nbsp;<a href="#fnref:Azure"
+            https://docs.microsoft.com/en-us/azure/machine-learning/. Accessed on 20.11.2019.&nbsp;<a href="#fnref:Azure"
               class="reversefootnote">↩</a>
           </p>
         </li>
         <li id="fn:MLJar">
-          <p>MLJAR. mljar-docs. https://docs.mljar.com/ (accessed on 06.02.2020).&nbsp;<a href="#fnref:MLJar"
+          <p>MLJAR. mljar-docs. https://docs.mljar.com/. Accessed on 06.02.2020.&nbsp;<a href="#fnref:MLJar"
               class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:ATM">
@@ -518,12 +538,12 @@
             on Big Data (Big Data). IEEE, pp. 151–162.&nbsp;<a href="#fnref:ATM" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:Auto_ml">
-          <p>Parry P. auto_ml 0.1.0 documentation. https://auto-ml.readthedocs.io/en/latest/index.html (accessed on
-            20.11.2019).&nbsp;<a href="#fnref:Auto_ml" class="reversefootnote">↩</a></p>
+          <p>Parry P. auto_ml 0.1.0 documentation. https://auto-ml.readthedocs.io/en/latest/index.html. Accessed on
+            20.11.2019.&nbsp;<a href="#fnref:Auto_ml" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:Amazon">
           <p>AWS. Amazon SageMaker - Developer Guide. https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-dg.pdf
-            (accessed on 20.11.2019).&nbsp;<a href="#fnref:Amazon" class="reversefootnote">↩</a></p>
+           . Accessed on 20.11.2019.&nbsp;<a href="#fnref:Amazon" class="reversefootnote">↩</a></p>
         </li>
       
         <li id="fn:AutoKeras">
@@ -535,28 +555,29 @@
         </li>
 
         <li id="fn:FeatureTools">
-          <p>Feature Labs. Featuretools 0.12.0 documentation. https://docs.featuretools.com/en/stable/index.html (accessed
-            on 20.11.2019).&nbsp;<a href="#fnref:FeatureTools" class="reversefootnote">↩</a></p>
+          <p>Feature Labs. Featuretools 0.12.0 documentation. https://docs.featuretools.com/en/stable/index.html. Accessed
+            on 20.11.2019.&nbsp;<a href="#fnref:FeatureTools" class="reversefootnote">↩</a></p>
         </li>
         <li id="fn:tsfresh">
           <p>Christ M, Braun N, Neuffer J. tsfresh — tsfresh 0.12.0 documentation.
-            https://tsfresh.readthedocs.io/en/latest/index.html (accessed on 06.02.2020).&nbsp;<a href="#fnref:tsfresh"
+            https://tsfresh.readthedocs.io/en/latest/index.html. Accessed on 06.02.2020.&nbsp;<a href="#fnref:tsfresh"
               class="reversefootnote">↩</a></p>
         </li>
 
         <li id="fn:UberLudwig">
-          <p>Uber Ludwig documentation. https://uber.github.io/ludwig/ (accessed on 27.05.2020);
+          <p>Uber Ludwig documentation. https://uber.github.io/ludwig/. Accessed on 27.05.2020.
             <a href="#fnref:Ludwig" class="reversefootnote">↩</a></p>
         </li>
 
         <li id="fn:TransmogrifAI">
           <p>Salesforce.com, Inc. AutoML library for building modular, reusable, strongly typed machine learning workflows
-            on Spark from Salesforce Engineering. https://transmogrif.ai/ (accessed on 26.01.2020).&nbsp;<a
+            on Spark from Salesforce Engineering. https://transmogrif.ai/. Accessed on 26.01.2020.&nbsp;<a
               href="#fnref:TransmogrifAI" class="reversefootnote">↩</a></p>
         </li>
               
-        <li id="fn:TheAutomatedStatician">
-          <p>https://link.springer.com/chapter/10.1007/978-3-030-05318-5_9<a href="#fnref:TheAutomatedStatician" class="reversefootnote">↩</a></p>
+        <li id="fn:TheAutomaticStatistician">
+          <p>The Automated Statician. https://link.springer.com/chapter/10.1007/978-3-030-05318-5_9. Accessed on 20.05.2020.
+            <a href="#fnref:TheAutomaticStatistician" class="reversefootnote">↩</a></p>
         </li>
 
         <li id="fn:AutoWEKA">
@@ -573,19 +594,22 @@
         </li>
 
         <li id="fn:DataRobot">
-          <p>https://www.datarobot.com/<a href="#fnref:DataRobot" class="reversefootnote">↩</a></p>
+          <p>DataRobot. https://www.datarobot.com/. Accessed on 12.05.2020.
+            <a href="#fnref:DataRobot" class="reversefootnote">↩</a></p>
         </li>
               
         <li id="fn:Devol">
-          <p>https://github.com/joeddav/devol<a href="#fnref:Devol" class="reversefootnote">↩</a></p>
+          <p>Devol. https://github.com/joeddav/devol. Accessed on 20.05.2020.
+            <a href="#fnref:Devol" class="reversefootnote">↩</a></p>
         </li>
       
         <li id="fn:ExploreKit">
-          <p>https://paperswithcode.com/paper/explorekit-automatic-feature-generation-and<a href="#fnref:ExploreKit" class="reversefootnote">↩</a></p>
+          <p>ExploreKit. http://people.eecs.berkeley.edu/~dawnsong/papers/icdm-2016.pdf. Accessed on 20.05.2020.
+            <a href="#fnref:ExploreKit" class="reversefootnote">↩</a></p>
         </li>
 
         <li id="fn:AutoMLZero">
-          <p>https://arxiv.org/abs/2003.03384<a href="#fnref:AutoMLZero" class="reversefootnote">↩</a></p>
+          <p>AutoML Zero. https://arxiv.org/pdf/2003.03384.pdf. Accessed on 12.05.2020.<a href="#fnref:AutoMLZero" class="reversefootnote">↩</a></p>
         </li>
         
         <li id="fn:AutoPyTorch">

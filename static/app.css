@@ -1450,7 +1450,7 @@ canvas {
 }
 
 .mw8 {
-    max-width: 64rem
+    max-width: 70rem
 }
 
 .mw9 {
@@ -2863,6 +2863,10 @@ canvas {
 
 .ml0 {
     margin-left: 0
+}
+
+.ml10 {
+    margin-left: 10px
 }
 
 .ml1 {
@@ -13477,7 +13481,7 @@ table, td, th {
 
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -13485,6 +13489,7 @@ table, td, th {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
+    transition: 0.3s;
   }
   
   .sidenav a {
@@ -13493,12 +13498,12 @@ table, td, th {
     color: #818181;
     display: block;
   }
-  
+
   .sidenav a:hover {
     color: #f1f1f1;
   }
   
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: 200px; /* Same as the width of the sidenav */
     padding: 0px 10px;
   }
