@@ -2,26 +2,26 @@
   <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
   <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
-        <caption  style="caption-side: top">Table 6. How Are the ML Models Analysed and Presented to the User</caption>
+      <table class="w-100 mw8 center" cellspacing="0">
+        <caption style="caption-side: top">Table 6. How Are the ML Models Analysed and Presented to the User</caption>
         <thead>
           <tr>
-            <th width=160 rowspan=3 class="tl bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><h4 class="system-header">System</h4></th>
+            <th width=160 rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><div class="system-header">System</div ></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Training</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>ML Algorithms Included</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Anti-overfitting approach</th>
-            <th class="fw6 bt b--black tc br ipt-green2" colspan=3>Algorithm Selection</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Hyperparameter Selection</th>
-            <th class="fw6 bt b--black tc bb br ipt-green2" colspan=2>Diagnosis</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Training</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>ML Algorithms Included</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Anti-overfitting approach</th>
+            <th class="ts fw6 bt b--black tc br ipt-green2" colspan=3>Algorithm Selection</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Hyperparameter Selection</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=2>Diagnosis</th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Evaluation Approach</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Search</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">GUI</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Metrics</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Charts</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Evaluation Approach</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Search</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">GUI</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Metrics</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Charts</th>
           </tr>
 
         </thead>
@@ -30,7 +30,8 @@
           <tr>
             <td class="ts tl bb thick-br bl ph2"><i>Hyperopt-sklearn</i></td> <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Decision tree, Gaussian processes, Annealing, Tree of parzen estimators (tpe), Light GBM, Random search (RS)</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Decision Tree, Gaussian Processes, 
+              Annealing, Tree of Parzen Estimators, Light GBM, Random Search.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Model</td> <!-- Search -->
@@ -42,7 +43,7 @@
           <tr>
             <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">AdaBoost, Decision tree, Gradient boosting, K-NN, Random forest, SVM</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">AdaBoost, Decision Tree, Gradient Boosting, K-NN, Random Forest, SVM.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Model</td> <!-- Search -->
@@ -56,7 +57,7 @@
             <td class="ts tl bb thick-br bl ph2"><i>TPOT</i></td>
             <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">AdaBoost, Decision tree, K-NN, Logistic regression, Random forest, SVM, XGBoost</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">AdaBoost, Decision Tree, K-NN, Logistic Regression, Random Forest, SVM, XGBoost.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Population</td> <!-- Search -->
@@ -70,7 +71,7 @@
             <td class="ts tl bb thick-br bl ph2"><i>H2O AutoML</i></td>
             <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Neural network, Gradient boosting, Random forest, XGBoost</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Neural Network, Gradient Boosting, Random Forest, XGBoost.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br"></td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Random search</td> <!-- Search -->
@@ -83,7 +84,7 @@
           <tr>
             <td class="ts tl bb thick-br bl ph2"><i>SAS</i></td> <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Neural network, Gradient Boosting, Regression, Random forest, SVM	</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Neural Network, Gradient Boosting, Regression, Random Forest, SVM.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Model</td> <!-- Search -->
@@ -97,7 +98,8 @@
             <td class="ts tl bb thick-br bl ph2"><i>MLBox</i></td>
             <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Random Forest, XGBoost (GB), K-nearest neighbors, Logistic Regression, Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Random Forest, XGBoost (GB), K-nearest Neighbors, Logistic Regression, 
+              Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Model</td> <!-- Search -->
@@ -111,7 +113,7 @@
             <td class="ts tl bb thick-br bl ph2"><i>Google AutoML</i></td>
             <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">AdaBoost, Gradient Boosting</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">AdaBoost, Gradient Boosting.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">-</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">-</td> <!-- Search -->
@@ -124,7 +126,7 @@
             <td class="ts tl bb thick-br bl ph2"><i>Azure Machine Learning</i>
             </td> <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Decision Tree, Logistic Regression, SVM</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Decision Tree, Logistic Regression, SVM.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
             <td class="ts tc bb br">Model</td> <!-- Search -->
@@ -137,7 +139,8 @@
           <tr>
             <td class="ts tl bb thick-br bl ph2"><i>MLJar</i></td> <!-- Systems -->
             <td class="ts tc bb br">Yes</td> <!-- Training -->
-            <td class="ts tc bb br">Deep Neural Network, Gradient Boosting, K-nearest neighbors, Logistic Regression, Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Deep Neural Network, Gradient Boosting, K-nearest Neighbors, 
+              Logistic Regression, Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees.</td> <!-- ML Algorithms included -->
             <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
             <td class="ts tc bb br"></td> <!-- Evaluation approach -->
             <td class="ts tc bb br"></td> <!-- Search -->
@@ -276,9 +279,6 @@
             An empty field means that the information is missing in the current version of our analysis.<br>
 
             There may be more algorithms used by these systems that are not explicitly stated.
-            The testing of specific algorithms is allowed in some systems, 
-            others just output the best model and the results. 
-            See <a href="#results_table">Table 8</a> for more information.
           </p>
         </caption>
       </table>

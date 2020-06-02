@@ -2,16 +2,16 @@
 <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
   <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+      <table class="w-100 mw8 center" cellspacing="0">
         <caption  style="caption-side: top">Table 7. How the ML Model is Deployed for Production</caption>
         <thead>
           <tr>
-            <th width="160" rowspan=3 class="tl bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><h4 class="system-header">System</h4></th>
+            <th width="160" rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><div class="system-header">System</div ></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Productionize Model</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Web Service</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Online Training</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Productionize Model</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Web Service</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Online Training</th>
           </tr>
         </thead>
         <tbody class="lh-copy ipt-green4">
@@ -24,7 +24,7 @@
           </tr>
           <tr>
             <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
-            <td class="ts tc bb br">-</td> <!-- Productionize model -->
+            <td class="ts tc bb br">Export model as a .pickle file.</td> <!-- Productionize model -->
             <td class="ts tc bb br">No</td> <!-- Web service -->
             <td class="ts tc bb br">-</td> <!-- Online training -->
           </tr>

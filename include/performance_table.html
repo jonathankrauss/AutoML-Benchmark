@@ -2,21 +2,21 @@
   <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
   <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+      <table class="w-100 mw8 center" cellspacing="0">
         <caption  style="caption-side: top">Table 3. How Do the AutoML Systems Perform when Applied on a Production Use Case</caption>
         <thead>       
           <tr>
-            <th rowspan=3 class="tl bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1" width=160><h4 class="system-header">System</h4></th>
+            <th rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1" width=160><div class="system-header">System</div ></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc bb br ipt-green2" colspan=6>Classification</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=6>Classification</th>
           </tr>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Accuracy</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Logarithm Loss</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">F1 Score</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">AUC</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Confusion Matrix Provided</th>
-            <th class="fw6 bt b--black tc double-bottom br ipt-green3">Runtime</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Accuracy</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Logarithm Loss</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">F1 Score</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">AUC</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Confusion Matrix Provided</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Runtime</th>
         </thead>
         <tbody class="lh-copy ipt-green4">
 
@@ -80,7 +80,8 @@
             <td class="ts tc bb br">-</td> <!-- F1 Score[0-1] -->
             <td class="ts tc bb br">-</td> <!-- AUC -->
             <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
-            <td class="ts tc bb br">40 iterations</td> <!-- Finding best model -->
+            <td class="ts tc bb br"></td> <!-- Finding best model -->
+            <!-- <td class="ts tc bb br">40 iterations</td> Finding best model -->
           </tr>
 
           <tr>
@@ -149,7 +150,10 @@
         </tbody>
         <caption align="bottom">
           <p class="ts color-grey-700 mv2" align="center">A "-" means that the information is not explicitly given by the system.
-            An empty field means that the information is missing in the current version of our analysis.
+            An empty field means that the information is missing in the current version of our analysis.<br>
+            Uber Ludwig, TransmogrifAI and The Automatic Statistician were not included in this analysis.<br>
+            Runtime can sometimes be set by the user, and sometimes cannot. 
+            It is also affected by the number of algorithms used and hardware available.
           </p>
         </caption>
       </table>
