@@ -82,7 +82,7 @@
    <!-- Here starts Chapter 1 -->
   <div class= "center ph4">
     <h2> 1: Introduction to AutoML in Production </h2>
-    <p class = "ph2">In the pursuit of leveraging the potential of data, 
+    <p class="ph2">In the pursuit of leveraging the potential of data, 
       companies usually rely on Machine Learning (ML) technologies.
 
       Applications of ML range from detecting anomalies in the operation and non-specialized machines 
@@ -99,7 +99,7 @@
   </div>
   <figure id="ml_pipeline" class="ph4">
     <section class="ph5 pv4">
-      <img src="static/images/pipeline.png" style="width: 70%;" alt="AutoMLPipeline" title="AutoML pipeline in the context of production">
+      <img src="static/images/pipeline.jpg" style="width: 70%;" alt="AutoMLPipeline" title="AutoML pipeline in the context of production">
       <figcaption>Fig. 1. AutoML pipeline in the context of production</figcaption>
     </section>
   </figure>
@@ -107,7 +107,7 @@
   <!-- Here starts Chapter 2 -->
   <section class= "ph4">
     <h2> 2: Methodology of the AutoML Benchmark </h2>
-    <p>
+    <p class="ph2">
       Each of the benchmarked systems was analysed in 7 different criteria:
       <UL>
         <LI><a href="#requirements_and_boundaries">Requirements and Boundaries</a></LI>
@@ -120,9 +120,9 @@
       </UL>
     </p>
 
-    <p>These criteria are spread out from chapters <a href="#before_use">4</a> to <a href="#results">7</a>.</p>
+    <p class="ph2">These criteria are spread out from chapters <a href="#before_use">4</a> to <a href="#results">7</a>.</p>
 
-    <p>
+    <p class="ph2">
       After that, in chapter <a href="#practical_examples">8</a>, 
       four exemplified users are presented, and AutoML systems are recommended for each of them.
     </p>
@@ -132,7 +132,7 @@
     <!-- Here starts Chapter 3 -->
     <section class= "ph4">
       <h2>3: AutoML Systems </h2>
-      <p> 
+      <p class="ph2"> 
         AutoML systems were evaluated based on publicly available data from the production domain. 
         The systems that are included in this benchmark are:
   
@@ -196,18 +196,18 @@
   <!-- Here starts Chapter 4 -->
   <section class= "ph4">
     <h2><a id="before_use"> 4: Before Use</a></h2>
-    <p class = "ph2">
+    <p class="ph2">
       The chapters <a href="#characteristics">Characteristics</a> and <a href="#requirements_and_boundaries">Requirements and Boundaries</a> 
       aim to guide the reader on what to have in mind before deciding which system to use.
     </p>
     <div class="ph1">
       <h3 id="characteristics">4.1 Characteristics</h3>
 
-        <p>
+        <p class="ph2">
           Each <a href="#benchmarked_systems">benchmarked systems</a> was tested in a specific version, 
           as can be seen in the "Tested at" column of the <a href="#characteristics_table">Table 1</a>.
         </p>
-        <p>
+        <p class="ph2">
           Even though this research is focused on AutoML systems, not every evaluated 
           system covers the whole <a href="#ml_pipeline">AutoML Pipeline</a>.
   
@@ -217,25 +217,25 @@
 
       <div id="characteristics_table"></div>
 
-      <p class = "ph2"> 
+      <p class="ph2"> 
         Feature Tools and tsfresh automate only the Data Preparation step of the <a href="#ml_pipeline">AutoML Pipeline</a>. 
         Nevertheless they were kept in the analysis, since they propose to automate the most time-consuming step of it.
       </p>
 
       <h3 id="requirements_and_boundaries">4.2 Requirements and Boundaries</h3>
-      <p class = "ph2"> 
-        <p>
+      <p class="ph2"> 
+        <p class="ph2">
           The systems differ in user knowledge, hardware and software requirements and price, 
           which may imply limitations for different users and use cases.
         </p>
-        <p>
+        <p class="ph2">
           The <a href="#requirements_and_boundaries_table">Table 2</a> exhibits these limitations for each system.
         </p>
       </p>
 
       <div id="requirements_and_boundaries_table"></div>
 
-      <p>
+      <p class="ph2">
         Most of the systems are free to use through a Python based API and require little knowledge in the programming language. 
         When the user has no experience in programming, a cloud based paid system should be used.
       </p>
@@ -247,7 +247,7 @@
   <section class= "ph4">
     <h2 id="performance"> 5: Performance of the AutoML Systems</h2>
     <p class="ph2">
-      <p>
+      <p class="ph2">
         In order to compare performances between the AutoML systems, 
         they were tested on a ML use case from production, where the following data from a CNC mill was used: the 
         <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">
@@ -257,7 +257,7 @@
         The dataset was pre-processed before being tested by each system, having in the end 7586 instances and 50 dimensions.
       </p>
 
-      <p>
+      <p class="ph2">
         A future version of this benchmark will further include the results generated with the 
         <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM" target="_blank"> SECOM data set</a>.
       </p>
@@ -279,21 +279,21 @@
   <!-- Here starts Chapter 6 -->
   <section class= "ph4">
     <h2> 6: Functionalities of the AutoML systems</h2>
-    <p class = "ph2">
+    <p class="ph2">
       The systems presented here propose to automate the <a href="#ml_pipeline">AutoML Pipeline</a>, 
       or parts of it. Having that in mind, 
       this chapter of the benchmark will evaluate to which degree every step of the Pipeline is covered by each system.
 
     <div class="ph1">
       <h3 id="data_integration">6.1 Data Integration</h3>
-      <p class = "ph2">
+      <p class="ph2">
         Data Integration aims to integrate data residing in different sources. 
         In the <a href="#integration_table">Table 4</a>, 
         data types accepted by each system are displayed, as well as if these automate the data integration process.
       </p>
       <div id="integration_table">
       </div>
-      <p class = "ph2">
+      <p class="ph2">
         No systems proposes to automate the Data Integration step, 
         since adapting to the vast quantity of different kinds of data sources is not trivial.
         Regarding the data type, some systems are more limited and others are more inclusive, 
@@ -306,35 +306,30 @@
 
     <div class="ph1">
       <h3 id="data_preparation">6.2 Data Preparation</h3>
-      <p class = "ph2">
+      <p class="ph2">
         After assembling the dataset in a way it can be accessed by the AutoML System, 
         it has to be prepared for the <a href="#modeling">Modeling</a> phase.
         That means increasing the quality of the data (Data Preprocessing) and 
-        restructuring it in order to facilitate the extraction of knowledge by an ML algorithm (Feature Engineering).
+        restructuring it in order to facilitate the extraction of knowledge by an ML algorithm (Feature Engineering). 
+        As can be seen in the <a href="#preparation_table">Table 5</a>, 
+        each system was evaluated with respect to how deep this preparation step is explored.
       </p>
       <div id="preparation_table"></div>
-
-      
     </div>
 
     <div class="ph1">
       <h3 id="modeling">6.3 Modeling</h3>
-      <p class = "ph2">
+      <p class="ph2">
         Some of the algorithms used for each system, as well as how they are selected, 
         are shown in the <a href="#modeling_table">Table 6</a>.
       </p>
       <div id="modeling_table"></div>
-      <p class = "ph2">
-        There may be more algorithms used by these systems that are not explicitly stated.<br>
-        The testing of specific algorithms is allowed in some systems, 
-        others just output the best model and the results. 
-        See <a href="#results_table">Table 8</a> for more information.<br>
-      </p>
+
     </div>
     
     <div class="ph1">
       <h3 id="deployment">6.4 Deployment</h3>
-      <p class = "ph2">
+      <p class="ph2">
         Ending the <a href="#ml_pipeline">AutoML Pipeline</a>, deployment aims to release the results to users.<br>
         
         For that, the <a href="#deployment_table">Table 7</a> tries to answers the following questions:
@@ -351,14 +346,14 @@
   <!-- Here starts Chapter 7 -->
   <section class= "ph4">
     <h2><a id="results">7: Results</a></h2>
-    <p class = "ph2">
+    <p class="ph2">
       The <a href="#results_table">Table 8</a>
       aims to show how the final results of each system are presented to the user.
     </p>
     <div class="ph1">
       <div id="results_table"></div>
     </div>
-    <p class = "ph2">
+    <p class="ph2">
       As can be seen in the table, the results vary, outputting sometimes a list of models and their characteristics, 
       and sometimes just the best model and evaluations. 
       This means that not always the user is allowed to decide which model can be exported, and therefore run in production.<br>
@@ -397,7 +392,7 @@
   <!-- Here starts Chapter 9 -->
   <section class= "ph4">
     <h2> 9: Wrap Up </h2>
-    <p class = "ph2">
+    <p class="ph2">
       The past developments in the area of AutoML indicate that progress towards improved automation 
       of specific steps within the <a href="#ml_pipeline">AutoML Pipeline</a> can be expected. 
 

@@ -2792,7 +2792,8 @@ canvas {
 
 .ph2 {
     padding-left: .5rem;
-    padding-right: .5rem
+    padding-right: .5rem;
+    font-size: 17px;
 }
 
 .ph3 {
@@ -13462,8 +13463,4 @@ caption {
 
 table, td, th {
     border: 0px
-}
-
-p {
-    font-size: 17px;
 }
