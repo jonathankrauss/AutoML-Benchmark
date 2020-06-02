@@ -88,7 +88,7 @@
     <div class="ml10">
       <a href="#data_integration">6.1. Data Integration</a>
       <a href="#data_preparation">6.2. Data Preparation</a>
-      <a href="#dodeling">6.3. Modeling</a>
+      <a href="#modeling">6.3. Modeling</a>
       <a href="#deployment">6.4. Deployment</a>
     </div>
     
@@ -110,7 +110,7 @@
             <a href="#requirements_and_boundaries">Requirements and Boundaries</a>, <a href="#performance">Performance</a>, 
             <a href="#data_integration">Data Integration</a>, <a href="#data_preparation">Data Preparation</a>, 
             <a href="#modeling">Modeling</a>, <a href="#deployment">Deployment</a> and <a href="#results">Results</a>.<br>
-            In the end, in chapter <a href="#modeling">Practical Examples</a>, the systems are recommended to four exemplified users.
+            In the end, in chapter <a href="#personas">Practical Examples</a>, the systems are recommended to four exemplified users.
           </p>
       </div>
     </section>
@@ -277,7 +277,8 @@
 
         <p class="ph2">
           Most of the systems are free to use through a Python-based API and require little knowledge in the programming language. 
-          When the user has no experience in programming, a cloud-based paid system should be used.
+          When the user has no experience in programming, a cloud-based paid system should be used.<br>
+          A deep knowledge in Data Science is usually not required, but may impact on results depending on the use case.
         </p>
       </div>
     </section>
@@ -289,12 +290,13 @@
       <p class="ph2">
         <p class="ph2">
           In order to compare performances between the AutoML systems, 
-          they were tested on an ML use case from production, where the following data from a CNC mill was used: the 
+          they were tested on an ML use case from production, where the following data from a CNC mill was used: 
           <a href="https://www.kaggle.com/shasun/tool-wear-detection-in-cnc-mill" target="_blank">
             CNC Mill Tool Wear data set
           </a>. 
           This is a classification problem, where the objective here is to predict the success of a test.
-          The dataset was pre-processed before being tested by each system, having in the end 7586 instances and 50 dimensions.
+          The dataset was pre-processed before being tested by each system, 
+          having in the end 7586 instances and 50 dimensions. The results are presented in <a href="#performance_table">Table 3</a>.
         </p>
 
         <p class="ph2">
@@ -336,18 +338,20 @@
           No systems proposes to automate the Data Integration step, 
           since adapting to the vast quantity of different kinds of data sources is not trivial.
           Regarding the data type, some systems are more limited and others are more inclusive, 
-          for example, Auto_ml and Google AutoML respectively.
+          for example, <i>Auto_ml</i> and <i>Google AutoML</i> respectively.<br>
     
-          As an example, a user facing an image classification problem 
-          can filter out some systems based only on <a href="#integration_table">Table 4</a>. 
+          Regarding a specific use case, when looking for what system to use, 
+          some systems can already be filter out based on <a href="#integration_table">Table 4</a>.
+          For example a user facing an audio classification problem and having audio files as input data, 
+          can pick <i>Uber Ludwig</i>, but not <i>ATM</i>, 
         </p>
       </div>
 
       <div class="ph1">
         <h3 id="data_preparation">6.2 Data Preparation</h3>
         <p class="ph2">
-          After assembling the dataset in a way it can be accessed by the AutoML System, 
-          it has to be prepared for the <a href="#modeling">Modeling</a> phase.
+          After assembling the dataset in a way it can be utilized by AutoML Systems, 
+          it's time to prepare it for the <a href="#modeling">Modeling</a> phase.
           That means increasing the quality of the data (Data Preprocessing) and 
           restructuring it in order to facilitate the extraction of knowledge by an ML algorithm (Feature Engineering). 
           As can be seen in <a href="#preparation_table">Table 5</a>, 
@@ -355,10 +359,10 @@
         </p>
         <div id="preparation_table"></div>
         <p class="ph2">
-          Exactly how each of these methods is performed is not specified, e.g. System X uses PCA for Data Reduction.
+          Exactly how each of these methods is performed is not specified in this benchmark, e.g. System X uses PCA for Data Reduction.
           Nevertheless, the concept might be helpful when deciding which system to use for a certain use case. 
           H2O AutoML might grant better result when dealing with unbalanced datasets, whereas 
-          others may be more effective for datasets with many dimensions, for example.
+          others systems may be more effective for datasets with many dimensions, for example.
         </p>
       </div>
 
@@ -383,7 +387,7 @@
       <div class="ph1">
         <h3 id="deployment">6.4 Deployment</h3>
         <p class="ph2">
-          Ending the <a href="#ml_pipeline">AutoML Pipeline</a>, deployment aims to release the results to users.<br>
+          Ending the <a href="#ml_pipeline">AutoML Pipeline</a>, deployment aims to make the model available to users.<br>
           
           For that, <a href="#deployment_table">Table 7</a> answers the following questions:
           <OL>
@@ -395,9 +399,8 @@
         <div id="deployment_table"></div>
         <p class="ph2">
           There is not a standard way of exporting the generated model, 
-          as can be seen in the first columns of <a href="#deployment_table">Table 7</a>.
-          Therefore, using it in another system might not be straight forward.<br>
-          When a Web Service can be used, usually a REST API is provided, 
+          as can be seen in the <i>Productionize Model</i> column of <a href="#deployment_table">Table 7</a>.<br>
+          Regarding the Web Service, usually a REST API is provided, 
           where the model can be accessed through an endpoint.
         </p>
       </div>
@@ -409,22 +412,20 @@
       <p class="ph2">
         <a href="#results_table">Table 8</a>
         aims to show how the trained models results of each system are presented to the user.<br>
-        Some systems provide also a intermediary results. 
-        If this phase takes a long time, 
-        it may be interesting to have access to a model that was already fully trained, 
-        or it's evaluation metrics, 
-        even if that is not the best model.
+        Some systems also provide intermediary results - in case <a href="#modeling">Modeling</a> takes a long time, 
+        it can be interesting to have access to a model that has already fully trained, even if that is not the best one.
     </p>
       <div class="ph1">
         <div id="results_table"></div>
       </div>
       <p class="ph2">
-        As can be seen in the table, the results vary, outputting sometimes a list of models and their characteristics, 
+        As can be seen in the table, the results vary from outputting sometimes a list of models and their characteristics, 
         and sometimes just the best model and evaluations. 
-        This means that not always the user is allowed to decide which model can be exported, and therefore run in production.<br>
+        Consequently, the user is not always allowed to decide which model can be exported, and therefore run in production.<br>
     
-        Since Feature Tools and tsfresh propose to automate the <a href="#data_preparation">Data Preparation</a> phase, 
-        they output only a new dataset, containing new features and transformed old ones.
+        Looking at non-AutoML System, since Feature Tools and tsfresh propose to automate only the 
+        <a href="#data_preparation">Data Preparation</a> phase, 
+        their outputs are structured as a new dataset, containing new features and transformed old ones.
       </p>
     </section>
 
@@ -434,10 +435,11 @@
         <p class="ph2">
           In order to simulate how the process of finding systems 
           that fulfill a person's restrictions and requirements occurs,
-          the cards below were created. <br>
+          the <a href="#personas_cards">Personas Cards</a> were created. <br>
 
           Each card represents a "persona" - an exemplified user. 
-          At the end of each card, the chosen systems are displayed, followed by the reason why they were chosen.
+          At the end of each card, the chosen systems are displayed, 
+          followed by the reasons they were designated for the specific persona and use case.
         </p>
         <div id="personas_cards"></div>
         <p class="ts color-grey-700 mv2" align="center">
@@ -564,7 +566,7 @@
               class="reversefootnote">↩</a></p>
         </li>
 
-        <li id="fn:UberLudwig">
+        <li id="fn:Ludwig">
           <p>Uber Ludwig documentation. https://uber.github.io/ludwig/. Accessed on 27.05.2020.
             <a href="#fnref:Ludwig" class="reversefootnote">↩</a></p>
         </li>
