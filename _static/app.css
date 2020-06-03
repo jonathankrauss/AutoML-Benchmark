@@ -117,12 +117,9 @@ table {
 }
 
 a {
-  color: inherit;
-}
-
-a:hover, a:focus {
-  /* near-white */
-  background-color: #f4f4f4;
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 blockquote {
