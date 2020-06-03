@@ -1,185 +1,162 @@
 <html>
-
-
+  <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
-
   <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+      <table class="w-100 mw8 center" cellspacing="0">
+        <caption  style="caption-side: top">Table 3. Performance of the AutoML Systems Applied on a Production Use Case</caption>
         <thead>       
           <tr>
-            <th rowspan=3 class="fw6 bt double-bottom b--black tl thick-br bl bg-white ph2" width="160" ><h4>System</h4></th>
-            <th class="fw6 bt b--black tc bb br bg-grey-400" colspan="8">Evaluation</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-400" rowspan = 3>Finding the best model (min)</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-400" rowspan = 3>Train/test <wbr>dataset</th>
-            <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-400" rowspan = 3>How to avoid overfitting?</th>
-
+            <th rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1" width=160><div class="system-header">System</div ></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc bb br bg-grey-200" colspan="6">Classification</th>
-            <th class="fw6 bt b--black tc bb br bg-grey-200" colspan="2">Regression</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=6>Classification</th>
           </tr>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Accuracy [%]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Logarithm Loss [-1 - 1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">F1 Score [0-1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">ROC</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">AUC [0-1]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Confusion Matrix</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">RMSE [0-inf]</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">MAE [0-inf]</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Accuracy</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Logarithm Loss</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">F1 Score</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">AUC</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Confusion Matrix Provided</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Runtime</th>
         </thead>
-        <tbody class="lh-copy">
+        <tbody class="lh-copy ipt-green4">
 
           <tr>
-            <td class="tl bb thick-br bl ph2">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
-                  class="footnote">1</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">0,9883</td> <!-- Accuracy -->
-            <td class="tc bb br">0,4</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9889</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">0,988</td> <!-- ROC -->
-            <td class="tc bb br">-</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">47 (100 trials)</td> <!-- Finding best model -->
-            <td class="tc bb br">Manual splitting</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
-
-
+            <td class="ts tl bb thick-br bl ph2"><i>Hyperopt-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">0.9883</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.4</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9889</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">-</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">47 min</td> <!-- Finding best model -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
-                  class="footnote">2</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">0,9964</td> <!-- Accuracy -->
-            <td class="tc bb br">0,1229</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9966</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">0,9964</td> <!-- ROC -->
-            <td class="tc bb br">&nbsp;</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">120</td> <!-- Finding best model -->
-            <td class="tc bb br">sklearn train_test_split</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">Resamble strategy</td> <!-- Avoiding overfitting -->
-
+            <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">0.9964</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.1229</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9966</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">-</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">120 min</td> <!-- Finding best model -->
           </tr>
          
           <tr>
-            <td class="tl bb thick-br bl ph2">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>TPOT</i></td>
             <!-- Systems -->
-            <td class="tc bb br">0,9928</td> <!-- Accuracy -->
-            <td class="tc bb br">-0,0287</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9928</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- ROC -->
-            <td class="tc bb br">0,9993</td> <!-- AUC -->
-            <td class="tc bb br">Not provided</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">68,93</td> <!-- Finding best model -->
-            <td class="tc bb br">Resamble strategy</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">K-fold cross-validaton</td> <!-- Avoiding overfitting -->
+            <td class="ts tc bb br">0.9928</td> <!-- Accuracy -->
+            <td class="ts tc bb br">-0.0287</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9928</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9993</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">68.93 min</td> <!-- Finding best model -->
           </tr>
           <tr>
             
           <tr>
-            <td class="tl bb thick-br bl ph2">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>H2O AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Accuracy -->
-            <td class="tc bb br">0,01207</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">-</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- ROC -->
-            <td class="tc bb br">0,999</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">53,1</td> <!-- Finding best model -->
-            <td class="tc bb br">sklearn train_test_split</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">K-fold cross-validation</td> <!-- Avoiding overfitting -->
+            <td class="ts tc bb br">0.999</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.01207</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">-</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.999</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">53.1 min</td> <!-- Finding best model -->
           </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">0,994</td> <!-- Accuracy -->
-            <td class="tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,995</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">0,997</td> <!-- ROC -->
-            <td class="tc bb br">-</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">&nbsp;</td> <!-- Finding best model -->
-            <td class="tc bb br">Automatic 60/30/10 train/validation/test split</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">K-fold cross validation</td> <!-- Avoiding overfitting -->
+            <td class="ts tl bb thick-br bl ph2"><i>SAS</i></td> <!-- Systems -->
+            <td class="ts tc bb br">0.994</td> <!-- Accuracy -->
+            <td class="ts tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.995</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">-</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br"></td> <!-- Finding best model -->
           </tr>
-          </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>MLBox</i></td>
             <!-- Systems -->
-            <td class="tc bb br">0,9937</td> <!-- Accuracy -->
-            <td class="tc bb br">&nbsp;</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- ROC -->
-            <td class="tc bb br">&nbsp;</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">&nbsp;</td> <!-- RMSE -->
-            <td class="tc bb br">&nbsp;</td> <!-- MAE -->
-            <td class="tc bb br">40 iterations</td> <!-- Finding best model -->
-            <td class="tc bb br">Manual splitting</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="ts tc bb br">0.9937</td> <!-- Accuracy -->
+            <td class="ts tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">-</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">-</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br"></td> <!-- Finding best model -->
+            <!-- <td class="ts tc bb br">40 iterations</td> Finding best model -->
           </tr>
-          </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>Google AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">0,996</td> <!-- Accuracy -->
-            <td class="tc bb br">0,014</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9955</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- ROC -->
-            <td class="tc bb br">0,999</td> <!-- AUC -->
-            <td class="tc bb br">1% of FN</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">60</td> <!-- Finding best model -->
-            <td class="tc bb br"> Automatic 80/10/10 train/validation/test split</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">Train/validation/test split</td> <!-- Avoiding overfitting -->
+            <td class="ts tc bb br">0.996</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.014</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9955</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.999</td> <!-- AUC -->
+            <td class="ts tc bb br">Yes</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">60 min</td> <!-- Finding best model -->
           </tr>
-          </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></sup>
+            <td class="ts tl bb thick-br bl ph2"><i>Azure Machine Learning</i>
             </td> <!-- Systems -->
-            <td class="tc bb br">0,9917</td> <!-- Accuracy -->
-            <td class="tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9917</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">-</td> <!-- ROC -->
-            <td class="tc bb br">0,9996</td> <!-- AUC -->
-            <td class="tc bb br">0,03 of FN</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">50 min</td> <!-- Finding best model -->
-            <td class="tc bb br">Train/test split included</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="ts tc bb br">0.9917</td> <!-- Accuracy -->
+            <td class="ts tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9917</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9996</td> <!-- AUC -->
+            <td class="ts tc bb br">Yes</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">50 min</td> <!-- Finding best model -->
           </tr>
-          </tr>
-          
-          </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">9</a></sup></td>
-            <!-- Systems -->
-            <td class="tc bb br">0,9997</td> <!-- Accuracy -->
-            <td class="tc bb br">0,004</td> <!-- Logarithm Loss[-1 - 1] -->
-            <td class="tc bb br">0,9964</td> <!-- F1 Score[0-1] -->
-            <td class="tc bb br">&nbsp;</td> <!-- ROC -->
-            <td class="tc bb br">0,9961</td> <!-- AUC -->
-            <td class="tc bb br">-</td> <!-- Confusion Matrix -->
-            <td class="tc bb br">-</td> <!-- RMSE -->
-            <td class="tc bb br">-</td> <!-- MAE -->
-            <td class="tc bb br">60,7</td> <!-- Finding best model -->
-            <td class="tc bb br">Manual splitting</td> <!-- Train/test dataset -->
-            <td class="tc bb thick-br">&nbsp;</td> <!-- Avoiding overfitting -->
+            <td class="ts tl bb thick-br bl ph2"><i>MLJar</i></td> <!-- Systems -->
+            <td class="ts tc bb br">-</td> <!-- Accuracy -->
+            <td class="ts tc bb br">-</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">-</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9997</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">77 min</td> <!-- Finding best model -->
           </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>ATM</i></td> <!-- Systems -->
+            <td class="ts tc bb br">0.9998</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.0045</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9998</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9998</td> <!-- AUC -->
+            <td class="ts tc bb br">Yes</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">115 min</td> <!-- Finding best model -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto_ml</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">0.9914</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.2959</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9918</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9913</td> <!-- AUC -->
+            <td class="ts tc bb br">Yes</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br"></td> <!-- Finding best model -->
           </tr>
           
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>AutoKeras</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">0.9997</td> <!-- Accuracy -->
+            <td class="ts tc bb br">0.004</td> <!-- Logarithm Loss[-1 - 1] -->
+            <td class="ts tc bb br">0.9964</td> <!-- F1 Score[0-1] -->
+            <td class="ts tc bb br">0.9961</td> <!-- AUC -->
+            <td class="ts tc bb br">No</td> <!-- Confusion Matrix -->
+            <td class="ts tc bb br">60.7 min</td> <!-- Finding best model -->
+          </tr>
         </tbody>
+        <caption align="bottom">
+          <p class="ts color-grey-700 mv2" align="center">A "-" means that the information is not explicitly given by the system.
+            An empty field means that the information is missing in the current version of our analysis.<br>
+            Uber Ludwig, TransmogrifAI and The Automatic Statistician were not included in this analysis.<br>
+            Runtime can sometimes be set by the user, and sometimes cannot. 
+            It is also affected by the number of algorithms used and hardware available.
+          </p>
+        </caption>
       </table>
     </div>
-
 </body>
 </html>

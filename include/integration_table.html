@@ -1,142 +1,243 @@
 <html>
-
-
-<body>
-
-  <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+<!-- <link rel="stylesheet" href="../static/app.css"> -->
+  <body>
+    <div class="overflow-auto ph5 pv4">
+      <table class="w-100 mw8 center" cellspacing="0">
+        <caption style="caption-side: top">Table 4. Data Types Accepted by each AutoML System</caption>
         <thead>
-          <tr>            
-            <th width="160" rowspan=3 class="fw6 bt double-bottom b--black tl thick-br bl bg-white ph2"><h4>System</h4></th>
-            <th class="fw6 bt b--black double-bottom tc br bg-grey-400" rowspan="3">Data integration included</th>
-            <th class="fw6 bt b--black tc thick-br bg-grey-400" colspan="6">Datatypes accepted</th>
+          <tr>
+            <th width="160" rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1 "><div class="system-header">System</div ></th>
           </tr>
           <tr>
-            <th class="fw6 bt b--black tc bb br bg-grey-200" colspan="2">Structured</th>
-            <th class="fw6 bt b--black tc bb thick-br bg-grey-200" colspan="4">Unstructured</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Automatic</th>
+            <th class="ts fw6 bt b--black tc br ipt-green2" colspan=6>Accepted Input Datatypes</th>
           </tr>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Numerical</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Time Series</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Images</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Videos</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" colspan="1">Audio</th>
-            <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-50" colspan="1">Text</th>
+          <tr>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Numerical</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Time Series</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Images</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Videos</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Audio</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3"</th>Text</th>
+          </tr>
+            
         </thead>
-        <tbody class="lh-copy">
+        <tbody class="lh-copy ipt-green4">
 
           <tr>
-            <td class="tl bb thick-br bl ph2">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
-                  class="footnote">1</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">&nbsp</td> <!-- Time Series -->
-            <td class="tc bb br">&nbsp</td> <!-- Images -->
-            <td class="tc bb br">&nbsp</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp</td> <!-- Audio -->
-            <td class="tc bb thick-br">&nbsp</td> <!-- Text -->
+            <td class="ts tl bb thick-br bl ph2"><i>Hyperopt-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">-</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">-</td> <!-- Text -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
-                  class="footnote">2</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">-</td> <!-- Time Series -->
-            <td class="tc bb br">&nbsp;</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
 
           </tr>
          
           <tr>
-            <td class="tl bb thick-br bl ph2">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>TPOT</i></td>
             <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">-</td> <!-- Time Series -->
-            <td class="tc bb br">-</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">No</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
           <tr>
             
           <tr>
-            <td class="tl bb thick-br bl ph2">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>H2O AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">X</td> <!-- Time Series -->
-            <td class="tc bb br">X</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">X</td> <!-- Time Series -->
-            <td class="tc bb br">&nbsp;</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
-          </tr>
+            <td class="ts tl bb thick-br bl ph2"><i>SAS</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">No</td> <!-- Videos -->
+            <td class="ts tc bb br">No</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>MLBox</i></td>
             <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">&nbsp;</td> <!-- Time Series -->
-            <td class="tc bb br">&nbsp;</td> <!-- Images -->
-            <td class="tc bb br">-</td> <!-- Videos -->
-            <td class="tc bb br">-</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">-</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">No</td> <!-- Videos -->
+            <td class="ts tc bb br">No</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>Google AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">X</td> <!-- Time Series -->
-            <td class="tc bb br">X</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></sup>
+            <td class="ts tl bb thick-br bl ph2"><i>Azure Machine Learning</i>
             </td> <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">X</td> <!-- Time Series -->
-            <td class="tc bb br">X</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">X</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">Yes</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
-          </tr>
-          
-          </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">9</a></sup></td>
-            <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Data Integration included -->
-            <td class="tc bb br">X</td> <!-- Numerical -->
-            <td class="tc bb br">&nbsp;</td> <!-- Time Series -->
-            <td class="tc bb br">X</td> <!-- Images -->
-            <td class="tc bb br">&nbsp;</td> <!-- Videos -->
-            <td class="tc bb br">&nbsp;</td> <!-- Audio -->
-            <td class="tc bb thick-br">X</td> <!-- Text -->
+            <td class="ts tl bb thick-br bl ph2"><i>MLJar</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
           </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>ATM</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">No</td> <!-- Videos -->
+            <td class="ts tc bb br">No</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">No</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto_ml</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">No</td> <!-- Images -->
+            <td class="ts tc bb br">No</td> <!-- Videos -->
+            <td class="ts tc bb br">No</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">No</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Amazon SageMaker</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">-</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br"></td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">-</td> <!-- Text -->
           </tr>
           
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Uber Ludwig</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">Yes</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>TransmogrifAI</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">-</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">-</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>The Automatic Statistician</i></td> <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">-</td> <!-- Text -->
+          </tr>
+          
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>AutoKeras</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">-</td> <!-- Time Series -->
+            <td class="ts tc bb br">Yes</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">Yes</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Feature Tools</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">Yes</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">-</td> <!-- Images -->
+            <td class="ts tc bb br">-</td> <!-- Videos -->
+            <td class="ts tc bb br">-</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">-</td> <!-- Text -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>tsfresh</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Automatic -->
+            <td class="ts tc bb br">No</td> <!-- Numerical -->
+            <td class="ts tc bb br">Yes</td> <!-- Time Series -->
+            <td class="ts tc bb br">No</td> <!-- Images -->
+            <td class="ts tc bb br">No</td> <!-- Videos -->
+            <td class="ts tc bb br">No</td> <!-- Audio -->
+            <td class="ts tc bb thick-br">No</td> <!-- Text -->
+          </tr>
         </tbody>
+        <caption align="bottom">
+          <p class="ts color-grey-700 mv2" align="center">A "-" means that the information is not explicitly given by the system.
+            An empty field means that the information is missing in the current version of our analysis.
+          </p>
+        </caption>
       </table>
     </div>
-
-</body>
+  </body>
 </html>

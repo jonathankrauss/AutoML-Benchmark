@@ -1,0 +1,287 @@
+<html>
+  <!-- <link rel="stylesheet" href="../static/app.css"> -->
+<body>
+  <div class="overflow-auto ph5 pv4">
+      <table class="w-100 mw8 center" cellspacing="0">
+        <caption style="caption-side: top;">Table 6. Modeling Approach and Diagnosis</caption>
+        <thead>
+          <tr>
+            <th width=160 rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><div class="system-header">System</div ></th>
+          </tr>
+          <tr>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Training</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>ML Algorithms Included</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Anti-overfitting approach</th>
+            <th class="ts fw6 bt b--black tc br ipt-green2" colspan=3>Algorithm Selection</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Hyperparameter Selection</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=2>Diagnosis</th>
+          </tr>
+          <tr>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Evaluation Approach</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Search</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">GUI</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Metrics</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Charts</th>
+          </tr>
+
+        </thead>
+        <tbody class="lh-copy ipt-green4">
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Hyperopt-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Decision Tree, Gaussian Processes, 
+              Annealing, Tree of Parzen Estimators, Light GBM, Random Search.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Model</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">AdaBoost, Decision Tree, Gradient Boosting, K-NN, Random Forest, SVM.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Model</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+         
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>TPOT</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">AdaBoost, Decision Tree, K-NN, Logistic Regression, Random Forest, SVM, XGBoost.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Population</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>H2O AutoML</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Neural Network, Gradient Boosting, Random Forest, XGBoost.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Random search</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>SAS</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Neural Network, Gradient Boosting, Regression, Random Forest, SVM.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Model</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">Yes</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>MLBox</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Random Forest, XGBoost (GB), K-nearest Neighbors, Logistic Regression, 
+              Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Model</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Google AutoML</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">AdaBoost, Gradient Boosting.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">-</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">-</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">Yes</td> <!-- Charts --> 
+          </tr>
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Azure Machine Learning</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Decision Tree, Logistic Regression, SVM.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">Full</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">Model</td> <!-- Search -->
+            <td class="ts tc bb br">Yes</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">Yes</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>MLJar</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Deep Neural Network, Gradient Boosting, K-nearest Neighbors, 
+              Logistic Regression, Random Forest, Light GBM, Regularized Greedy Forest, Extra Trees.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">Yes</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">Yes</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>ATM</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">-</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto_ml</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">-</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Amazon SageMaker</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br"></td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Uber Ludwig</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">-</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">Yes</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>TransmogrifAI</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">Logistic Regression, Random Forest.</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">Cross-validation</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>The Automatic Statistician</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">-</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br"></td> <!-- Evaluation approach -->
+            <td class="ts tc bb br"></td> <!-- Search -->
+            <td class="ts tc bb br">-</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">-</td> <!-- Metrics -->
+            <td class="ts tc bb br">-</td> <!-- Charts --> 
+          </tr>
+          
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>AutoKeras</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Yes</td> <!-- Training -->
+            <td class="ts tc bb br">-</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">-</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">-</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">-</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">Yes</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">Yes</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+          
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Feature Tools</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Training -->
+            <td class="ts tc bb br">None</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">None</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">None</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">None</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">No</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">None</td> <!-- Metrics -->
+            <td class="ts tc bb br">None</td> <!-- Charts --> 
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>tsfresh</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">No</td> <!-- Training -->
+            <td class="ts tc bb br">None</td> <!-- ML Algorithms included -->
+            <td class="ts tc bb br">None</td> <!-- Anti-overfitting approach -->
+            <td class="ts tc bb br">None</td> <!-- Evaluation approach -->
+            <td class="ts tc bb br">None</td> <!-- Search -->
+            <td class="ts tc bb br">No</td> <!-- GUI -->
+            <td class="ts tc bb br">No</td> <!-- Hyperparameter Selection-->
+            <td class="ts tc bb br">No</td> <!-- Metrics -->
+            <td class="ts tc bb br">No</td> <!-- Charts --> 
+          </tr>
+        </tbody>
+        <caption align="bottom">
+          <p class="ts color-grey-700 mv2" align="center">
+            A "-" means that the information is not explicitly given by the system.
+            An empty field means that the information is missing in the current version of our analysis.<br>
+
+            There may be more algorithms used by these systems which are not explicitly stated.
+          </p>
+        </caption>
+      </table>
+    </div>
+</body>
+</html>
