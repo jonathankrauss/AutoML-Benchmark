@@ -2,6 +2,14 @@
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
+@font-face {
+    font-family: "Frutiger LT Com 45 Light";
+    src: url('fonts/FrutigerLTCom-Light.woff2') format('woff2'),
+        url('fonts/FrutigerLTCom-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -41,9 +49,9 @@ pre {
 }
 
 a {
-    color: #357edd;
+    color: blue;
     background-color: transparent;
-    -webkit-text-decoration-skip: objects
+    text-decoration: none;
 }
 
 abbr[title] {
@@ -100,7 +108,8 @@ audio:not([controls]) {
 }
 
 img {
-    border-style: none
+    border-style: none;
+    max-width: 100%;
 }
 
 svg:not(:root) {
@@ -208,10 +217,6 @@ canvas {
 .ipt-light-green {
     background-color: rgb(197 ,246, 235)
 }
-        
-.ipt-green {
-    background-color: rgb(23 ,156, 125)
-}
 
 .ipt-light-orange {
     background-color: rgb(255 ,204 , 153)
@@ -293,10 +298,6 @@ canvas {
     width: 100%;
     height: 100%;
     z-index: 100
-}
-
-img {
-    max-width: 100%
 }
 
 .cover {
@@ -1449,7 +1450,7 @@ img {
 }
 
 .mw8 {
-    max-width: 64rem
+    max-width: 70rem
 }
 
 .mw9 {
@@ -2799,7 +2800,8 @@ img {
 
 .ph2 {
     padding-left: .5rem;
-    padding-right: .5rem
+    padding-right: .5rem;
+    font-size: 17px;
 }
 
 .ph3 {
@@ -2861,6 +2863,10 @@ img {
 
 .ml0 {
     margin-left: 0
+}
+
+.ml10 {
+    margin-left: 10px
 }
 
 .ml1 {
@@ -3257,7 +3263,11 @@ img {
 }
 
 .tc {
-    text-align: center
+    text-align: center;
+}
+
+.ts {
+    font-size: 12px;
 }
 
 .tj {
@@ -3580,7 +3590,6 @@ img {
 }
 
 .nested-img img {
-    width: 100%;
     max-width: 100%;
     display: block
 }
@@ -13318,20 +13327,16 @@ img {
     stroke: #000
 }
 
-html {
-    font-size: 16px;
+html * {
+    /* font-size: 17px; */
     line-height: 1.6;
-    font-family: Times New Roman, serif;
+    font-family: "Frutiger LT Com 45 Light";
 }
+
+
 
 html[lang=ja] {
     line-height: 1.9
-}
-
-@media screen and (min-width:48em) {
-    html {
-        font-size: 20px
-    }
 }
 
 code, kbd, pre, samp {
@@ -13370,7 +13375,7 @@ button, h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
-    margin-bottom: .5em
+    margin-bottom: .5em;
 }
 
 h3 {
@@ -13379,6 +13384,28 @@ h3 {
 
 .twitter-share-button-wrapper+h1, .twitter-share-button-wrapper+h2, .twitter-share-button-wrapper+h3, .twitter-share-button-wrapper+h4, .twitter-share-button-wrapper+h5, .twitter-share-button-wrapper+h6, h1, h1+h2, h1+h3, h1+h4, h1+h5, h1+h6, h2+h3, h2+h4, h2+h5, h2+h6, h3+h4, h3+h5, h3+h6, h4+h5, h4+h6, h5+h6 {
     margin-top: 1em
+}
+
+.system-header {
+    margin: 0;
+    position: relative;
+    top: 30%;
+}
+
+.ipt-green1 {
+    background-color: rgb(23, 156, 125);
+}
+
+.ipt-green2 {
+    background-color: rgb(111, 194, 159);
+}
+
+.ipt-green3 {
+    background-color: rgb(149, 216, 189);
+}
+
+.ipt-green4 {
+    background-color: rgb(216, 252, 237);
 }
 
 h1 {
@@ -13402,14 +13429,6 @@ h4, h5, h6 {
 
 table {
     margin: 1em 0
-}
-
-a {
-    color: inherit
-}
-
-a:focus, a:hover {
-    background-color: #f4f4f4
 }
 
 blockquote {
@@ -13438,7 +13457,14 @@ figure img, p img {
 figcaption {
     text-align: center;
     padding-top: .25em;
-    color: #999
+    color: #999;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+caption {
+    text-align: center;
+    font-size: 17px;
 }
 
 .twitter-tweet {
@@ -13452,3 +13478,32 @@ figcaption {
 table, td, th {
     border: 0px
 }
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.3s;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }

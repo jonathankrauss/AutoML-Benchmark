@@ -1,174 +1,320 @@
 <html>
-
-
+  <!-- <link rel="stylesheet" href="../static/app.css"> -->
 <body>
-
-  <!-- colours = light-pastel, pastel, ipt-orange, ipt-light-orange, bg-orange-200, bg-orange-100, ipt-light-orange, bg-amber-200 -->
-  
   <div class="overflow-auto ph5 pv4">
-      <table class="f6 w-100 mw8 center" cellspacing="0" style='font-size:60%'>
+      <table class="w-100 mw8 center" cellspacing="0">
+        <caption  style="caption-side: top">Table 5. Preparation of the Integrated Data for Modeling</caption>
         <thead>
           <tr>
-            <th width="160" rowspan=3 class="fw6 bt double-bottom b--black tl thick-br bl bg-white ph2"><h4>System</h4></th>
-            <th class="fw6 bt b--black tc br bg-grey-400" colspan = 7>Data preparation</th>
-            <th class="fw6 bt b--black tc thick-br bg-grey-400" colspan = 3>Feature Engineering</th>
+            <th width="160" rowspan=3 class="ts bl fw6 bt b--black tc double-bottom bb thick-br ipt-green1"><div class="system-header">System</div ></th>
+          </tr>
+          <tr>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green2" rowspan=2>Input Required</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=8>Data Preprocessing</th>
+            <th class="ts fw6 bt b--black tc bb br ipt-green2" colspan=3>Feature Engineering</th>
           </tr>
 
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Included</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Handling missing values</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Outliers detection and deletion</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data standardization</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data reduction</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Data balancing</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">PCA</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Included</th>
-            <th class="fw6 bt b--black tc double-bottom br bg-grey-50" rowspan="2" colspan="1">Integrated with modeling</th>
-            <th class="fw6 bt b--black tc double-bottom thick-br bg-grey-50" rowspan="2" colspan="1">Automatic</th>
+          <tr>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Handling Missing Values</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Outliers Detection and Deletion</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Data Standardization</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Data Encoding</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Feature Scaling</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Data Reduction</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Data Balancing</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Data Augmentation</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Feature Generation</th>
+            <th class="ts fw6 bt b--black tc double-bottom br ipt-green3">Integrated with Modeling</th>
+          </tr>
 
         </thead>
-        <tbody class="lh-copy">
+        <tbody class="lh-copy ipt-green4">
 
           <tr>
-            <td class="tl bb thick-br bl ph2">Hyperopt-sklearn<sup id="fnref:Hyperoptsklearn"><a href="#fn:Hyperoptsklearn"
-                  class="footnote">1</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">-</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">X</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">-</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp</td> <!-- PCA -->
-            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
-
+            <td class="ts tl bb thick-br bl ph2"><i>Hyperopt-sklearn</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Train and  test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">No</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">No</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">Yes</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
           </tr>
+
           <tr>
-            <td class="tl bb thick-br bl ph2">Auto-sklearn<sup id="fnref:Autosklearn"><a href="#fn:Autosklearn"
-                  class="footnote">2</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">X</td> <!-- Data standardization -->
-            <td class="tc bb br">&nbsp</td> <!-- Data reduction -->
-            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
-            <td class="tc bb br">X</td> <!-- PCA -->
-            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
-
-          </tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto-sklearn</i></td> <!-- Systems -->
+              <td class="ts tc bb br">Train and  test datasets.</td> <!-- Input required -->
+              <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+              <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+              <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+              <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+              <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+              <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+              <td class="ts tc bb br">-</td> <!-- Data balancing -->
+              <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+              <td class="ts tc bb br">-</td> <!-- Feature generation -->
+              <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
+            </tr>
          
           <tr>
-            <td class="tl bb thick-br bl ph2">TPOT<sup id="fnref:TPOT"><a href="#fn:TPOT" class="footnote">3</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>TPOT</i></td>
             <!-- Systems -->
-            <td class="tc bb br">&nbsp;</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">-</td> <!-- Data balancing -->
-            <td class="tc bb br">X</td> <!-- PCA -->
-            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">X</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+            <td class="ts tc bb br"></td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">No</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">No</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">No</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
           </tr>
-          <tr>
             
           <tr>
-            <td class="tl bb thick-br bl ph2">H2O AutoML<sup id="fnref:H2O"><a href="#fn:H2O" class="footnote">4</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>H2O AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">X</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp;</td> <!-- PCA -->
-            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+            <td class="ts tc bb br"></td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">No</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">Yes</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>SAS</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Whole dataset.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- > Handling missing values -->
+            <td class="ts tc bb br">No</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">No</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">No</td> <!-- Data balancing -->
+            <td class="ts tc bb br">Yes</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">SAS<sup id="fnref:SAS"><a href="#fn:SAS" class="footnote">5</a></sup></td> <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">X</td> <!-- Data reduction -->
-            <td class="tc bb br">-</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp</td> <!-- PCA -->
-            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
-          </tr>
-          </tr>
-          <tr>
-            <td class="tl bb thick-br bl ph2">MLBox<sup id="fnref:MLBox"><a href="#fn:MLBox" class="footnote">6</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>MLBox</i></td>
             <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp</td> <!-- PCA -->
-            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
-          </tr>
+            <td class="ts tc bb br">Train and test datasets. Testset must not contain a target.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">No</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">No</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">No</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Google AutoML<sup id="fnref:Google"><a href="#fn:Google" class="footnote">7</a></sup></td>
+            <td class="ts tl bb thick-br bl ph2"><i>Google AutoML</i></td>
             <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">&nbsp</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp</td> <!-- PCA -->
-            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">X</td> <!-- Automatic -->
-          </tr>
+            <td class="ts tc bb br">Whole dataset.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
           </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">Azure Machine Learning<sup id="fnref:Azure"><a href="#fn:Azure" class="footnote">8</a></sup>
+            <td class="ts tl bb thick-br bl ph2"><i>Azure Machine Learning</i>
             </td> <!-- Systems -->
-            <td class="tc bb br">X</td> <!-- Included -->
-            <td class="tc bb br">X</td> <!-- >Handling missing values -->
-            <td class="tc bb br">&nbsp</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">&nbsp</td> <!-- Data standardization -->
-            <td class="tc bb br">&nbsp</td> <!-- Data reduction -->
-            <td class="tc bb br">X</td> <!-- Data balancing -->
-            <td class="tc bb br">X</td> <!-- PCA -->
-            <td class="tc bb br">X</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">&nbsp</td> <!-- Automatic -->
-          </tr>
+            <td class="ts tc bb br"></td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">Yes</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">Yes</td> <!-- Data balancing -->
+            <td class="ts tc bb br">Yes</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br"></td> <!-- Integrated with modeling -->
           </tr>
           
-          </tr>
           <tr>
-            <td class="tl bb thick-br bl ph2">AutoKeras<sup id="fnref:AutoKeras"><a href="#fn:AutoKeras" class="footnote">9</a></sup></td>
-            <!-- Systems -->
-            <td class="tc bb br">-</td> <!-- Included -->
-            <td class="tc bb br">-</td> <!-- >Handling missing values -->
-            <td class="tc bb br">-</td> <!-- Outliers detection and deletion -->
-            <td class="tc bb br">-</td> <!-- Data standardization -->
-            <td class="tc bb br">-</td> <!-- Data reduction -->
-            <td class="tc bb br">-</td> <!-- Data balancing -->
-            <td class="tc bb br">&nbsp</td> <!-- PCA -->
-            <td class="tc bb br">-</td> <!-- Feature Engineering Included -->
-            <td class="tc bb br">-</td> <!-- Integrated with modeling -->
-            <td class="tc bb thick-br">-</td> <!-- Automatic -->
+            <td class="ts tl bb thick-br bl ph2"><i>MLJar</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
           </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>ATM</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
           </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Auto_ml</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Amazon SageMaker</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">Yes</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">Yes</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Uber Ludwig</i>
+            </td> <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">No</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
+          </tr>
+  
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>TransmogrifAI</i></td> <!-- Systems -->
+            <td class="ts tc bb br">Whole dataset.</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">Yes</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">Yes</td> <!-- Integrated with modeling -->
+          </tr>
+
           
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>The Automatic Statistician</i></td> <!-- Systems -->
+            <td class="ts tc bb br">-</td> <!-- Input required -->
+            <td class="ts tc bb br">Yes</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">Yes</td> <!-- Data reduction -->
+            <td class="ts tc bb br">Yes</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">-</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>AutoKeras</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Train and test datasets.</td> <!-- Input required -->
+            <td class="ts tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">Yes</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br"></td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">Yes</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">-</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>Feature Tools</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Datasets and relations between them.</td> <!-- Input required -->
+            <td class="ts tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">Yes</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
+          </tr>
+
+          <tr>
+            <td class="ts tl bb thick-br bl ph2"><i>tsfresh</i></td>
+            <!-- Systems -->
+            <td class="ts tc bb br">Time series dataset and target dataset.</td> <!-- Input required -->
+            <td class="ts tc bb br">-</td> <!-- >Handling missing values -->
+            <td class="ts tc bb br">-</td> <!-- Outliers detection and deletion -->
+            <td class="ts tc bb br">-</td> <!-- Data standardization -->
+            <td class="ts tc bb br">-</td> <!-- Data encoding -->
+            <td class="ts tc bb br">-</td> <!-- Feature scaling -->
+            <td class="ts tc bb br">-</td> <!-- Data reduction -->
+            <td class="ts tc bb br">-</td> <!-- Data balancing -->
+            <td class="ts tc bb br">-</td> <!-- Data augmentation -->
+            <td class="ts tc bb br">Yes</td> <!-- Feature generation -->
+            <td class="ts tc bb br">No</td> <!-- Integrated with modeling -->
+          </tr>
         </tbody>
+        <caption align="bottom">
+          <p class="ts color-grey-700 mv2" align="center">A "-" means that the information is not explicitly given by the system.
+            An empty field means that the information is missing in the current version of our analysis.
+          </p>
+        </caption>
       </table>
     </div>
-
 </body>
 </html>
