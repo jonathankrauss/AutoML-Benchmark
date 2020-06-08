@@ -101,7 +101,7 @@
   <div class="main">
     <section class="jumbotron bg-light text-center">
       <div class="container">
-          <h1>AutoML Benchmark</h1>
+          <h1>AutoML Benchmark in Production</h1>
           <p class="text-muted ph2">
             Comparison and Analysis of Different AutoML Systems in the Production Domain.<br>
             25 systems were identified and most of them were evaluated.
@@ -197,9 +197,20 @@
           Some were included in the analysis, but were not evaluated in every criteria:
     
           <UL>
-            <LI>Uber Ludwig<sup id="fnref:Ludwig"><a href="#fn:Ludwig" class="footnote">16</a></sup></LI>
-            <LI>TransmogrifAI<sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI" class="footnote">17</a></sup></LI>
-            <LI>The Automatic Statistician<sup id="fnref:TheAutomaticStatistician"><a href="#fn:TheAutomaticStatistician" class="footnote">18</a></sup></LI>
+            <LI>Uber Ludwig
+              <sup id="fnref:Ludwig"><a href="#fn:Ludwig" class="footnote">16</a></sup>,
+              not tested regarding its <a href="#performance">Performance</a>.
+            </LI>
+            <LI>TransmogrifAI
+              <sup id="fnref:TransmogrifAI"><a href="#fn:TransmogrifAI" class="footnote">17</a></sup>,
+              systems that require no programming knowledge or Python skills were tested. 
+              Since TransmogrifAI requisites expertise in the programming language Scala, 
+              its <a href="#performance">Performance</a> was not tested.
+            </LI>
+            <LI>The Automatic Statistician
+              <sup id="fnref:TheAutomaticStatistician"><a href="#fn:TheAutomaticStatistician" class="footnote">18</a></sup>,
+              since no version is available for the public, its <a href="#performance">Performance</a> was not tested.
+            </LI>
           </UL>
     
           The following ones were not included in the analysis:
@@ -214,13 +225,21 @@
               a demo must be requested for use.</LI>
             <LI>
               Devol<sup id="fnref:Devol"><a href="#fn:Devol" class="footnote">22</a></sup>, 
-              is not being actively developed, and not much information is available about the system.
+              is not being actively developed, 
+              and most information required for this research is not provided by the system.
             </LI>
             <LI>
               ExploreKit<sup id="fnref:ExploreKit"><a href="#fn:ExploreKit" class="footnote">23</a></sup>, 
-              not much information is available about the system.</LI>
-            <LI>AutoML Zero<sup id="fnref:AutoMLZero"><a href="#fn:AutoMLZero" class="footnote">24</a></sup></LI>
-            <LI>Auto-PyTorch<sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch" class="footnote">25</a></sup></LI>
+              most information required for this research is not provided by the system.</LI>
+            <LI>AutoML Zero
+              <sup id="fnref:AutoMLZero"><a href="#fn:AutoMLZero" class="footnote">24</a></sup>,
+              most information required for this research is not provided by the system.
+            </LI>
+            <LI>Auto-PyTorch
+              <sup id="fnref:AutoPyTorch"><a href="#fn:AutoPyTorch" class="footnote">25</a></sup>,
+              it's currently in a very early pre-alpha version and
+              most information required for this research is not provided by the system.
+            </LI>
           </UL>
           
           <!-- The main criteria for selecting the most suitable system for a use case from production were: 
@@ -303,6 +322,16 @@
           A future version of this benchmark will further include the results generated with the 
           <a href = "https://archive.ics.uci.edu/ml/datasets/SECOM" target="_blank"> SECOM data set</a>.
         </p>
+
+        <p>
+          An overview of other publicly available data sets for production can be found at 
+          <a 
+            href="https://www.ipt.fraunhofer.de/de/kompetenzen/ProduktionsqualitaetundMesstechnik/Projekte/machine-learning.html"
+            target="_blank"
+          >
+            Fraunhofer IPT Application Fields and Free-Access Data Records
+          </a>.
+        </p>
       <p/>
       <!--Performance Table -->
       <div class="ph1">
@@ -361,8 +390,8 @@
         <p class="ph2">
           Exactly how each of these methods is performed is not specified in this benchmark, e.g. System X uses PCA for Data Reduction.
           Nevertheless, the concept might be helpful when deciding which system to use for a certain use case. 
-          H2O AutoML might grant better result when dealing with unbalanced datasets, whereas 
-          others systems may be more effective for datasets with many dimensions, for example.
+          H2O AutoML might grant better result when dealing with unbalanced data sets, whereas 
+          others systems may be more effective for data sets with many dimensions, for example.
         </p>
       </div>
 
@@ -442,14 +471,22 @@
           followed by the reasons they were designated for the specific persona and use case.
         </p>
         <div id="personas_cards"></div>
-        <p class="ts color-grey-700 mv2" align="center">
+        <p class="ts color-grey-700 mv2" style="text-align: center">
           Paid systems, such as Google AutoML and Azure, 
           can be used by the personas with no budget since these systems provide free trials, 
           but it would not be a long term solution.<br>
           Recommended systems are not ordered from most recommended to less recommended.
         </p>
         <p class="ph2">
-          
+          To test the systems,
+          in case of security issues or non-availability of data, 
+          it is possible to use publicly available data sets from production. See 
+          <a 
+            href="https://www.ipt.fraunhofer.de/de/kompetenzen/ProduktionsqualitaetundMesstechnik/Projekte/machine-learning.html"
+            target="_blank"
+          >
+            Fraunhofer IPT Application Fields and Free-Access Data Records
+          </a>.
         </p>
     </section> 
 
