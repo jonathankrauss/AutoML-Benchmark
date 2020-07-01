@@ -24,6 +24,10 @@ article, aside, footer, header, nav, section {
     display: block
 }
 
+p {
+    font-size: 17px;
+}
+
 h1 {
     font-size: 2em;
     margin: .67em 0
@@ -2801,7 +2805,6 @@ canvas {
 .ph2 {
     padding-left: .5rem;
     padding-right: .5rem;
-    font-size: 17px;
 }
 
 .ph3 {
@@ -13490,6 +13493,7 @@ table, td, th {
     overflow-x: hidden;
     padding-top: 20px;
     transition: 0.3s;
+    color: white;
   }
   
   .sidenav a {
@@ -13506,4 +13510,8 @@ table, td, th {
   .main {
     margin-left: 200px; /* Same as the width of the sidenav */
     padding: 0px 10px;
+  }
+
+  .tab {
+    padding-left: 4em;
   }
